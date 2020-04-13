@@ -27,8 +27,8 @@
 <p>$g$ 为 $m$ 的原根当且仅当 $\{g, g^2, \cdots, g^{\varphi(m)} \}$ 构成 $m$ 的一个缩系。</p>
 <h4 id="原根的存在性"><a href="#原根的存在性" class="headerlink" title="原根的存在性"></a>原根的存在性</h4><p>若 $m$ 有原根，则 $m$ 一定是下列形式：$2, 4, p^a, 2p^a$，其中 $p$ 是奇素数，$a$ 是正整数。</p>
 <h4 id="求所有原根"><a href="#求所有原根" class="headerlink" title="求所有原根"></a>求所有原根</h4><p>设 $g$ 为 $m$ 的一个原根，则集合 $S = \{g^s \mid 1 \le s \le \varphi(m), s \perp \varphi(m)\}$ 给出 $m$ 的所有原根。因此，若 $m$ 有原根，则 $m$ 有 $\varphi(\varphi(m))$ 个原根。</p>
-<h4 id="求一个原根"><a href="#求一个原根" class="headerlink" title="求一个原根"></a>求一个原根</h4><p>对 $p - 1$ 进行质因数分解得到不同的质因子 $d_1, d_2, \cdots, d_m$，对于任意的 $1 &lt; a &lt; p$，要判定 $a$ 是否是模 $p$ 的原根，只需要检验 $a^{(p - 1) / d_1}, a^{(p - 1) / d_2}. \cdots, a^{(p - 1) / d_m}$ 这 $m$ 个数中是否存在一个数在模 $p$ 意义下等于 $1$。若存在，则 $a$ 不是 $p$ 的原根；若不存在，则 $a$ 是 $p$ 的原根。</p>
-<p>更形式化地，若 $g \perp m$，$p1, p2, \cdots, p_k$ 是 $\varphi(m)$ 的所有不同的质因数，则 $g$ 是 $m$ 的原根，当且仅当 $\forall 1 \le i \le k, g^{\varphi(m) / p_i} \not \equiv 1 \pmod m$。</p>
+<h4 id="求一个原根"><a href="#求一个原根" class="headerlink" title="求一个原根"></a>求一个原根</h4><p>对 $p - 1$ 进行质因数分解得到不同的质因子 $d_1, d_2, \cdots, d_m$，对于任意的 $1 &lt; a &lt; p$，要判定 $a$ 是否是模 $p$ 的原根，只需要检验 $a^{(p - 1) / d_1}, a^{(p - 1) / d_2}, \cdots, a^{(p - 1) / d_m}$ 这 $m$ 个数中是否存在一个数在模 $p$ 意义下等于 $1$。若存在，则 $a$ 不是 $p$ 的原根；若不存在，则 $a$ 是 $p$ 的原根。</p>
+<p>更形式化地，若 $g \perp m$，$p_1, p_2, \cdots, p_k$ 是 $\varphi(m)$ 的所有不同的质因数，则 $g$ 是 $m$ 的原根，当且仅当 $\forall 1 \le i \le k, g^{\varphi(m) / p_i} \not \equiv 1 \pmod m$。</p>
 <hr>
 <h3 id="洛谷模板题"><a href="#洛谷模板题" class="headerlink" title="洛谷模板题"></a><a href="https://www.luogu.com.cn/problem/P6091" target="_blank" rel="noopener">洛谷模板题</a></h3><h4 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h4><p>给定不超过 $N$ 的若干个数 $n$，求出它们所有的原根。</p>
 <h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p>按照上面的做法，先筛出 $\varphi(1 \dots n)$，对于每个 $n$ 暴力枚举最小的原根（是 $O \left( n^\frac 14 \right)$ 的），再递推求出所有原根即可。</p>
