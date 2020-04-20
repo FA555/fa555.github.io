@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>从零开始的多项式笔记</title>
+      <link href="/2020/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>本文是照抄的 oi-wiki；和本博客、oi-wiki 原文一样遵循 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-SA 4.0 协议</a>。</p><a id="more"></a><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="多项式的度"><a href="#多项式的度" class="headerlink" title="多项式的度"></a>多项式的度</h3><p>对于一个多项式 $f(x)$，称其最高次项的次数为该多项式的<strong>度</strong>，记作 $\operatorname{deg}{f}$。</p><h3 id="多项式的逆元"><a href="#多项式的逆元" class="headerlink" title="多项式的逆元"></a>多项式的逆元</h3><p>对于多项式 $f(x)$，若存在 $g(x)$ 满足</p><script type="math/tex; mode=display">f(x)g(x) \equiv 1 \pmod{x^n} \\\operatorname{deg}{g} \le \operatorname{deg}{f}</script><p>则称 $g(x)$ 为 $f(x)$ 在模 $x^n$ 意义下的<strong>逆元</strong>，记作 $f^{-1}(x)$。</p><h3 id="多项式的余数和商"><a href="#多项式的余数和商" class="headerlink" title="多项式的余数和商"></a>多项式的余数和商</h3><p>对于多项式 $f(x), g(x)$，存在<strong>唯一</strong>的 $Q(x), R(x)$ 满足</p><script type="math/tex; mode=display">\begin{align}f(x) &= Q(x)g(x) + R(x) \\\operatorname{deg}{Q} &= \operatorname{deg}{f} - \operatorname{deg}{g} \\\operatorname{deg}{R} &< \operatorname{deg}{g}\end{align}</script><p>我们称 $Q(x)$ 为 $g(x)$ 除 $f(x)$ 的<strong>商</strong>，$R(x)$ 为 $g(x)$ 除 $f(x)$ 的<strong>余数</strong>。亦可记作</p><script type="math/tex; mode=display">f(x) \equiv R(x) \pmod{g(x)}</script><h3 id="多项式的对数函数与指数函数"><a href="#多项式的对数函数与指数函数" class="headerlink" title="多项式的对数函数与指数函数"></a>多项式的对数函数与指数函数</h3><p>对于一个多项式 $f(x)$，可以将其对数函数看作其与麦克劳林级数的复合：</p><script type="math/tex; mode=display">\ln(1 - f(x)) = -\sum_{i = 1}^{+ \infty} \frac{f^i(x)}i = \sum_{i = 1}^{+ \infty} \frac{(-1)^{i - 1} f^i(x)}i</script><p>其指数函数同样可以这样定义：</p><script type="math/tex; mode=display">\exp f(x) = e^{f(x)} = \sum_{i = 0}^{+ \infty} \frac{f^i(x)}{i!}</script><h3 id="多项式的多点求值和插值"><a href="#多项式的多点求值和插值" class="headerlink" title="多项式的多点求值和插值"></a>多项式的多点求值和插值</h3><p><strong>多项式的多点求值</strong>即给出一个多项式 $f(x)$ 和 $n$ 个点 $x_1, x_2, \cdots, x_n$，求</p><script type="math/tex; mode=display">f(x_1), f(x_2), \cdots, f(x_n)</script><p><strong>多项式的插值</strong>即给出 $n + 1$ 个点</p><script type="math/tex; mode=display">(x_0, y_0), (x_1, y_1), \cdots, (x_n, y_n)</script><p>求一个 $n$ 次多项式 $f(x)$ 使得这 $n + 1$ 个点都在 $f(x)$ 上。</p><p>这两种操作的实质就是将多项式在<strong>系数表示</strong>和<strong>点值表示</strong>间转化。</p><hr><h2 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h2><h3 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h3><p>给出 $n$ 个点 $P_i(x_i, y_i)$，将过这 $n$ 个点的最多 $n - 1$ 次的多项式记为 $f(x)$，求 $f(k)$ 的值。</p><h3 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h3><h4 id="差分法"><a href="#差分法" class="headerlink" title="差分法"></a>差分法</h4><p>差分法适用于 $x_i = i$ 的情况。</p><p>如，用差分法求某三次多项式 $f(x) = \sum_{i = 0}^e a_i x^i$ 的多项式形式，已知 $f(1)$ 至 $f(6)$ 的值分别为 $1, 5, 14, 30, 55, 91$。</p><script type="math/tex; mode=display">\begin{array}{ccccccccccc}1 & & 5 & & 14 & & 30 & & 55 & & 91 \\& 4 & & 9 & & 16 & & 25 & & 36 \\& & 5 & & 7 & & 9 & & 11 \\& & & 2 & & 2 & & 2 \\\end{array}</script><p>第一行为 $f(x)$ 的连续的前 $n$ 项；之后的每一行为之前一行中对应的相邻两项之差。观察到，如果这样操作的次数足够多（前提是 $f(x)$ 为多项式），最后总会返回一个定值，可以利用这个系数求出 $f(x)$ 的每一项的系数，然后即刻将 $k$ 代入多项式中求解。上例中可求出 $f(x) = \frac 13 x^3 + \frac12 x^2 + \frac 16 x$。时间复杂度为 $O(n^2)$。这种方法对给出的点的限制性较强。</p><h4 id="待定系数法"><a href="#待定系数法" class="headerlink" title="待定系数法"></a>待定系数法</h4><p>设 $f(x) = \sum_{i = 0}^{n - 1} a_i x^i$，将每个 $x_i$ 代入 $f(x)$，有$f(x_i) = y_i$，这样就可以得到一个由 $n$ 条 $n$ 元一次方程所组成的方程组，然后使用<strong>高斯消元</strong>解该方程组求出每一项 $a_i$，即确定了 $f(x)$ 的表达式。</p><p>时间复杂度 $O(n^3)$，对给出的点的坐标无要求。</p><h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>如图 1 所示，将每一个点 $(x_i, y_i)$ 在 $x$ 轴上的投影 $(x_i, 0)$ 记为 $H_i$。对每一个 $i$，我们选择一个点集 $\{ P_i \} \cup \{ H_j \mid 1 \le i \le n, j \ne i \}$，作过这 $n$ 个点的至多 $n - 1$ 次的线 $g_i(x)$。图中 $f(x)$ 用黑线表示，$g_i(x)$ 用彩色线表示。</p><p><img src="/files/img/poly_lagrange_interpolation.png" alt="图 1 - 拉格朗日插值"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 多项式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阶段总结</title>
       <link href="/2020/%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/"/>
       <url>/2020/%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/</url>
