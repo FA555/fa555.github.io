@@ -4,12 +4,18 @@
   
     
     <entry>
-      <title>2020-June-Records</title>
+      <title>2020 June Records</title>
       <link href="/2020/2020-June-Records/"/>
       <url>/2020/2020-June-Records/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>菜鸡 fa_555 会把一些动态简要地记在这里。主要还是留给自己以后看的。</p><a id="more"></a><p><em>所有代码不保证包括无关紧要的部分</em></p><hr><p>临近省选，不会记太多的东西。</p><hr><h3 id="YY的GCD"><a href="#YY的GCD" class="headerlink" title="YY的GCD"></a><a href="https://www.luogu.com.cn/problem/P2257" target="_blank" rel="noopener">YY的GCD</a></h3><h4 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h4><p>给定 $n, m \ (1 \le n, m \le 10^7)$，求 $1 \le x \le n, 1 \le y \le m$ 且 $\gcd(x, y)$ 为质数的 $(x, y)$ 有多少对。$T \ (1 \le T \le 10^4)$ 组数据。</p><h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p>不妨设 $n \le m$。</p><script type="math/tex; mode=display">\begin{aligned}& \sum_{i = 1}^n{ \sum_{j = 1}^n{[ \gcd(i, j) \in \mathbb P]}} \\=& \sum_{p \in \mathbb P}{ \sum_{i = 1}^n{ \sum_{j = 1}^n{[ \gcd(i, j) = p]}}} \\=& \sum_{p \in \mathbb P}{ \sum_{i = 1}{ \lfloor n / p \rfloor}{ \sum_{j = 1}{ \lfloor m / p \rfloor}{[ \gcd(i, j) = 1]}}} \\=& \sum_{p \in \mathbb P}{ \sum_{i = 1}{ \lfloor n / p \rfloor}{ \sum_{j = 1}{ \lfloor m / p \rfloor}{ \sum_{d \mid \gcd(i, j)}{ \mu(d)}}}} \\=& \sum_{p \in \mathbb P}{ \sum_{d = 1}{ \lfloor n / p \rfloor}{ \mu(d) \left \lfloor \frac n{pd} \right \rfloor \left \lfloor \frac m{pd} \right \rfloor}} \\=& \sum_{p \in \mathbb P}{ \sum_{d = 1}{ \lfloor n / p \rfloor}{ \mu(d) \left \lfloor \frac nt \right \rfloor \left \lfloor \frac mt \right \rfloor}} \\=& \sum_{t = 1}^n{ \left \lfloor \frac nt \right \rfloor \left \lfloor \frac mt \right \rfloor \sum_{p \in \mathbb P, p \mid t}{ \mu \left( \frac tp \right)}}\end{aligned}</script><p>其中设 $t = pd$。</p><p>设 $f(x) = \sum_{p \in \mathbb P, p \mid t}{ \mu(t / p)}$，则 $f(x)$ 可以用埃筛在 $O(n \log \log n)$ 的时间内筛出，答案可以数论分块单次 $O( \sqrt n)$ 询问。</p><h4 id="code"><a href="#code" class="headerlink" title="code"></a><a href="https://www.luogu.com.cn/record/34298758" target="_blank" rel="noopener">code</a></h4><hr><h3 id="无平方因子数"><a href="#无平方因子数" class="headerlink" title="无平方因子数"></a>无平方因子数</h3><p>求小于等于 $n$ 的无平方因子数的个数，即求 $\sum_{k = 1}^n{ \mu^2(k)}$。</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 动态 </category>
+          
+      </categories>
       
       
     </entry>
