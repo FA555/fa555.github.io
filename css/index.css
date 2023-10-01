@@ -22,7 +22,7 @@ body {
   background: #fff;
   color: #4c4948;
   font-size: 16px;
-  font-family: Fira Code, Lato, Helvetica Neue For Number, -apple-system, Fira Code, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: HYZhengYuan, Lato, Helvetica Neue For Number, -apple-system, Fira Code, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Microsoft YaHei, Hiragino Sans GB, Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 2;
 }
 *::-webkit-scrollbar {
@@ -1910,4 +1910,8 @@ img:hover {
 @font-face {
   font-family: Fira Code;
   src: url("/files/FiraCode-Regular.ttf");
+}
+@font-face {
+  font-family: HYZhengYuan;
+  src: url("/files/HYZhengYuan-55W.ttf");
 }
