@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="数数入门笔记"><meta name="keywords" content="数学"><meta name="author" content="fa_555"><meta name="copyright" content="fa_555"><title>数数入门笔记 | fa_555's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 7.3.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%B1%BB%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">第一类斯特林数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%B1%BB%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">第二类斯特林数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%86%E5%88%86%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">拆分数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%A2%E5%BC%8F%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">形式幂级数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%BD%A2%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">闭形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E4%BE%8B%E5%AD%90"><span class="toc-number">2.2.</span> <span class="toc-text">一些例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.</span> <span class="toc-text">组合对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0%E5%BC%95%E5%85%A5-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">生成函数引入 - 二项式定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0%EF%BC%88OGF%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">普通生成函数（OGF）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-OGF"><span class="toc-number">5.1.</span> <span class="toc-text">常用的 OGF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="toc-number">5.2.</span> <span class="toc-text">斐波那契数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0"><span class="toc-number">5.3.</span> <span class="toc-text">卡特兰数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%9E%8B%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0%EF%BC%88EGF%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">指数型生成函数（EGF）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-EGF"><span class="toc-number">6.1.</span> <span class="toc-text">常用的 EGF</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%A4%E8%AE%BA%E7%9B%B8%E5%85%B3"><span class="toc-number">7.</span> <span class="toc-text">群论相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">7.1.</span> <span class="toc-text">群的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%AE%E6%8D%A2%E7%BE%A4"><span class="toc-number">7.2.</span> <span class="toc-text">置换群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Burnside-%E5%BC%95%E7%90%86"><span class="toc-number">7.3.</span> <span class="toc-text">Burnside 引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Polya-%E5%AE%9A%E7%90%86"><span class="toc-number">7.4.</span> <span class="toc-text">Polya 定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9B%B8%E5%85%B3"><span class="toc-number">8.</span> <span class="toc-text">线性代数相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="toc-number">8.1.</span> <span class="toc-text">行列式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E6%80%A7%E8%B4%A8%EF%BC%9A"><span class="toc-number">8.1.1.</span> <span class="toc-text">行列式的性质：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Matrix-Tree-%E5%AE%9A%E7%90%86"><span class="toc-number">8.2.</span> <span class="toc-text">Matrix-Tree 定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%8B%93%E5%B1%95"><span class="toc-number">8.2.1.</span> <span class="toc-text">简单拓展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Best-theorem"><span class="toc-number">8.2.2.</span> <span class="toc-text">Best theorem</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%A0%E9%81%93%E4%BE%8B%E9%A2%98"><span class="toc-number">9.</span> <span class="toc-text">几道例题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E9%80%9A%E5%9B%BE%E8%AE%A1%E6%95%B0-%E9%9B%86%E8%AE%AD%E9%98%9F%E4%BD%9C%E4%B8%9A2013-%E5%9F%8E%E5%B8%82%E8%A7%84%E5%88%92"><span class="toc-number">9.1.</span> <span class="toc-text">连通图计数 - [集训队作业2013]城市规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%9B%E8%B0%B7%E6%A8%A1%E6%9D%BF%E9%A2%98"><span class="toc-number">9.2.</span> <span class="toc-text">洛谷模板题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#problem"><span class="toc-number">9.2.1.</span> <span class="toc-text">problem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#solution"><span class="toc-number">9.2.2.</span> <span class="toc-text">solution</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#code"><span class="toc-number">9.2.3.</span> <span class="toc-text">code</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars.githubusercontent.com/u/29965600"></div><div class="author-info__name text-center">fa_555</div><div class="author-info__description text-center">夢の続きを知りたいのかい？</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/111890">Luogu</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">31</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">18</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">8</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://github.com/FA555">Github</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://codeforces.com/profile/fa_555">Codeforces</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fa_555's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">文章</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a><a class="site-page" href="/links">友链</a></span></div><div id="post-info"><div id="post-title">数数入门笔记</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-07</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">3.3k</span><span class="post-meta__separator">|</span><span>阅读时长: 13 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>数数太难了，学不会数数。</p>
+<span id="more"></span>
+<p>[TOC]</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="第一类斯特林数"><a href="#第一类斯特林数" class="headerlink" title="第一类斯特林数"></a>第一类斯特林数</h3><p>$S_u(n, m)$ 表示 $n$ 个不同元素构成 $m$ 的圆排列的方案数。</p>
+<script type="math/tex; mode=display">
+S_u(n, m) = S_u(n - 1, m - 1) + (n - 1) \times S_u(n - 1, m)</script><p>有符号：$S_s(n, m) = (-1)^{n + m} S_u(n, m)$</p>
+<p>有符号生成函数：$x^{ \underline n}$</p>
+<h3 id="第二类斯特林数"><a href="#第二类斯特林数" class="headerlink" title="第二类斯特林数"></a>第二类斯特林数</h3><p>$S(n, m)$ 表示把 $n$ 个不同元素拆分成 $m$ 个非空集合的方案数。</p>
+<script type="math/tex; mode=display">
+S(n, m) = S(n - 1, m - 1) + m \times S(n - 1, m) \\
+S(n, m) = \frac 1{m!} \sum{(-1)^k \binom mk (m - k)^n}</script><p>贝尔数为第二类斯特林数之和。</p>
+<h3 id="拆分数"><a href="#拆分数" class="headerlink" title="拆分数"></a>拆分数</h3><p>$f_n$ 代表大小为 $n$ 的正整数拆分成若干个无序的正整数的和的方案数。</p>
+<p>两种 dp，$f_{i, j}$ 表示拆分成若干个小于等于 $j$ 的数字的方案数，$f_{i, j} = f_{i - j, j} + f_{i, j - 1}$。$g_{i, j}$ 表示拆分成 $j$ 个数字的方案数，$g_{i, j} = g_{i - j, j} + g_{i - 1, j - 1}$。</p>
+<p>单独用任何一个复杂度都是 $O(n^2)$。考虑大于 $\sqrt n$ 的数字只有 $\sqrt n$ 个，结合二者，复杂度 $O(n \sqrt n)$。</p>
+<p>生成函数：$\displaystyle \frac 1{ \sum_{n = 0}^\infty{(-1)^k x^{k(3k \pm 1)}}}$</p>
+<h2 id="形式幂级数"><a href="#形式幂级数" class="headerlink" title="形式幂级数"></a>形式幂级数</h2><p>形如 $\displaystyle \sum_{n = 0}^\infty{a_n x^n}$。</p>
+<script type="math/tex; mode=display">
+\sum_{n = 0}^\infty{a_n x^n} \pm \sum_{n = 0}^\infty{b_n x^n} = \sum_{n = 0}^\infty{(a_n \pm b_n) x^n} \\
+\sum_{n = 0}^\infty{a_n x^n} \pm \sum_{n = 0}^\infty{b_n x^n} = \sum_{n = 0}^\infty{\left( \sum_{k = 0}^n{a_k b_{n - k}}\right) x^n}</script><h3 id="闭形式"><a href="#闭形式" class="headerlink" title="闭形式"></a>闭形式</h3><p>形式幂级数的表达形式是一个长度为无穷的多项式，但是对于部分的形式幂级数，存在长度有限的函数能够直接表示它，我们通常称之为闭形式。</p>
+<p>考虑一个最简单的例子：$\displaystyle \sum_{n = 0}^\infty{x^n} = \frac 1{1 - x}$。</p>
+<p>注意到闭形式其实存在收敛域的问题。但形式幂级数中，$x$ 仅仅是一个符号，我们忽略讨论收敛域。</p>
+<h3 id="一些例子"><a href="#一些例子" class="headerlink" title="一些例子"></a>一些例子</h3><ul>
+<li>$\displaystyle \sum_{n = 0}^\infty{x^n} = \frac 1{1 - x}$，这个可以等比数列求和公式（存在收敛域，不讨论）</li>
+<li>显然能得到 $\displaystyle \sum_{n = 1}^\infty{x^n} = \frac x{1 - x}$</li>
+<li>考虑 $\displaystyle \sum_{n = 1}^\infty{n x^n}$，这个怎么求呢？<ol>
+<li>对第一个式子两边求导：$\displaystyle \left( \sum_{n = 0}^\infty{x^n}\right)’ = \left( \dfrac 1{1 - x}\right)’ \Rightarrow \sum_{n = 0}^\infty{(n + 1) x^n} = \frac 1{(1 - x)^2}$。再两边乘 $x$ 即可得到 $\displaystyle \sum_{n = 1}^\infty{n x^n} = \dfrac x{(1 - x)^2}$。</li>
+<li>$\displaystyle \left( \sum_{n = 0}^\infty{x^n}\right) \ast \left( \sum_{n = 0}^\infty{x^n}\right) = \sum_{n = 0}^\infty{(n + 1) x^n} = \frac 1{(1 - x)^2}$，和上一种方法殊途同归。</li>
+</ol>
+</li>
+<li>我们还知道 $\displaystyle \sum_{n = 0}^\infty{ \frac 1{n!} x^n} = e^x$。</li>
+<li>其实上面的几个就是各种生成函数。你已经上贼船了。</li>
+</ul>
+<h2 id="组合对象"><a href="#组合对象" class="headerlink" title="组合对象"></a>组合对象</h2><p>组合计数是一类常见问题，通常给定我们若干组合条件，对于每个组合对象，有某个函数 <code>size</code> 衡量了它的大小，如图的节点数，序列的长度等。<code>size</code> 为 $n$ 的满足组合条件的组合对象个数为有限个，记为 $A_n$ ，题目要求某个 $A_n$。</p>
+<p>组合对象分为是否有标号的两种，指的是是否考虑组合对象内部的元素有不同的区别，例如无标号的三个点的图只有 $4$ 种，而有标号的有 $8$ 种。</p>
+<h2 id="生成函数引入-二项式定理"><a href="#生成函数引入-二项式定理" class="headerlink" title="生成函数引入 - 二项式定理"></a>生成函数引入 - 二项式定理</h2><p>怎么让文化课选手也能理解生成函数呢？我们从大家都会的二项式定理说起。</p>
+<p><em>此处选用了所有亲高中生的写法，比如将组合数 $\displaystyle \binom nm$ 改用 $C_n^m$ 表示。</em></p>
+<p>如果你学过了选修 2-3，你会知道</p>
+<script type="math/tex; mode=display">
+(1 + x)^n = C_n^0 + C_n^1 x + C_n^2 x^2 + \cdots + C_n^{n - 1} x^{n - 1} + C_n^n x^n</script><p>然后如果你做了（高中数学老师名字隐去）的作业，你会遇到让你求 $C_n^0 - C_n^1 + C_n^2 - C_n^3 + \cdots + (-1)^n C_n^n$ 的题目。作为一名文化课选手，你熟练地将 $x = -1$ 代了进去，并且发现等式左边是 $0$，于是你又做出了一道题，拿到了 5 分。</p>
+<p>你没有局限于文化课固定的垃圾套路，发现了其中的奥秘。你发现，这种操作把一个数列（$C_n^i$）映射到了一个函数（$(x + 1)^n$）上。你开始思考，是不是其他的数列也可以这么操作呢？</p>
+<p>恭喜你，你发现了<strong>生成函数</strong>。通过生成函数，我们可以把数列的运算转化为对函数的运算<del>，借用多项式的运算，大量的毒瘤数数题就此诞生了</del>。</p>
+<h2 id="普通生成函数（OGF）"><a href="#普通生成函数（OGF）" class="headerlink" title="普通生成函数（OGF）"></a>普通生成函数（OGF）</h2><p>数列 $A_0, A_1, \cdots$ 的普通生成函数为 $\displaystyle \sum_{n = 0}^\infty{A_n x^n}$。</p>
+<p>普通生成函数通常考虑无标号问题（组合问题），它的加法操作和乘法操作分别对应了并和拼接两种操作。</p>
+<ul>
+<li>并：无标号 $n$ 个点的图的个数，假如 $\displaystyle \sum_{n = 0}^\infty{a_n x^n}$ 是连通图的 OGF，$\displaystyle \sum_{n = 0}^\infty{b_n x^n}$ 是不连通图的 OGF，$\displaystyle \sum_{n = 0}^\infty{a_n x^n} + \sum_{n = 0}^\infty{b_n x^n}$ 就是所有图的 OGF。</li>
+<li>拼接：有两类物品，拿 $n$ 个物品 A 的方案数为 $a_n$，OGF 为 $\displaystyle \sum_{n = 0}^\infty{a_n x^n}$；拿 $n$ 个物品 B 的方案数为 $b_n$，OGF 为 $\displaystyle \sum_{n = 0}^\infty{b_n x^n}$。那么拿 $n$ 个物品的 OGF 为 $\displaystyle \sum_{n = 0}^\infty{a_n x^n} \ast \sum_{n = 0}^\infty{b_n x^n}$。</li>
+</ul>
+<h3 id="常用的-OGF"><a href="#常用的-OGF" class="headerlink" title="常用的 OGF"></a>常用的 OGF</h3><p><em>↓这个表格某些单元格的对齐方式渲染有问题，有神仙知道原因或解决方案请务必告诉我，谢谢（</em></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数列</th>
+<th style="text-align:center">形式幂级数</th>
+<th style="text-align:center">闭形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$1, 1, 1, \cdots$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^\infty{x^n}$</td>
+<td style="text-align:center">$\displaystyle \frac 1{1 - x}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\displaystyle \binom NN, \binom{N + 1}N, \binom{N + 2}N, \cdots$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^\infty{\binom{N + n}N x^n}$</td>
+<td style="text-align:center">$\displaystyle \frac 1{(1 - x)^{N + 1}}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$1, 1, 1, \cdots, 1$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^N{x^n}$</td>
+<td style="text-align:center">$\displaystyle \frac{1 - x^{N + 1}}{1 - x}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$1, 0, 0, 1, 0, 0, 1, \cdots \ (a = 3)$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^\infty{x^{a n}}$</td>
+<td style="text-align:center">$\displaystyle \frac 1{1 - x^a}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>此外还有一些很 trivial 的东西，比如 OGF 乘以 $x$ 相当于数列右移一位。</p>
+<p>把一个数列的 OGF 乘以 $\displaystyle \frac 1{1 - x}$ 相当于对其求前缀和，乘以 $1 - x$ 相当于对其求差分。详见<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5488">P5488 差分与前缀和</a>。</p>
+<h3 id="斐波那契数"><a href="#斐波那契数" class="headerlink" title="斐波那契数"></a>斐波那契数</h3><p>令 $f_n$ 为斐波那契数列，$f_1 = f_2 = 1$，如何求出 $\displaystyle \sum_{n = 0}^\infty{f_n x^n}$ 的闭形式？</p>
+<p>令 $\displaystyle F_n = \sum_{n = 0}^\infty{f_n x^n}$，由 $f_n = f_{n - 1} + f_{n - 2}$ 可以得到 $F(x) = x F(x) + x^2 F(x) + x$。解方程得 $\displaystyle F(x) = \frac x{1 - x - x^2}$。</p>
+<p>$1 - x - x^2$ 怎么因式分解呢？</p>
+<p>待定系数法，设 $(1 + ax)(1 + bx) = (1 - x - x^2)$，解得 $a, b$ 分别是 $\displaystyle \frac{-1 \pm \sqrt 5}2$。此时有</p>
+<script type="math/tex; mode=display">
+F(x) = \frac x{ \left(1 - \frac{1 + \sqrt 5}2 x \right) \left(1 - \frac{1 - \sqrt 5}2 x \right)}</script><p>考虑裂项和待定系数法，设 $\displaystyle \frac A{1 + ax} + \frac B{1 + bx} = F(x)$。取 $\displaystyle a = \frac{-1 + \sqrt 5}2$，解得 $\displaystyle A = \frac 1{ \sqrt 5}, B = - \frac 1{ \sqrt 5}$。</p>
+<p>这样，我们就得到了</p>
+<script type="math/tex; mode=display">
+F(x) = \frac 1{ \sqrt 5} \left( \frac 1{1 - \frac{1 + \sqrt 5}2 x} - \frac 1{1 - \frac{1 - \sqrt 5}2 x} \right)</script><p>因为 $\displaystyle \sum_{n = 0}^\infty{a x^n} = \frac 1{1 - ax}$，代入得</p>
+<script type="math/tex; mode=display">
+f_n = [x^n] F(x) = \frac 1{ \sqrt 5} \left( \left( \frac{1 + \sqrt 5}2 \right)^n - \left( \frac{1 - \sqrt 5}2 \right)^n \right)</script><h3 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h3><p>如何求节点数为 $n$ 的二叉树的个数？</p>
+<p>直接大力推式是可以的，但是太麻烦了完全看不懂。</p>
+<p>注意到生成函数本身是具有组合性质的。令 $F(x)$ 表示该问题的生成函数，考虑一棵二叉树可以划分成根节点和左右两个子树，得到 $F(x) = x F^2(x) + 1$。解方程得 $\displaystyle F(x) = \frac{1 - \sqrt{1 - 4x}}{2x}$。</p>
+<p>$\displaystyle F(x) = \sum_{n = 0}^\infty{ \frac{(2n)!}{n! (n + 1)!} x^n}$，证明从略。</p>
+<h2 id="指数型生成函数（EGF）"><a href="#指数型生成函数（EGF）" class="headerlink" title="指数型生成函数（EGF）"></a>指数型生成函数（EGF）</h2><p>数列 $A_0, A_1, \cdots$ 的指数型生成函数为 $\displaystyle \sum_{n = 0}^\infty{A_n \frac{x^n}{n!}}$。</p>
+<p>在处理有标号问题（排列问题）的时候，我们通常使用指数型生成函数。在这样的定义下，加法和乘法依然保持了性质。</p>
+<h3 id="常用的-EGF"><a href="#常用的-EGF" class="headerlink" title="常用的 EGF"></a>常用的 EGF</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数列</th>
+<th style="text-align:center">形式幂级数</th>
+<th style="text-align:center">闭形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$1, 1, 1, \cdots$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^\infty{ \frac{x^n}{n!}}$</td>
+<td style="text-align:center">$e^x$</td>
+</tr>
+<tr>
+<td style="text-align:center">$1, 0, 1, \cdots$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^\infty{ \frac{x^{2n}}{(2n)!}}$</td>
+<td style="text-align:center">$\displaystyle \frac{e^x + e^{-x}}{2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0, 1, 0, \cdots$</td>
+<td style="text-align:center">$\displaystyle \sum_{n = 0}^\infty{ \frac{x^{2n + 1}}{(2n + 1)!}}$</td>
+<td style="text-align:center">$\displaystyle \frac{e^x - e^{-x}}{2}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="群论相关"><a href="#群论相关" class="headerlink" title="群论相关"></a>群论相关</h2><p>这里推荐<a target="_blank" rel="noopener" href="https://blog.csdn.net/liangzhaoyang1/article/details/72639208">一篇博客</a>，讲的是比我下面抄的课件要清楚的。</p>
+<h3 id="群的定义"><a href="#群的定义" class="headerlink" title="群的定义"></a>群的定义</h3><p>定义集合 $G$ 和作用于 $G$ 中的元素的二元运算 $\oplus$，若其满足以下性质，则称其为一个群，记作 $(G, \oplus)$。</p>
+<ol>
+<li>封闭性<br>对于任意 $a \in G, b \in G$，都有 $a \oplus b \in G$。</li>
+<li>结合律<br>对于任意 $a, b, c$，有 $(a \oplus b) \oplus c = a \oplus (b \oplus c)$。</li>
+<li>单位元<br>存在唯一的 $e \in G$，满足对于任意 $a \in G$ 有 $a \oplus e = e \oplus a = a$。</li>
+<li>逆元<br>对于任意 $a \in G$，存在唯一的 $a’ \in G$ 满足 $a \oplus a’ = a’ \oplus a = e$。</li>
+</ol>
+<h3 id="置换群"><a href="#置换群" class="headerlink" title="置换群"></a>置换群</h3><p>置换就是对元素进行重排列。</p>
+<p>置换群指的是一个置换的集合，满足任意两个置换不能复合出一个新的不在集合内的置换。</p>
+<h3 id="Burnside-引理"><a href="#Burnside-引理" class="headerlink" title="Burnside 引理"></a>Burnside 引理</h3><p>令 $X$ 表示某个集合，令 $G$ 表示作用在 $X$ 上的某个置换群。对于任意 $G$ 内的元素 $g$，定义 $f(g)$ 为 $X$ 内经过置换 $g$ 后不变的元素的数量。我们要求的是 $X$ 内本质不同的元素的个数，本质不同指不能通过 $G$ 获得彼此，记为 $|X / G|$。</p>
+<script type="math/tex; mode=display">
+|X / G| = \frac 1{|G|} \sum_{g \in G}{f(g)}</script><h3 id="Polya-定理"><a href="#Polya-定理" class="headerlink" title="Polya 定理"></a>Polya 定理</h3><p>令 $G$ 是 $X$ 的一个置换群，$|X| = n$，用 $m$ 种颜色染色，本质不同的染色方案是</p>
+<script type="math/tex; mode=display">
+|X / G| = \frac 1{|G|} \sum_{g \in G}{m^{c(g)}}</script><p>其中 $c(g)$ 表示 $g$ 的循环节数。</p>
+<p>通常我们并不需要枚举所有的 $g$ 计算 $c(g)$，而是枚举 $c(g)$ 快速计算多少 $g$ 满足条件。</p>
+<h2 id="线性代数相关"><a href="#线性代数相关" class="headerlink" title="线性代数相关"></a>线性代数相关</h2><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><p>一个方阵 $A$ 的行列式表示为 $|A|$ 或 $\det(A)$。</p>
+<script type="math/tex; mode=display">
+\det(A) = \sum_{p}{(-1)^{ \sigma(p)}}{ \prod_{i = 1}^n{a_{i, p_i}}}</script><p>其中 $p$ 表示一个排列，$\sigma(p)$ 表示 $p$ 的逆序对数。使用高斯消元快速计算行列式的值。</p>
+<h4 id="行列式的性质："><a href="#行列式的性质：" class="headerlink" title="行列式的性质："></a>行列式的性质：</h4><ul>
+<li>对角矩阵 / 上三角矩阵 / 下三角矩阵的行列式是主对角线上元素的乘积。</li>
+<li>交换矩阵的两行，行列式的值取相反数。</li>
+<li>将矩阵的一行的所有元素乘上一个相同的常数 $k$，行列式的值也乘上 $k$。</li>
+<li>将矩阵的一行加到另外一行上去，行列式的值不变。</li>
+<li>由于转置的存在，行列式所有对行成立的性质对列也成立。</li>
+</ul>
+<h3 id="Matrix-Tree-定理"><a href="#Matrix-Tree-定理" class="headerlink" title="Matrix-Tree 定理"></a>Matrix-Tree 定理</h3><p>对于无向图 $G$，定义 $G$ 的度数矩阵 $D$：</p>
+<script type="math/tex; mode=display">
+D_{i, j} = \begin{cases}
+\deg_i &, i = j \\
+0 &, i \ne j
+\end{cases}</script><p>定义 $G$ 的基尔霍夫矩阵 $L = D - C$，其中 $C$ 代表 $G$ 的邻接矩阵，则图 $G$ 的生成树数量是 $L$ 的任意一个代数余子式。</p>
+<h4 id="简单拓展"><a href="#简单拓展" class="headerlink" title="简单拓展"></a>简单拓展</h4><p>带权图的生成树：</p>
+<p>定义一棵树的权值是树上所有边的总权值。</p>
+<p>我们将度数矩阵中的度数改为与它相连的所有边的边权和，邻接矩阵的连通性改为边权，就可以求出所有生成树的权值和。</p>
+<p>有向图的生成树形图计数：</p>
+<p>我们将度数矩阵中的度数改为入度，邻接矩阵改为有向图的邻接矩阵，那么以 $x$ 为根的树形图个数即为 $L_{x, x}$。</p>
+<h4 id="Best-theorem"><a href="#Best-theorem" class="headerlink" title="Best theorem"></a>Best theorem</h4><p>一个有向图 $G$ 的欧拉回路的数量是</p>
+<script type="math/tex; mode=display">
+t_1(G) \prod_{i = 1}^n{(\deg(i) - 1)!}</script><p>其中 $t_1(G)$ 表示图 $G$ 的以 $1$ 为根的树形图的数量。</p>
+<h2 id="几道例题"><a href="#几道例题" class="headerlink" title="几道例题"></a>几道例题</h2><h3 id="连通图计数-集训队作业2013-城市规划"><a href="#连通图计数-集训队作业2013-城市规划" class="headerlink" title="连通图计数 - [集训队作业2013]城市规划"></a>连通图计数 - <a target="_blank" rel="noopener" href="https://fa555.github.io/2020/2020-Apr-Records/#%E9%9B%86%E8%AE%AD%E9%98%9F%E4%BD%9C%E4%B8%9A2013-%E5%9F%8E%E5%B8%82%E8%A7%84%E5%88%92">[集训队作业2013]城市规划</a></h3><p>这篇题解是刚学多项式求逆的时候写的，学完 OGF 和 EGF 之后重看题解学会了很多东西，并且有了个新方法（待补）</p>
+<h3 id="洛谷模板题"><a href="#洛谷模板题" class="headerlink" title="洛谷模板题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4980">洛谷模板题</a></h3><h4 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h4><p>一个 $n$ 个点 $n$ 条边的环，给点任意染色，求有多少种本质不同的染色方案，对 $10^9 + 7$ 取模。</p>
+<p>两种染色方案本质不同，当且仅当其任意旋转后不能重合。</p>
+<h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p>有 $n$ 种置换，分别为顺时针旋转 $0 \sim n - 1$ 格。其中对于顺时针旋转 $i$ 格的置换，每个循环节的长度为 $\displaystyle \frac n{ \gcd(i, n)}$，循环节个数为 $\gcd(i, n)$。</p>
+<p>设答案为 $L$，朴素 Polya 定理的式子是 $\displaystyle L = \frac 1n \sum_{i = 1}^n{n^{ \gcd(i, n)}}$，这个显然是要超时的。</p>
+<p>枚举 $\gcd$ 稍微推一下式子得到 $\displaystyle L = \sum_{d | n}{n^{d - 1} \varphi \left(\frac nd\right)}$。</p>
+<p>设 $n$ 的唯一分解 $\displaystyle n = \prod_{i = 1}^m{p_i^{c_i}}$，对所有 $1 \le i \le m$ 预处理 $\varphi(p_i), \varphi(p_i^2), \cdots, \varphi(p_i^{c_i})$。通过枚举 $p_i$ 的指数枚举 $d$ 即可在 $O(1)$ 求 $\displaystyle \varphi\left(\frac nd\right)$。</p>
+<h4 id="code"><a href="#code" class="headerlink" title="code"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/34274059">code</a></h4></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">fa_555</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.fa555.tech/2020/counting/">https://blog.fa555.tech/2020/counting/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.fa555.tech">fa_555's Blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/2020-June-Records/"><i class="fa fa-chevron-left">  </i><span>2020 June Records</span></a></div><div class="next-post pull-right"><a href="/2020/Suffix-Array/"><span>后缀数组学习笔记</span><i class="fa fa-chevron-right"></i></a></div></nav><div class="post-adv"></div></div></div><footer class="footer-bg" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2024 By fa_555</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

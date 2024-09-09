@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Math Theory"><meta name="keywords" content="数论"><meta name="author" content="fa_555,undefined"><meta name="copyright" content="fa_555"><title>Math Theory | fa_555's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/black.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/css/zenburn.min.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="reveal"><div class="slides"><section data-markdown data-separator="===" data-separator-vertical="---" data-charset="utf-8"><script type="text/template">
+<!-- .slide: data-background="#fff2cc" -->
+
+## Math Theory
+
+### by fa_555
+
+===
+
+<!-- .slide: data-background="#d0e0e3" -->
+
+### 模运算
+
+小学二年级的东西
+
+---
+
+<!-- .slide: data-background="#d0e0e3" -->
+
+给定任意整数 $b$，正整数 $p$，一定存在等式
+
+$$
+b = kp + r
+$$
+
+其中 $k, r \in \mathrm{Z}, 0 \le r < p$。
+
+则称 $k$ 是 $b$ 除以 $p$ 的商，$r$ 是 $b$ 除以 $p$ 的余数。
+
+定义 $b \bmod p$ 表示 $b$ 除以 $p$ 的余数。
+
+---
+
+<!-- .slide: data-background="#d0e0e3" -->
+
+众所周知，模运算满足以下几个运算律：
+
+$(a + b) \bmod p = a \bmod p + b \bmod p$
+
+$(a - b) \bmod p = a \bmod p - b \bmod p$
+
+$(a \ast b) \bmod p = a \bmod p \ast b \bmod p$
+
+$a ^ b \bmod p = ((a \bmod p) ^ b) \bmod p$
+
+$(a + b) \bmod p = (a \bmod p + b \bmod p) \bmod p$
+
+**注意不满足除法**
+
+===
+
+<!-- .slide: data-background="#d9ead3" -->
+
+### 快速幂 && 快速乘
+
+先来点简单的
+
+---
+
+<!-- .slide: data-background="#d9ead3" -->
+
+#### 模板题
+
+给定 $b, p, m$，求 $b ^ p \bmod m$。
+
+---
+
+<!-- .slide: data-background="#d9ead3" -->
+
+- 直接求是 $O(p)$ 的，太慢了。
+
+- 考虑优化。
+
+$$
+b ^ p =
+\begin{cases}
+(b ^ {\frac{p}{2}}) ^ 2 & p \bmod 2 = 0 \and p \ne 0 \\
+(b ^ {\lfloor \frac{p}{2} \rfloor}) ^ 2 * b & p \bmod 2 = 1 \\
+1 & p = 0
+\end{cases}
+$$
+</script></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/js/head.min.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"></script><script>Reveal.initialize({
+  mouseWheel: false,
+  transition: 'concave',
+  transitionSpeed: 'default',
+  parallaxBackgroundImage: '',
+  parallaxBackgroundSize: '',
+  parallaxBackgroundHorizontal: '',
+  parallaxBackgroundVertical: '',
+  markdown: {
+    smartypants: true
+  },
+  dependencies: [
+    { src: '/js/third-party/reveal/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/js/third-party/reveal/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    // Syntax highlight for <code> elements
+    { src: '/js/third-party/reveal/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    // Zoom in and out with Alt+click
+    { src: '/js/third-party/reveal/zoom.min.js', async: true },
+    // Speaker notes
+    { src: '/js/third-party/reveal/notes.min.js', async: true },
+    // MathJax
+    { src: '/js/third-party/reveal/math.min.js', async: true }
+  ]
+});</script></body></html>

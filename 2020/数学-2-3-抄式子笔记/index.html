@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="数学 2-3 抄式子笔记"><meta name="keywords" content="数学"><meta name="author" content="fa_555"><meta name="copyright" content="fa_555"><title>数学 2-3 抄式子笔记 | fa_555's Blog</title><meta name="robots" content="noindex"><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 7.3.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-number">1.</span> <span class="toc-text">随机变量及其分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">统计</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars.githubusercontent.com/u/29965600"></div><div class="author-info__name text-center">fa_555</div><div class="author-info__description text-center">夢の続きを知りたいのかい？</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/111890">Luogu</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">31</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">18</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">8</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://github.com/FA555">Github</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://codeforces.com/profile/fa_555">Codeforces</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fa_555's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">文章</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a><a class="site-page" href="/links">友链</a></span></div><div id="post-info"><div id="post-title">数学 2-3 抄式子笔记</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-04-15</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%96%87%E5%8C%96%E8%AF%BE/">文化课</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.4k</span><span class="post-meta__separator">|</span><span>阅读时长: 6 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>文化课好难啊<img src="/files/kk.png" alt="/kk"></p>
+<span id="more"></span>
+<hr>
+<h2 id="随机变量及其分布"><a href="#随机变量及其分布" class="headerlink" title="随机变量及其分布"></a>随机变量及其分布</h2><p>离散型随机变量的分布列具有如下性质：</p>
+<script type="math/tex; mode=display">
+p_i \ge 0, i \in[1, n], i \in \mathbb Z \\
+\sum_{i = 1}^n p_i = 1</script><hr>
+<p>设 $\Omega$ 为事件全集，$n(A)$ 表示事件 $A$ 所包含的基本事件个数，则</p>
+<script type="math/tex; mode=display">
+P(B | A) = \frac{n(AB)}{n(A)} = \frac{n(AB) / n(\Omega)}{n(A) / n(\Omega)} = \frac{P(AB)}{P(A)}</script><p>设 $A, B$ 为两个事件，且 $P(A) &gt; 0$，称</p>
+<script type="math/tex; mode=display">
+P(B | A) = \frac{P(AB)}{P(A)}</script><p>为在事件 $A$ 发生的条件下，事件 $B$ 发生的<strong>条件概率</strong>。</p>
+<p>条件概率具有概率的性质，任何事件的条件概率在 $0$ 到 $1$ 之间，即</p>
+<script type="math/tex; mode=display">
+0 \le P(B | A) \le 1</script><p>如果 $B$ 和 $C$ 是两个互斥事件，则</p>
+<script type="math/tex; mode=display">
+P(B \cup C | A) = P(B | A) + P(C | A)</script><hr>
+<p>设 $A, B$ 为两个事件，若</p>
+<script type="math/tex; mode=display">
+P(AB) = P(A)P(B)</script><p>则称事件 $A$ 与事件 $B$ <strong>相互独立</strong>。</p>
+<p>可以证明，如果事件 $A$ 与 $B$ 相互独立，那么 $A$ 与 $B$，$\bar A$ 与 $B$，$A$ 与 $\bar B$，$\bar A$ 与 $\bar B$ 也都相互独立。</p>
+<hr>
+<p>一般地，在 $n$ 次独立重复试验中，用 $X$ 表示事件 $A$ 的发生的次数，设每次试验中事件 $A$ 发生的概率为 $p$，则</p>
+<script type="math/tex; mode=display">
+P(X = k) = \binom nk p^k (1 - p)^{n - k}, k \in [0, n], k \in \mathbb N</script><p>此时称随机变量 $X$ 服从<strong>二项分布</strong>，记作 $X \sim B(n, p)$，并称 $p$ 为成功概率。</p>
+<hr>
+<p>一般地，若离散型随机变量 $X$ 的分布列为</p>
+<script type="math/tex; mode=display">
+\begin{array}{|c|c|c|c|c|}
+\hline 
+X & x_1 & x_2 & \cdots & x_n \\ \hline 
+P & p_1 & p_2 & \cdots & p_n \\ \hline
+\end{array} \tag{1}</script><p>则称</p>
+<script type="math/tex; mode=display">
+E(X) = \sum_{i = 1}^n x_i p_i</script><p>为随机变量 $X$ 的<strong>均值</strong>或<strong>数学期望</strong>。它反映了离散型随机变量取值的真实水平。</p>
+<script type="math/tex; mode=display">
+E(aX + b) = aE(x) + b</script><hr>
+<p>一般地，如果随机变量 $X$ 服从两点分布，那么</p>
+<script type="math/tex; mode=display">
+E(X) = 1 \times p + 0 \times (1 - p) = p</script><p>于是有：<strong>若 $X$ 服从两点分布，则 $E(X) = p$</strong>。</p>
+<p>如果 $X \sim B(n, p)$，那么由 $k \binom nk = n\binom{n - 1}{k - 1}$，可得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+E(X) &= \sum_{k = 0}^n{k \binom nk p^k q^{n - k}} \\
+&= \sum_{k = 1}^n{np \binom{n - 1}{k - 1} p^{k - 1} q^{(n - 1) - (k - 1)}} \\
+&= np \sum_{k = 0}^{n - 1}{p^k q^{n - 1 - k}} \\
+&= np
+\end{align}</script><p>于是有：若 $X \sim B(n, p)$，则 $E(X) = np$。</p>
+<hr>
+<p>若离散型随机变量 $X$ 的分布列如表 $(1)$ 所示，则 $(x_i - E(X))^2$ 表示了 $x_i$ 相对于均值 $E(X)$ 的偏离程度。而</p>
+<script type="math/tex; mode=display">
+D(X) = \sum_{i = 1}^n{(x_i - E(X))^2 p_i}</script><p>为这些偏离程度的加权平均，刻画了随机变量 $X$ 与其均值 $E(X)$ 的平均偏离程度。我们将 $D(X)$ 称为随机变量 $X$ 的<strong>方差</strong>，并称其算术平方根 $\sqrt{D(X)}$ 为随机变量 $X$ 的<strong>标准差</strong>。</p>
+<p>可以证明如下结论：</p>
+<ul>
+<li>若 $X$ 服从两点分布，则 $D(X) = p(1 - p)$。</li>
+<li>若 $X \sim B(n, p)$，则 $D(X) = np(1 - p)$。</li>
+<li>$D(aX + b) = a^2 D(X)$。</li>
+</ul>
+<hr>
+<p>有函数</p>
+<script type="math/tex; mode=display">
+\varphi_{\mu, \sigma}(x) = \frac 1{\sqrt{2 \pi} \sigma} e^{- \frac{(x - \mu)^2}{2\sigma^2}}</script><p>其中 $\mu$ 和 $\sigma \ (\sigma &gt; 0)$ 为参数。我们称 $\varphi_{\mu, \sigma}$ 的图象为<strong>正态分布密度曲线</strong>，简称<strong>正态曲线</strong>。</p>
+<p>一般地，如果对于任何实数 $a, b \ (a &lt; b)$，随机变量 $X$ 满足</p>
+<script type="math/tex; mode=display">
+P(a < X \le b) = \int_a^b{\varphi_{\mu, \sigma}(x) \ \mathrm dx}</script><p>则称随机变量 $X$ 服从<strong>正态分布</strong>，正态分布完全由参数 $\mu$ 和 $\sigma$ 确定，因此正态分布常记作 $N(\mu, \sigma^2)$。如果随机变量 $X$ 服从正态分布，则记为 $X \sim N(\mu, \sigma^2)$。</p>
+<p>正态曲线有以下特点：</p>
+<ol>
+<li>曲线位于 $x$ 轴上方，与 $x$ 轴不相交；</li>
+<li>曲线是单峰的，它关于直线 $x = \mu$ 对称；</li>
+<li>曲线在 $x = \mu$ 处达到峰值 $\frac 1{\sigma \sqrt{2 \pi}}$；</li>
+<li>曲线与 $x$ 轴之间的面积为 $1$。</li>
+</ol>
+<hr>
+<h2 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h2><p>对于一组具有线性相关关系的数据</p>
+<script type="math/tex; mode=display">
+(x_1, y_1), (x_2, y_2), \cdots, (x_n, y_n)</script><p>我们知道其回归直线 $y = bx + a$ 的斜率和截距的最小二乘估计分别为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\hat b &= \frac{\sum_{i = 1}^n{(x_i - \bar x)(y_i - \bar y)}}{\sum_{i = 1}^n{(x_i - \bar x)^2}} \\
+\hat a &= \bar y - \hat b \bar x
+\end{align}</script><hr>
+<p>线性回归模型</p>
+<script type="math/tex; mode=display">
+y = bx + a + e</script><p>中 $a$ 和 $b$ 为模型的未知参数，$e$ 是 $y$ 和 $bx + a$ 之间的误差，通常 $e$ 为随机变量，称为<strong>随机误差</strong>，它的均值 $E(e) = 0$，方差 $D(e) = \sigma^2 &gt; 0$。这样线性回归模型的完整表达式为</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+y = bx + a + e \\
+E(e) = 0, D(e) = \sigma^2
+\end{cases} \tag{2}</script><hr>
+<p>在实际应用中，我们用回归方程</p>
+<script type="math/tex; mode=display">
+\hat y = \hat bx + \hat a</script><p>中的 $\hat y$ 估计 $(2)$ 中的 $bx + a$。由于随机误差 $e = y - (bx + a)$，所以 $\hat e = y - \hat y$ 是 $e$ 的估计量，对于样本点 $(x_i, y_i)$ 而言，其随机误差为</p>
+<script type="math/tex; mode=display">
+e_i = y_i - bx_i - a</script><p>其估计值为</p>
+<script type="math/tex; mode=display">
+\hat e_i = y_i - \hat y_i = y_i - \hat bx_i - \hat a</script><p>$\hat e_i$ 称为相应于点 $x_i, y_i$ 的<strong>残差</strong>。</p>
+<hr>
+<script type="math/tex; mode=display">
+R^2 = 1 - \frac{\sum_{i = 1}^n{(y_i - \hat y)^2}}{\sum_{i = 1}^n{(y_i - \bar y)^2}}</script><p>也可以用于刻画回归的效果，$R^2$ 越接近于 $1$，表示回归的效果越好。</p>
+<hr>
+<p>一般地，假设有两个分类变量 $X$ 和 $Y$，它们的取值分别为 $\{x_1, x_2\}$ 和 $\{y_1, y_2\}$，其样本频数列联表（称为 $2 \times 2$ 列联表）为</p>
+<script type="math/tex; mode=display">
+\begin{array}{|c|c|c|c|}
+\hline & y_1 & y_2 & 总计 \\ \hline 
+x_1 & a & b & a + b \\ \hline 
+x_2 & c & d & c + d \\ \hline 
+总计 & a + c & b + d & a + b + c + d \\ \hline 
+\end{array}</script><p>利用公式</p>
+<script type="math/tex; mode=display">
+K^2 = \frac{(a + b + c + d)(ad - bc)^2}{(a + b)(c + d)(a + c)(b + d)}</script><p>计算出随机变量 $K^2$ 的观测值 $k$。查表确定对“两个分类变量有关系”犯错误的上界 $a$ 的临界值 $k_0$。如果 $k &gt; k_0$，就推断“$X$ 与 $Y$ 有关系”，这种推断犯错误的概率不超过 $a$。</p>
+<!-- flag of hidden posts --></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">fa_555</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.fa555.tech/2020/%E6%95%B0%E5%AD%A6-2-3-%E6%8A%84%E5%BC%8F%E5%AD%90%E7%AC%94%E8%AE%B0/">https://blog.fa555.tech/2020/%E6%95%B0%E5%AD%A6-2-3-%E6%8A%84%E5%BC%8F%E5%AD%90%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.fa555.tech">fa_555's Blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><nav id="pagination"></nav><div class="post-adv"></div></div></div><footer class="footer-bg" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2024 By fa_555</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

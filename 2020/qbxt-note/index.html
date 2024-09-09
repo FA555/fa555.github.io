@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="qbxt_note"><meta name="keywords" content="数学"><meta name="author" content="fa_555"><meta name="copyright" content="fa_555"><title>qbxt_note | fa_555's Blog</title><meta name="robots" content="noindex"><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 7.3.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E7%94%A8%E7%9A%84%E6%95%B0%E5%88%97%E6%B1%82%E5%92%8C"><span class="toc-number">1.</span> <span class="toc-text">没用的数列求和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TODO"><span class="toc-number">2.</span> <span class="toc-text">&#x2F;&#x2F; TODO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E6%A0%B9"><span class="toc-number">3.</span> <span class="toc-text">原根</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars.githubusercontent.com/u/29965600"></div><div class="author-info__name text-center">fa_555</div><div class="author-info__description text-center">夢の続きを知りたいのかい？</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/111890">Luogu</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">31</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">18</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">8</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://github.com/FA555">Github</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://codeforces.com/profile/fa_555">Codeforces</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fa_555's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">文章</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a><a class="site-page" href="/links">友链</a></span></div><div id="post-info"><div id="post-title">qbxt_note</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-17</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">385</span><span class="post-meta__separator">|</span><span>阅读时长: 2 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h3 id="没用的数列求和"><a href="#没用的数列求和" class="headerlink" title="没用的数列求和"></a>没用的数列求和</h3><p>$ {a_n} $ 是公差为 $ d $ 的等差数列，$ {b_n} $ 是公比为 $ q $ 的等比数列，记 $ T = \sum_{i = 1}^n a_i b_i $。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+qT &= a_1b_2 + a_2b_3 + \cdots + a_nb_nq \\
+(1 - q)T &= a_1b_1 + d(b_2 + b_3 + \cdots + b_n) - a_nb_nq \\
+T &= \frac{a_1b_1 + d\frac{b_1q(1 - q^{n - 1})}{1 - q} - a_nb_nq}{1 - q} \\
+\end{aligned}</script><hr>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(x + y)^n &= \sum_{i = 0}^n \binom{n}{i} x^i y^{n - i} \\
+\sum_{i = a}^b \binom{i}{c} &= \binom{b + 1}{c + 1} - \binom{a}{c + 1} \\
+\end{aligned}</script><h3 id="TODO"><a href="#TODO" class="headerlink" title="// TODO"></a><strong>// TODO</strong></h3><p>给定 $n, m (n \le 10^6, m \notin \mathbb{P})$，求$\sum_{i = 0}^n \binom{n}{i} \ast \operatorname{fib}(i) \bmod m$。</p>
+<p>solution:</p>
+<p>即求 $\operatorname{fib}(2n) \bmod m$</p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20200117085618613.png" alt="如果你们看到这行字，说明懒 fa_555 懒得把图片发上来了/cy"></p>
+<hr>
+<h3 id="原根"><a href="#原根" class="headerlink" title="原根"></a>原根</h3><p>如果对于 $g, p (p \in \mathbb{P})$ 有 $g, g^2, \cdots, a^{g - 1}$ 是 $1, 2, …, p - 1$ 的一个排列，那么 $g$ 是 $p$ 的原根。</p>
+<p>如果 $p - 1$ 有质因子 $q_1, q_2, …, q_t$，且对于任意一个 $q_i (1 \le i \le t)$ 均有 $g^{\frac{p - 1}{q_i}} \ne 1$，那么 $g$ 是 $p$ 的原根。</p>
+<p>$p$ 的原根的个数等于 $\varphi(p - 1)$。</p>
+<hr>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum_{d \mid n} \varphi(d) &= n \\
+\sum_{d \mid n} \mu(d) &=
+\begin{cases}
+1 & ,n = 1 \\
+0 & ,\text{otherwise}
+\end{cases}
+\end{aligned}</script><hr>
+<p>给定 $n$, $m$，求</p>
+<script type="math/tex; mode=display">
+\sum_{i = 1}^n \sum_{j = 1}^m \operatorname{lcm}(i, j) \bmod 20101009</script><p>solution:</p>
+<p>不妨设 $n &lt; m$。枚举 $\gcd(i, j)$。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ans &= \sum_{g = 1}^n \sum_{i = 1}^{\lfloor \frac{n}{g} \rfloor} \sum_{j = 1}^{\lfloor \frac{m}{g} \rfloor} [gcd(i, j) = 1] gij \\
+&= \sum_{g = 1}^n \sum_{i = 1}^{\lfloor \frac{n}{g} \rfloor} \sum_{j = 1}^{\lfloor \frac{m}{g} \rfloor} \sum_{d | \gcd(i, j)} \mu(d)gij \\
+&= \sum_{g = 1}^n g \sum_{d = 1}^{\lfloor \frac{n}{g} \rfloor} d^2\mu(d) · f(\lfloor \frac{n}{gd} \rfloor) f(\lfloor \frac{m}{gd} \rfloor) \\
+\end{aligned}</script><p>其中 $f(n) = \sum_{i = 1}^n i$</p>
+<!-- flag of hidden posts --></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">fa_555</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.fa555.tech/2020/qbxt-note/">https://blog.fa555.tech/2020/qbxt-note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.fa555.tech">fa_555's Blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><nav id="pagination"></nav><div class="post-adv"></div></div></div><footer class="footer-bg" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2024 By fa_555</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

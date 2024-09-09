@@ -1,0 +1,2744 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="线性代数 复习"><meta name="keywords" content="线性代数"><meta name="author" content="fa_555"><meta name="copyright" content="fa_555"><title>线性代数 复习 | fa_555's Blog</title><meta name="robots" content="noindex"><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 7.3.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">线性代数 - 期末总复习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E6%A6%82%E5%BF%B5%E6%B8%85%E5%8D%95"><span class="toc-number">1.1.</span> <span class="toc-text">前置概念清单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5"><span class="toc-number">1.1.2.</span> <span class="toc-text">矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%90%91%E9%87%8F%E3%80%81%E5%B9%B3%E9%9D%A2%E4%B8%8E%E7%9B%B4%E7%BA%BF"><span class="toc-number">1.1.3.</span> <span class="toc-text">空间向量、平面与直线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="toc-number">1.1.4.</span> <span class="toc-text">向量组的线性相关性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">1.1.5.</span> <span class="toc-text">线性方程组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="toc-number">1.1.6.</span> <span class="toc-text">特征值与特征向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%9E%8B"><span class="toc-number">1.1.7.</span> <span class="toc-text">二次型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E6%9B%B2%E9%9D%A2%E4%B8%8E%E6%9B%B2%E7%BA%BF"><span class="toc-number">1.1.8.</span> <span class="toc-text">空间曲面与曲线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-%E5%8E%9F%E6%96%87"><span class="toc-number">1.2.</span> <span class="toc-text">清单+原文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">行列式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-1"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-1"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%90%91%E9%87%8F%E3%80%81%E5%B9%B3%E9%9D%A2%E4%B8%8E%E7%9B%B4%E7%BA%BF-1"><span class="toc-number">1.2.3.</span> <span class="toc-text">空间向量、平面与直线</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-2"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-2"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7-1"><span class="toc-number">1.2.4.</span> <span class="toc-text">向量组的线性相关性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-3"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-3"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84-1"><span class="toc-number">1.2.5.</span> <span class="toc-text">线性方程组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-4"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-4"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F-1"><span class="toc-number">1.2.6.</span> <span class="toc-text">特征值与特征向量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-5"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-5"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%9E%8B-1"><span class="toc-number">1.2.7.</span> <span class="toc-text">二次型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-6"><span class="toc-number">1.2.7.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-6"><span class="toc-number">1.2.7.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E6%9B%B2%E9%9D%A2%E4%B8%8E%E6%9B%B2%E7%BA%BF-1"><span class="toc-number">1.2.8.</span> <span class="toc-text">空间曲面与曲线</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E5%8D%95-7"><span class="toc-number">1.2.8.1.</span> <span class="toc-text">清单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E6%9C%AC%E5%8E%9F%E6%96%87-7"><span class="toc-number">1.2.8.2.</span> <span class="toc-text">课本原文</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars.githubusercontent.com/u/29965600"></div><div class="author-info__name text-center">fa_555</div><div class="author-info__description text-center">夢の続きを知りたいのかい？</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/111890">Luogu</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">31</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">18</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">8</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://github.com/FA555">Github</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://codeforces.com/profile/fa_555">Codeforces</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fa_555's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">文章</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a><a class="site-page" href="/links">友链</a></span></div><div id="post-info"><div id="post-title">线性代数 复习</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-11-02</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">38.2k</span><span class="post-meta__separator">|</span><span>阅读时长: 158 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>每章有<strong>清单</strong>和<strong>课本原文</strong>两个 part，另附有<strong>结论</strong>部分作为单独的文件。不含有绝大多数公式定理的证明过程，含有部分引入过程，基本解题方法参照课本每个性质 / 定理后的第一道例题。截至目前，源文件代码 191KB🙏。</p>
+<p><strong>建议使用方式：</strong></p>
+<ol>
+<li><p>对照<strong>本文件 2~9 页</strong>查漏补缺全书知识点</p>
+<ul>
+<li><p>着重关注<strong>加粗条目</strong></p>
+</li>
+<li><p>发现遗漏则<strong>对照后文或课本复习相关知识点</strong></p>
+</li>
+<li><p>若发现相关题型的固定方法没有掌握则<strong>回看课本例题</strong></p>
+</li>
+</ul>
+</li>
+<li><p>转向另一个文件「Linalg-结论.pdf」</p>
+<ul>
+<li>甄别一些有意义的结论，尝试证明或记忆</li>
+<li>有余力的话可以挑战一下最后一部分的证明题习题</li>
+</ul>
+</li>
+</ol>
+<span id="more"></span>
+<hr>
+<p>勘误请发邮件到 <a href="mailto:fa_555@foxmail.com">fa_555@foxmail.com</a></p>
+<blockquote>
+<p>↓ 下面的目录是能点的</p>
+</blockquote>
+<p>[TOC]</p>
+<div style="page-break-after:always"></div>
+
+<h1 id="线性代数-期末总复习"><a href="#线性代数-期末总复习" class="headerlink" title="线性代数 - 期末总复习"></a>线性代数 - 期末总复习</h1><h2 id="前置概念清单"><a href="#前置概念清单" class="headerlink" title="前置概念清单"></a>前置概念清单</h2><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><ul>
+<li><strong>对角线法则</strong></li>
+<li>排列<ul>
+<li>自然排列（标准次序）</li>
+<li>逆序、逆序数</li>
+<li>奇排列、偶排列</li>
+<li>对换、相邻对换</li>
+</ul>
+</li>
+<li>上三角形行列式、下三角形行列式、三角形行列式</li>
+<li>行列式的转置（$D^ \mathrm T, D’$）<ul>
+<li>$D^ \mathrm T = D$</li>
+</ul>
+</li>
+<li><strong>行列式的性质</strong></li>
+<li><strong>行列式的展开</strong><ul>
+<li>余子式、代数余子式</li>
+</ul>
+</li>
+<li>克罗内克符号（克氏符号）</li>
+<li><strong>范德蒙德行列式</strong></li>
+<li>拉普拉斯定理</li>
+<li><strong>克拉默法则</strong><ul>
+<li>含有 $n$ 个方程的 $n$ 元线性方程组的系数行列式</li>
+</ul>
+</li>
+</ul>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><ul>
+<li>矩阵的概念<ul>
+<li>行标、列标</li>
+<li>方阵<ul>
+<li>对角元、主对角线</li>
+</ul>
+</li>
+<li>向量<ul>
+<li>行矩阵（行向量）、列矩阵（列向量）</li>
+<li>维数</li>
+</ul>
+</li>
+<li>同型矩阵<ul>
+<li>矩阵的相等</li>
+</ul>
+</li>
+<li>零矩阵</li>
+<li>特殊方阵<ul>
+<li>对角矩阵</li>
+<li>数量矩阵</li>
+<li>单位矩阵</li>
+<li>上三角矩阵、下三角矩阵</li>
+</ul>
+</li>
+<li>线性变换<ul>
+<li>恒等变换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>矩阵的运算<ul>
+<li>加法 &lt;- 线性运算<ul>
+<li>交换律</li>
+<li>结合律</li>
+<li>零元</li>
+<li>消去律</li>
+<li>逆元<ul>
+<li>减法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数乘 &lt;- 线性运算<ul>
+<li>结合律</li>
+<li>对加法、矩阵加法的分配律</li>
+</ul>
+</li>
+<li>乘法<ul>
+<li>结合律</li>
+<li>对矩阵加法的分配律</li>
+<li>与矩阵数乘的结合律</li>
+<li>左、右单位元</li>
+<li>方阵的方幂（乘幂）<ul>
+<li>两个性质，类比有理数</li>
+<li>关于矩阵的多项式</li>
+</ul>
+</li>
+<li>逆元（矩阵的乘法逆）</li>
+</ul>
+</li>
+<li>转置（一元）<ul>
+<li>自反性</li>
+<li>对加法的分配律</li>
+<li>常数转置不变</li>
+<li>反序律</li>
+<li>=&gt; 对称矩阵、反对称矩阵</li>
+</ul>
+</li>
+<li>行列式<ul>
+<li>转置的行列式</li>
+<li>数乘的行列式</li>
+<li>行列式乘法规则</li>
+</ul>
+</li>
+<li><strong>乘法逆</strong><ul>
+<li>可逆矩阵（非奇异矩阵）&lt;=&gt; 不可逆矩阵（奇异矩阵）</li>
+<li>逆矩阵</li>
+<li>逆矩阵的唯一性、矩阵乘法的逆元</li>
+<li>伴随矩阵<ul>
+<li><strong>伴随矩阵求逆</strong></li>
+</ul>
+</li>
+<li>性质<ul>
+<li>自反性</li>
+<li>数乘的逆</li>
+<li>行列式与逆</li>
+<li>转置的逆</li>
+<li>反序律</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>矩阵的秩</strong><ul>
+<li>矩阵的子式<ul>
+<li>非零子式</li>
+</ul>
+</li>
+<li>满秩矩阵 &lt;=&gt; 降秩矩阵</li>
+</ul>
+</li>
+<li>矩阵的初等变换<ul>
+<li>初等行变换 &amp; 初等列变换<ul>
+<li>对换变换</li>
+<li>数乘变换</li>
+<li>倍加变换</li>
+</ul>
+</li>
+<li>初等变换的性质<ul>
+<li>反身性</li>
+<li>对称性</li>
+<li>传递性</li>
+</ul>
+</li>
+<li>初等变换不改变矩阵的秩</li>
+<li>=&gt; <strong>行阶梯形矩阵</strong><ul>
+<li>主元</li>
+<li>=&gt; <strong>简化的阶梯型矩阵（行最简形矩阵）</strong><ul>
+<li><blockquote>
+<p><em>Reduced Row Echelon Form, RREF，在别的地方见到的翻译都是<strong>简化阶梯型矩阵</strong>或<strong>行化简阶梯型矩阵</strong></em></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>等价标准形矩阵</li>
+</ul>
+</li>
+<li><strong>初等行变换求逆</strong></li>
+<li>初等矩阵<ul>
+<li><strong>三种初等矩阵及其意义</strong></li>
+<li>初等矩阵求逆矩阵</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分块矩阵<ul>
+<li>子块（子矩阵）</li>
+<li>块行、块列</li>
+<li>按行分块、行向量表示法；按列分块、列向量表示法</li>
+<li>分块矩阵的运算<ul>
+<li>加法</li>
+<li>数乘</li>
+<li>转置</li>
+<li>乘法</li>
+<li><strong>求逆</strong></li>
+</ul>
+</li>
+<li>特殊分块矩阵<ul>
+<li>分块对角矩阵（准对角矩阵）</li>
+<li>准上三角矩阵、准下三角矩阵</li>
+<li>两类特殊分块矩阵的行列式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="空间向量、平面与直线"><a href="#空间向量、平面与直线" class="headerlink" title="空间向量、平面与直线"></a>空间向量、平面与直线</h3><ul>
+<li>向量（矢量）<em>(三维以下)</em><ul>
+<li>向量的长度（模）</li>
+<li>自由向量</li>
+<li>特殊的向量<ul>
+<li>零向量</li>
+<li>单位向量</li>
+</ul>
+</li>
+<li>向量的空间关系与判定<ul>
+<li>相等性</li>
+<li>负向量</li>
+<li>平行（共线）<ul>
+<li>=&gt; 共面</li>
+</ul>
+</li>
+<li>夹角<ul>
+<li>余弦 -&gt; 坐标表示式</li>
+<li>=&gt; 正交（垂直）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量的线性运算<ul>
+<li>加法<ul>
+<li>定义<ul>
+<li>三角形法则</li>
+<li>平行四边形法则</li>
+</ul>
+</li>
+<li>=&gt; 减法</li>
+</ul>
+</li>
+<li>数乘<ul>
+<li>零元</li>
+<li>单位元</li>
+<li>结合律</li>
+<li>对两种加法的分配律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>坐标<ul>
+<li>利用坐标进行线性运算</li>
+</ul>
+</li>
+<li>数量积（点积、内积）<ul>
+<li>交换性</li>
+<li>齐次性</li>
+<li>可加性</li>
+<li>非负性</li>
+<li>坐标表示式</li>
+</ul>
+</li>
+<li>混合积<ul>
+<li>性质（5）</li>
+<li>几何意义：有向体积</li>
+</ul>
+</li>
+<li>向量积（叉积、外积）<ul>
+<li>模的几何意义</li>
+<li>反对称性</li>
+<li>齐次性</li>
+<li>对向量加法的分配律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间直角坐标系<ul>
+<li>右手规则</li>
+<li>坐标轴 =&gt; 坐标面</li>
+<li>卦限</li>
+<li>坐标<ul>
+<li>点</li>
+<li>向量<ul>
+<li>直角坐标系的基向量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向径</li>
+<li>定比分点</li>
+<li>向量模的坐标表示式</li>
+<li>两点间距离公式</li>
+<li>向量的方向角</li>
+<li>向量在轴上的投影<ul>
+<li>三个性质</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>平面与直线<ul>
+<li>平面的法向量</li>
+<li><strong>平面的方程</strong><ul>
+<li>点法式方程</li>
+<li>一般方程</li>
+<li>截距式方程</li>
+<li>三点式方程</li>
+</ul>
+</li>
+<li>直线的方向向量<ul>
+<li>方向数</li>
+<li>方向余弦</li>
+</ul>
+</li>
+<li>空间直线的方程<ul>
+<li>参数方程</li>
+<li>标准方程（点向式方程、对称方程）</li>
+<li>普通方程（已经方程）</li>
+<li>两点式方程</li>
+</ul>
+</li>
+<li>平面与空间直线相关的问题<ul>
+<li>两平面的夹角</li>
+<li>点到平面的距离</li>
+<li>点到直线的距离</li>
+<li>空间两直线间的关系</li>
+<li>直线与平面的夹角</li>
+<li>平面束方程</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量组的线性相关性"><a href="#向量组的线性相关性" class="headerlink" title="向量组的线性相关性"></a>向量组的线性相关性</h3><ul>
+<li>$n$ 维向量<ul>
+<li>分量</li>
+<li>行向量</li>
+<li>列向量</li>
+<li>零向量</li>
+<li>负向量</li>
+<li>单位坐标向量</li>
+<li>向量的运算<ul>
+<li>线性运算<ul>
+<li>加法 =&gt; 减法</li>
+<li>数乘</li>
+<li>运算律<ul>
+<li>加法交换律</li>
+<li>加法结合律</li>
+<li>加法零元</li>
+<li>加法逆元</li>
+<li>加法单位元</li>
+<li>数乘单位元</li>
+<li>数乘对向量加法的分配律</li>
+<li>数乘对数量加法的分配律</li>
+<li>数乘结合律</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>线性组合<ul>
+<li>组合系数（表出系数）</li>
+<li><strong>线性表出（线性表示）</strong></li>
+<li><strong>线性相关 &lt;=&gt; 线性无关</strong><ul>
+<li>相关系数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量组<ul>
+<li>行向量组、列向量组</li>
+<li>向量组等价<ul>
+<li>等价关系：反身性、对称性、传递性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>极大线性无关向量组（极大无关组）</p>
+<blockquote>
+<p>明明是 <strong>极大线性无关组</strong> 这个名字用得更多些</p>
+</blockquote>
+</li>
+<li>向量组的秩<ul>
+<li>行秩</li>
+<li>列秩</li>
+</ul>
+</li>
+<li>向量空间<ul>
+<li>子空间</li>
+<li>零空间</li>
+<li><strong>向量生成（张成）的向量空间</strong></li>
+<li><strong>基</strong><ul>
+<li>基向量</li>
+<li>坐标</li>
+</ul>
+</li>
+<li>维数</li>
+</ul>
+</li>
+</ul>
+<h3 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h3><ul>
+<li><strong>齐次线性方程组</strong><ul>
+<li>组成<ul>
+<li>$m \times n$ 系数矩阵</li>
+<li>$n$ 维未知列向量</li>
+<li>$m$ 维零列向量</li>
+</ul>
+</li>
+<li>解向量（解）<ul>
+<li>零解 &lt;=&gt; 非零解</li>
+<li>解空间</li>
+<li>基础解系<ul>
+<li>解向量组</li>
+</ul>
+</li>
+<li>通解</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>非齐次线性方程组</strong><ul>
+<li>增广矩阵</li>
+<li>解的存在性<ul>
+<li>相容 &lt;=&gt; 不相容</li>
+</ul>
+</li>
+<li>导出组</li>
+<li>通解 / 特解</li>
+</ul>
+</li>
+</ul>
+<h3 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h3><ul>
+<li>特征方程<ul>
+<li>特征多项式</li>
+<li>特征值</li>
+<li>特征向量</li>
+</ul>
+</li>
+<li>矩阵的迹</li>
+<li>矩阵的相似关系<ul>
+<li><strong>矩阵的对角化</strong><ul>
+<li>可对角化 &lt;=&gt; 相似于对角矩阵</li>
+</ul>
+</li>
+<li>相似标准型</li>
+</ul>
+</li>
+</ul>
+<h3 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h3><ul>
+<li>$n$ 维向量<ul>
+<li>内积</li>
+<li>柯西不等式</li>
+<li>向量的长度（范数）<ul>
+<li>单位向量</li>
+</ul>
+</li>
+<li>向量的夹角<ul>
+<li>正交<ul>
+<li><strong>施密特正交化方法</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>共轭向量</li>
+</ul>
+</li>
+<li>矩阵<ul>
+<li>正交矩阵（正交变换）<ul>
+<li><strong>5 个性质</strong></li>
+</ul>
+</li>
+<li>实对称矩阵<ul>
+<li><strong>3 个性质定理</strong></li>
+<li><strong>实对称矩阵对角化的一般方法</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二次型<ul>
+<li>二次型的矩阵<ul>
+<li><strong>矩阵的合同</strong></li>
+</ul>
+</li>
+<li>二次型的秩</li>
+<li>标准形<ul>
+<li>将二次型化为标准形的一般方法<ul>
+<li><strong>正交变换</strong></li>
+<li>配方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>规范形<ul>
+<li><strong>正惯性指数</strong>、负惯性指数、符号差</li>
+</ul>
+</li>
+<li>正定二次型、正定矩阵<ul>
+<li>半正定、负定、半负定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="空间曲面与曲线"><a href="#空间曲面与曲线" class="headerlink" title="空间曲面与曲线"></a>空间曲面与曲线</h3><ul>
+<li>空间曲面<ul>
+<li>曲面的方程</li>
+<li>旋转面</li>
+<li>柱面</li>
+<li>二次曲面<ul>
+<li>椭球面</li>
+<li>单叶双曲面</li>
+<li>双叶双曲面</li>
+<li>椭圆锥面</li>
+<li>椭圆抛物面</li>
+<li>双曲抛物面</li>
+<li>椭圆柱面、双曲柱面、抛物柱面</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间曲线<ul>
+<li>方程<ul>
+<li>一般方程</li>
+<li>参数方程</li>
+</ul>
+</li>
+<li>在坐标面上的投影</li>
+</ul>
+</li>
+</ul>
+<div style="page-break-after:always"></div>
+
+<h2 id="清单-原文"><a href="#清单-原文" class="headerlink" title="清单+原文"></a>清单+原文</h2><h3 id="行列式-1"><a href="#行列式-1" class="headerlink" title="行列式"></a>行列式</h3><h4 id="清单"><a href="#清单" class="headerlink" title="清单"></a>清单</h4><ul>
+<li><strong>对角线法则</strong></li>
+<li>排列<ul>
+<li>自然排列（标准次序）</li>
+<li>逆序、逆序数</li>
+<li>奇排列、偶排列</li>
+<li>对换、相邻对换</li>
+</ul>
+</li>
+<li>上三角形行列式、下三角形行列式、三角形行列式</li>
+<li>行列式的转置（$D^ \mathrm T, D’$）<ul>
+<li>$D^ \mathrm T = D$</li>
+</ul>
+</li>
+<li><strong>行列式的性质</strong></li>
+<li><strong>行列式的展开</strong><ul>
+<li>余子式、代数余子式</li>
+</ul>
+</li>
+<li>克罗内克符号（克氏符号）</li>
+<li><strong>范德蒙德行列式</strong></li>
+<li>拉普拉斯定理</li>
+<li><strong>克拉默法则</strong><ul>
+<li>含有 $n$ 个方程的 $n$ 元线性方程组的系数行列式</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文"><a href="#课本原文" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>定义 1</strong> 在一个 $n$ 元排列 $p_1p_2 \cdots p_n$ 中，若一个大的数排在一个小的数的前面（即与标准次序不同时），则称这两个数形成一个<strong>逆序</strong>。一个排列中所有的逆序的总数叫做这个排列的<strong>逆序数</strong>，记为 $\tau(p_1p_2 \cdots p_n)$。</p>
+<p><strong>定义 2</strong> 逆序数为奇数的排列称为<strong>奇排列</strong>，逆序数为偶数的排列称为<strong>偶排列</strong>。</p>
+<p><strong>定义 3</strong> 将一个排列中的某两个数的位置互换，而其余的数不动，就得到了一个新的排列，称这样的变换为一次<strong>对换</strong>，将相邻两个数对换，称为<strong>相邻对换</strong>。</p>
+<p><strong>定理 1</strong> 对排列进行一次对换则改变其奇偶性。</p>
+<p><strong>推论 1</strong> 奇排列调成自然排列的对换次数为奇数，偶排列调成自然排列的对换次数为偶数。</p>
+<p><strong>推论 2</strong> 全体 $n$ 元排列 $(n &gt; 1)$ 的集合中，奇排列与偶排列各一半。</p>
+<p><strong>定义 4</strong> 将 $n^2$ 个数 $a_{ij}(i, j = 1, 2, \cdots, n)$ 排成 $n$ 行 $n$ 列，在其左右两侧加两条竖线，按照下式</p>
+<script type="math/tex; mode=display">
+D_n = \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix} = \sum_{p_1p_2 \cdots p_n}{(-1)^{ \tau(p_1p_2 \cdots p_n)}a_{1p_1}a_{2p_2} \cdots a_{np_n}}</script><p>计算得到一个数，称为 <strong>$n$ 阶行列式</strong>，简记作 $D = \det(a_{ij})$，其中 $\sum \limits_{p_1p_2 \cdots p_n}$ 表示对所有 $n$ 元排列 $p_1p_2 \cdots p_n$ 求和。</p>
+<p><strong>定义（三角形行列式）</strong> 主对角线一下的元素全为 $0$ 的行列式叫作<strong>上三角型行列式</strong>，主对角线以上的元素全为零的行列式叫做<strong>下三角形行列式</strong>。上三角形行列式与下三角形行列式统称为<strong>三角形行列式</strong>。</p>
+<p><strong>定理</strong> 三角形行列式的值等于对角线上所有元素的乘积。</p>
+<p><strong>定理 2</strong> $n$ 阶行列式也可以定义为</p>
+<script type="math/tex; mode=display">
+D_n = \sum_{p_1p_2 \cdots p_n}{ (-1)^{ \tau(p_1p_2 \cdots p_n)}}{ a_{q_11}a_{q_22} \cdots a_{q_nn}}</script><p>其中 $\sum \limits_{p_1p_2 \cdots p_n}$ 表示对所有 $n$ 元排列求和。</p>
+<p><strong>行列式的性质</strong></p>
+<blockquote>
+<p>太长不看版：</p>
+<p>(1) 行列式与它的转置行列式相等。</p>
+<p>(2) 交换行列式的任意两行（列），行列式的值改变符号。</p>
+<p>(3) 行列式的某一行（列）中所有的元素都乘以同一个数 $k$，等于用数 $k$ 乘此行列式。</p>
+<p>(4) 如果行列式中有两行（列）的元素成比例，则此行列式的值等于零。</p>
+<p>(5) 如果行列式中某一行（列）的元素全为零，则此行列式的值等于零。</p>
+<p>(6) 行列式可以逐行（列）拆开。</p>
+<p>(7) 把行列式 $D$ 的某一行（列）的所有元素都乘以同一个数后加到另一行（列）的对应元素上去，所得的行列式仍为 $D$。</p>
+</blockquote>
+<p><strong>性质 1</strong> 行列式与它的转置行列式相等，即</p>
+<script type="math/tex; mode=display">
+D^ \mathrm T = D</script><p><strong>性质 2</strong> 交换行列式的任意两行（列），行列式的值改变符号，即</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & & \vdots \\
+a_{i1} & a_{i2} & \cdots & a_{in} \\
+\vdots & \vdots & & \vdots \\
+a_{k1} & a_{k2} & \cdots & a_{kn} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix} = - \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & & \vdots \\
+a_{k1} & a_{k2} & \cdots & a_{kn} \\
+\vdots & \vdots & & \vdots \\
+a_{i1} & a_{i2} & \cdots & a_{in} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix}</script><p><strong>推论</strong> 如果行列式中有两行（列）相同，则此行列式的值等于零。</p>
+<p><strong>性质 3</strong> 行列式的某一行（列）中所有的元素都乘以同一个数 $k$，等于用数 $k$ 乘此行列式。</p>
+<p><strong>推论 1</strong> 行列式中某一行（列）中所有元素的公因子可以提到行列式符号的外面。</p>
+<p><strong>推论 2</strong> 如果行列式中有两行（列）的元素全为零，则此行列式的值等于零。</p>
+<p><strong>性质 4</strong> 如果行列式中有两行（列）的元素成比例，则此行列式的值等于零。</p>
+<p><strong>性质 5</strong> 行列式可以按行（列）拆开，即</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+D &= \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & & \vdots \\
+a_{i1} + b_{i1} & a_{i2} + b_{i2} & \cdots & a_{in} + b_{in} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix} \\
+&=\begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & & \vdots \\
+a_{i1} & a_{i2} & \cdots & a_{in} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix} + \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & & \vdots \\
+b_{i1} & b_{i2} & \cdots & b_{in} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix}
+\end{aligned}</script><p>利用性质 5 拆开行列式时，应当逐行、逐列拆开。</p>
+<p><strong>性质 6</strong> 把行列式 $D$ 的某一行（列）的所有元素都乘以同一个数以后加到另一行（列）的对应元素上去，所得的行列式仍为 $D$。</p>
+<p><strong>定义 5</strong> 在 $D_n$ 中划去元素 $a_{ij}$ 所在的第 $i$ 行和第 $j$ 列后剩下的 $n - 1$ 行和 $n - 1$ 列元素，按原来的相对顺序组成一个 $n - 1$ 阶行列式，记为 $M_{ij}$，即</p>
+<script type="math/tex; mode=display">
+M_{ij} = \begin{vmatrix}
+a_{1,1} & \cdots & a_{1, j - 1} & a_{1, j + 1} & \cdots & a_{1, n} \\
+\vdots &  & \vdots & \vdots & & \vdots \\
+a_{i - 1,1} & \cdots & a_{i - 1, j - 1} & a_{i - 1, j + 1} & \cdots & a_{i - 1, n} \\
+a_{i + 1,1} & \cdots & a_{i + 1, j - 1} & a_{i + 1, j + 1} & \cdots & a_{i + 1, n} \\
+\vdots &  & \vdots & \vdots & & \vdots \\
+a_{n,1} & \cdots & a_{n, j - 1} & a_{n, j + 1} & \cdots & a_{n, n} \\
+\end{vmatrix}</script><p>称 $M_{ij}$ 为元素 $a_{ij}$ 的<strong>余子式</strong>，令</p>
+<script type="math/tex; mode=display">
+A_{ij} = (-1)^{i + j}M_{ij}</script><p>称 $A_{ij}$ 为元素 $a_{ij}$ 的<strong>代数余子式</strong> $(i, j = 1, 2, \cdots, n)$。</p>
+<p><strong>定理 3（行列式按行（列）展开法则）</strong> 行列式 $D$ 等于它的任一行（列）的各元素与其对应的代数余子式的乘积之和，即</p>
+<script type="math/tex; mode=display">
+D = a_{i1} A_{i1} + a_{i2} A_{i2} + \cdots + a_{in} A_{in} \qquad (i = 1, 2, \cdots, n)</script><p>或</p>
+<script type="math/tex; mode=display">
+D = a_{1j} A_{1j} + a_{2j} A_{2j} + \cdots + a_{nj} A_{nj} \qquad (j = 1, 2, \cdots, n)</script><p><strong>推论</strong> 行列式某一行（列）的元素与另一行（列）的对应元素的代数余子式的乘积之和等于零。即</p>
+<script type="math/tex; mode=display">
+a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 \qquad (i \ne j)</script><p>或</p>
+<script type="math/tex; mode=display">
+a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 \qquad (i \ne j)</script><p>综合定理 3 及其推论，有展开式</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum_{j = 1}^n{a_{kj} A_{ij}} = \delta_{ki}D
+\sum_{j = 1}^n{a_{jk} A_{ji}} = \delta_{ki}D
+\end{aligned}</script><p>其中，称 $\delta_{ki} = \begin{cases}1, \quad k = i, \\ 0, \quad k \ne i \end{cases}$ 为<strong>克罗内克 (Kronecker) 符号</strong>，或<strong>克氏符号</strong>。</p>
+<p><strong>范德蒙德 (Vandermonde) 行列式</strong></p>
+<script type="math/tex; mode=display">
+D_n = \begin{vmatrix}
+1 & 1 & \cdots & 1 \\
+a_1 & a_2 & \cdots & a_n \\
+a_1^2 & a_2^2 & \cdots & a_n^2 \\
+\vdots & \vdots & & \vdots \\
+a_1^{n - 1} & a_2^{n - 1} & \cdots & a_n^{n - 1} \\
+\end{vmatrix} = \prod_{1 \le j < i \le n}{(a_i - a_j)}</script><p><strong>定义 6</strong> 在 $n$ 阶行列式</p>
+<script type="math/tex; mode=display">
+D = \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix}</script><p>中任意选定 $k$ 行，（第 $i_1,i_2, \cdots, i_k$ 行）与 $k$ 列（第 $j_1, j_2, \cdots, j_k$ 列），位于这些行和列的相交处的元素按原来的次序构成的 $k$ 阶行列式</p>
+<script type="math/tex; mode=display">
+N = \begin{vmatrix}
+a_{i_1j_1} & a_{i_1j_2} & \cdots & a_{i_1j_k} \\
+a_{i_2j_1} & a_{i_2j_2} & \cdots & a_{i_2j_k} \\
+\vdots & \vdots & & \vdots \\
+a_{i_kj_1} & a_{i_kj_2} & \cdots & a_{i_kj_k} \\
+\end{vmatrix}</script><p>称为该行列式的一个 <strong>$k$ 阶子式</strong>，在 $D$ 中去掉这些行和列后剩下的元素按原来的次序构成的一个 $n - k$ 阶子式，称为 $N$ 的<strong>余子式</strong>，记为 $M$，称</p>
+<script type="math/tex; mode=display">
+A = (-1)^{i_1 + \cdots + i_k + j_1 + \cdots + j_k} M</script><p>为 $N$ 的<strong>代数余子式</strong>。</p>
+<p><strong>定理 4（拉普拉斯定理）</strong> 在 $n$ 阶行列式 $D$ 中，任取 $k$ 行（列），设由这 $k$ 行（列）元素所组成的所有 $k$ 阶子式为 $N_1, N_2, \cdots, N_m(m = C_n^k)$，其所对应的代数余子式分别为 $A_1, A_2, \cdots, A_m$，则有</p>
+<script type="math/tex; mode=display">
+D = N_1A_1 + N_2A_2 + \cdots + N_mA_m</script><p><strong>定义</strong> 含有 $n$ 个方程的 $n$ 元线性方程组的一般形式为</p>
+<script type="math/tex; mode=display">
+\left\{ \begin{array}{cc}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
+\vdots \\
+a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n \\
+\end{array} \right.</script><p>它的系数构成的 $n$ 阶行列式</p>
+<script type="math/tex; mode=display">
+D = \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{vmatrix}</script><p>称为方程组的<strong>系数行列式</strong>。</p>
+<p><strong>定理 5（克拉默 (Cramer) 法则）</strong> 若 $n$ 个方程的 $n$ 元线性方程组的系数行列式 $D = \det(a_{ij}) \ne 0$ ，则方程组必有唯一解</p>
+<script type="math/tex; mode=display">
+x_j = \frac{D_j}D, \quad j = 1, 2, \cdots, n</script><p>其中，</p>
+<script type="math/tex; mode=display">
+D_j = \begin{vmatrix}
+a_{11} & \cdots & a_{1,j - 1} &  b_1 & a_{1, j + 1} & \cdots & a_{1n} \\
+\vdots & & \vdots & \vdots & \vdots & & \vdots \\
+a_{i1} & \cdots & a_{i, j - 1} & b_i & a_{i, j + 1} &  \cdots & a_{2n} \\
+\vdots & & \vdots & \vdots & \vdots & & \vdots \\
+a_{n1} & \cdots & a_{n,j - 1} & b_n & a_{n,j + 1} & \cdots & a_{nn} \\
+\end{vmatrix}, \quad j = 1, 2, \cdots, n</script><p>是将系数行列式 $D$ 中第 $j$ 列元素 $a_{1j}, a_{2j}, \cdots, a_{nj}$ 对应地换为 $b_1, b_2, \cdots, b_n$ 得到的行列式。</p>
+<p><strong>定义</strong> 如果 $n$ 元线性方程组右端的常数项 $b_1, b_2, \cdots, b_n$ 均为零，即</p>
+<script type="math/tex; mode=display">
+\left\{ \begin{array}{cc}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\
+\vdots \\
+a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0 \\
+\end{array} \right.</script><p>则称为<strong>齐次线性方程组</strong>。当 $b_1, b_2, \cdots, b_n$ 不全为零时，称方程组为<strong>非齐次线性方程组</strong>。</p>
+<p><strong>定理 6</strong> 如果齐次线性方程组的系数行列式 $D \ne 0$，则它只有零解：</p>
+<script type="math/tex; mode=display">
+x_1 = x_2 = \cdots = x_n = 0</script><p><strong>推论</strong> 若齐次线性方程组有非零解，则它的系数行列式 $D = 0$。</p>
+<div style="page-break-after:always"></div>
+
+<h3 id="矩阵-1"><a href="#矩阵-1" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="清单-1"><a href="#清单-1" class="headerlink" title="清单"></a>清单</h4><ul>
+<li>矩阵的概念<ul>
+<li>行标、列标</li>
+<li>方阵<ul>
+<li>对角元、主对角线</li>
+</ul>
+</li>
+<li>向量<ul>
+<li>行矩阵（行向量）、列矩阵（列向量）</li>
+<li>维数</li>
+</ul>
+</li>
+<li>同型矩阵<ul>
+<li>矩阵的相等</li>
+</ul>
+</li>
+<li>零矩阵</li>
+<li>特殊方阵<ul>
+<li>对角矩阵</li>
+<li>数量矩阵</li>
+<li>单位矩阵</li>
+<li>上三角矩阵、下三角矩阵</li>
+</ul>
+</li>
+<li>线性变换<ul>
+<li>恒等变换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>矩阵的运算<ul>
+<li>加法 &lt;- 线性运算<ul>
+<li>交换律</li>
+<li>结合律</li>
+<li>零元</li>
+<li>消去律</li>
+<li>逆元<ul>
+<li>减法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数乘 &lt;- 线性运算<ul>
+<li>结合律</li>
+<li>对加法、矩阵加法的分配律</li>
+</ul>
+</li>
+<li>乘法<ul>
+<li>结合律</li>
+<li>对矩阵加法的分配律</li>
+<li>与矩阵数乘的结合律</li>
+<li>左、右单位元</li>
+<li>方阵的方幂（乘幂）<ul>
+<li>两个性质，类比有理数</li>
+<li>关于矩阵的多项式</li>
+</ul>
+</li>
+<li>逆元（矩阵的乘法逆）</li>
+</ul>
+</li>
+<li>转置（一元）<ul>
+<li>自反性</li>
+<li>对加法的分配律</li>
+<li>常数转置不变</li>
+<li>反序律</li>
+<li>=&gt; 对称矩阵、反对称矩阵</li>
+</ul>
+</li>
+<li>行列式<ul>
+<li>转置的行列式</li>
+<li>数乘的行列式</li>
+<li>行列式乘法规则</li>
+</ul>
+</li>
+<li><strong>乘法逆</strong><ul>
+<li>可逆矩阵（非奇异矩阵）&lt;=&gt; 不可逆矩阵（奇异矩阵）</li>
+<li>逆矩阵</li>
+<li>逆矩阵的唯一性、矩阵乘法的逆元</li>
+<li>伴随矩阵<ul>
+<li><strong>伴随矩阵求逆</strong></li>
+</ul>
+</li>
+<li>性质<ul>
+<li>自反性</li>
+<li>数乘的逆</li>
+<li>行列式与逆</li>
+<li>转置的逆</li>
+<li>反序律</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>矩阵的秩</strong><ul>
+<li>矩阵的子式<ul>
+<li>非零子式</li>
+</ul>
+</li>
+<li>满秩矩阵 &lt;=&gt; 降秩矩阵</li>
+</ul>
+</li>
+<li>矩阵的初等变换<ul>
+<li>初等行变换 &amp; 初等列变换<ul>
+<li>对换变换</li>
+<li>数乘变换</li>
+<li>倍加变换</li>
+</ul>
+</li>
+<li>初等变换的性质<ul>
+<li>反身性</li>
+<li>对称性</li>
+<li>传递性</li>
+</ul>
+</li>
+<li>初等变换不改变矩阵的秩</li>
+<li>=&gt; <strong>行阶梯形矩阵</strong><ul>
+<li>主元</li>
+<li>=&gt; <strong>简化的阶梯型矩阵（行最简形矩阵）</strong><ul>
+<li><blockquote>
+<p><em>Reduced Row Echelon Form, RREF，在别的地方见到的翻译都是<strong>简化阶梯型矩阵</strong>或<strong>行化简阶梯型矩阵</strong></em></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>等价标准形矩阵</li>
+</ul>
+</li>
+<li><strong>初等行变换求逆</strong></li>
+<li>初等矩阵<ul>
+<li><strong>三种初等矩阵及其意义</strong></li>
+<li>初等矩阵求逆矩阵</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分块矩阵<ul>
+<li>子块（子矩阵）</li>
+<li>块行、块列</li>
+<li>按行分块、行向量表示法；按列分块、列向量表示法</li>
+<li>分块矩阵的运算<ul>
+<li>加法</li>
+<li>数乘</li>
+<li>转置</li>
+<li>乘法</li>
+<li><strong>求逆</strong></li>
+</ul>
+</li>
+<li>特殊分块矩阵<ul>
+<li>分块对角矩阵（准对角矩阵）</li>
+<li>准上三角矩阵、准下三角矩阵</li>
+<li>两类特殊分块矩阵的行列式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-1"><a href="#课本原文-1" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>定义 1</strong> 由 $m \times n$ 个数 $a_{ij} (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n)$ 排成的一个 $m$ 行 $n$ 列的<strong>数表</strong></p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}</script><p>称为一个 <strong>$m$ 行 $n$ 列矩阵</strong>，简称 <strong>$m \times n$ 矩阵</strong>。它是一个用一对圆括号所围的矩形阵列。其中 $a_{ij}$ 称为该矩阵的第 $i$ 行第 $j$ 列元素 $(i = 1, 2, \cdots, m; j = 1, 2, \cdots, n)$，而 $i$ 称为<strong>行标</strong>，$j$ 称为<strong>列标</strong>。第 $i$ 行与第 $j$ 列的交叉位置记为 $(i, j)$。</p>
+<p>元素为实数的矩阵称为实矩阵，元素为复数的矩阵称为复矩阵，如无特殊说明，本书中的矩阵都指实矩阵。</p>
+<p>通常用大写黑体字母 $\boldsymbol{A, B, C}$ 等表示矩阵。有时为了表明矩阵的行数 $m$ 和列数 $n$，也可记为 $\boldsymbol A = (a_{ij})_{m \times n}$ 或 $\boldsymbol A_{m \times n}$，有时简记作 $\boldsymbol A$。</p>
+<p>当 $m = n$ 时，称 $\boldsymbol A = (a_{ij})_{n \times n}$ 为 <strong>$n$ 阶矩阵</strong>，或者称为 <strong>$n$ 阶方阵</strong>。$n$ 解方阵是由 $n^2$ 个数排成的一个正方表，它不是一个数，它与 $n$ 阶行列式是两个完全不同的概念。只有一阶方阵看做是一个数。在 $n$ 阶方阵的对角线上的元素 $a_{11}, a_{22}, \cdots, a_{nn}$，称为此方阵的<strong>对角元</strong>。对角元所在对角线称为<strong>主对角线</strong>。</p>
+<p>当 $m = 1$ 时，称</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+a_1 & a_2 & \cdots & a_n
+\end{pmatrix}</script><p>为<strong>行矩阵</strong>，即 <strong>$1 \times n$ 矩阵</strong>，$1 \times n$ 矩阵又称为 <strong>$n$ 维行向量</strong>。为了避免元素间的混淆，行矩阵也记作</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = (a_1, a_2, \cdots, a_n)</script><p>当 $n = 1$ 时，称</p>
+<script type="math/tex; mode=display">
+\boldsymbol B = \begin{pmatrix}
+b_1 \\
+b_2 \\
+\vdots \\
+b_m
+\end{pmatrix}</script><p>为<strong>列矩阵</strong>，即 $m \times 1$ 矩阵，$m \times 1$ 矩阵又称为 <strong>$m$ 维列向量</strong>。</p>
+<p>向量是特殊的矩阵，而且它们是非常重要的特殊矩阵。这里，向量的<strong>维数</strong>都指的是其中所含的元素的个数。行矩阵和列矩阵也可用小写字母 $\boldsymbol{a, b, \cdots, x, y, \cdots}$ 来表示。</p>
+<p>如果两个矩阵的行数、列数分别相等，则称它们是<strong>同型矩阵</strong>。</p>
+<p>设 $\boldsymbol A = (a_{ij})_{m \times n}$，$\boldsymbol B = (b_{ij})_{m \times n}$，则 $\boldsymbol A$ 与 $\boldsymbol B$ 是同型矩阵。两个同型矩阵 $\boldsymbol A$ 与 $\boldsymbol B$ 的对应元素相等，则称 $\boldsymbol A$ 与 $\boldsymbol B$ 相等，即</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \boldsymbol B \Leftrightarrow a_{ij} = b_{ij}, \quad (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n)</script><p>元素全为零的矩阵称为<strong>零矩阵</strong>，用 $\boldsymbol O_{m, n}$ 或者用 $\boldsymbol O$ 表示，有时也用 $\boldsymbol 0$ 表示。即</p>
+<script type="math/tex; mode=display">
+\boldsymbol 0 = \begin{pmatrix}
+0 & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 \\
+\vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & 0 \\
+\end{pmatrix}</script><p>注意 不同型的零矩阵是不相等的。</p>
+<p>几种常用的特殊方阵：</p>
+<p>(1) $n$ 阶对角矩阵</p>
+<p>形如</p>
+<script type="math/tex; mode=display">
+\boldsymbol \Lambda = \begin{pmatrix}
+a_{11} & 0 & \cdots & 0 \\
+0 & a_{22} & \cdots & 0 \\
+\vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & a_{nn} \\
+\end{pmatrix} \quad \text{或} \quad \boldsymbol \Lambda = \begin{pmatrix}
+a_{11} & & & \\
+& a_{22} & & \\
+& & \ddots & \\
+& & & a_{nn} \\
+\end{pmatrix}</script><p>的矩阵，称为<strong>对角矩阵</strong>，对角矩阵必须是方阵。</p>
+<p>(2) 数量矩阵</p>
+<p>当对角矩阵的主对角线上的元素都相同时，称它为<strong>数量矩阵</strong>。$n$ 阶数量矩阵有如下形式：</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+a & 0 & \cdots & 0 \\
+0 & a & \cdots & 0 \\
+\vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & a \\
+\end{pmatrix} \quad \text{或} \quad \begin{pmatrix}
+a & & & \\
+& a & & \\
+& & \ddots & \\
+& & & a \\
+\end{pmatrix}</script><p>特别当 $n = 1$ 时，称它为 $n$ 阶<strong>单位矩阵</strong>。$n$ 阶单位矩阵记为 $\boldsymbol E_n$ 或 $\boldsymbol I_n$，即</p>
+<script type="math/tex; mode=display">
+\boldsymbol E_n = \begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & 1 \\
+\end{pmatrix} \quad \text{或} \quad \boldsymbol E_n = \begin{pmatrix}
+1 & & & \\
+& 1 & & \\
+& & \ddots & \\
+& & & 1 \\
+\end{pmatrix}</script><p>在不会引起混淆时，也可以用 $\boldsymbol E$ 或 $\boldsymbol I$ 表示单位矩阵。</p>
+<p>$n$ 阶矩阵常用 $a \boldsymbol E_n$ 或 $a \boldsymbol I_n$ 表示。</p>
+<p>(3) $n$ 阶上三角矩阵与 $n$ 阶下三角矩阵</p>
+<p>形如</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+0 & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & a_{nn} \\
+\end{pmatrix}, \begin{pmatrix}
+a_{11} & 0 & \cdots & 0 \\
+a_{21} & a_{22} & \cdots & 0 \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{pmatrix}</script><p>的矩阵分别称为<strong>上三角矩阵</strong>和<strong>下三角矩阵</strong>。</p>
+<p>对角矩阵必须是方阵。一个方阵是对角矩阵当且仅当它既是上三角矩阵，又是下三角矩阵。</p>
+<p>在许多实际问题中，经常遇到一些变量要用另一些变量线性表示。设一组变量 $y_1, y_2, \cdots, y_n$ 用另一组变量 $x_1, x_2, \cdots, x_n$ 线性表示为</p>
+<script type="math/tex; mode=display">
+\left\{ \begin{array}{cc}
+y_1 = a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \\
+y_2 = a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \\
+\vdots \\
+y_n = a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n \\
+\end{array} \right.</script><p>把这种从一组变量 $x_1, x_2, \cdots, x_n$ 到另一组变量 $y_1, y_2, \cdots, y_n$ 的变换叫作<strong>线性变换</strong>。</p>
+<p>给定了线性变换，它的系数所构成的矩阵也就随之确定；反之，如果给出一个 $n \times n$ 矩阵，则可构造出线性变换，即线性变换也就确定。在这个意义上，线性变换和矩阵之间存在着一一对应关系。因而可利用矩阵来研究线性变换。</p>
+<p>线性变换</p>
+<script type="math/tex; mode=display">
+\left\{ \begin{array}{cc}
+y_1 = \lambda_1 x_1 \\
+y_2 = \lambda_2 x_2 \\
+\vdots \\
+y_n = \lambda_n x_n \\
+\end{array} \right.</script><p>对应 $n$ 阶对角矩阵</p>
+<script type="math/tex; mode=display">
+\boldsymbol \Lambda = \begin{pmatrix}
+\lambda_1 & & & \\
+& \lambda_2 & & \\
+& & \ddots & \\
+& & & \lambda_n \\
+\end{pmatrix}</script><p>当 $\lambda_1 = \lambda_2 = \cdots = \lambda_n$ 时，称线性变换为<strong>恒等变换</strong>，恒等变换对应单位矩阵。</p>
+<p><strong>定义 2</strong> 设 $\boldsymbol A = (a_{ij})_{m \times n}$ 和 $\boldsymbol B = (b_{ij})_{m \times n}$，由 $\boldsymbol A$ 和 $\boldsymbol B$ 的对应元素相加所得到的一个 $m \times n$ 矩阵，称为 $\boldsymbol A$ 与 $\boldsymbol B$ 的和，记为 $\boldsymbol A + \boldsymbol B$。即</p>
+<script type="math/tex; mode=display">
+\boldsymbol A + \boldsymbol B = (a_{ij} + b_{ij})_{m \times n}</script><p>只有当两个矩阵 $\boldsymbol A$ 与 $\boldsymbol B$ 是同型矩阵时，它们才可以相加。</p>
+<p>容易证明，矩阵的加法适合下面的运算律：</p>
+<p>设 $\boldsymbol A, \boldsymbol B, \boldsymbol C$ 都是 $m \times n$ 矩阵，$\boldsymbol O = (0)_{m \times n}$ 是零矩阵，则有</p>
+<p>(1) 交换律：$\boldsymbol A + \boldsymbol B = \boldsymbol B + \boldsymbol A$；</p>
+<p>(2) 结合律：$( \boldsymbol A + \boldsymbol B) + \boldsymbol C = \boldsymbol A + ( \boldsymbol B + \boldsymbol C)$；</p>
+<p>(3) 零元：$\boldsymbol A + \boldsymbol O = \boldsymbol O + \boldsymbol A = \boldsymbol A$；</p>
+<p>(4) 消去律：$\boldsymbol A + \boldsymbol C = \boldsymbol B + \boldsymbol C \Leftrightarrow \boldsymbol A = \boldsymbol B$。</p>
+<p>设 $\boldsymbol A = (a_{ij})_{m \times n}$，称矩阵</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+-a_{11} & -a_{12} & \cdots & -a_{1n} \\
+-a_{21} & -a_{22} & \cdots & -a_{2n} \\
+\vdots & \vdots & & \vdots \\
+-a_{m1} & -a_{m2} & \cdots & -a_{mn} \\
+\end{pmatrix}</script><p>为 $\boldsymbol A$ 的<strong>负矩阵</strong>，记为 $-\boldsymbol A$，显然有</p>
+<script type="math/tex; mode=display">
+\boldsymbol A + (- \boldsymbol A) = (- \boldsymbol A) + \boldsymbol A = \boldsymbol O</script><p>由此定义矩阵的减法为</p>
+<script type="math/tex; mode=display">
+\boldsymbol A - \boldsymbol B = \boldsymbol A + (- \boldsymbol B) = (a_{ij} - b_{ij})_{m \times n}</script><p><strong>定义 3</strong> 对于任意一个矩阵 $\boldsymbol A = (a_{ij})_{m \times n}$ 和任意一个数 $k$，规定 $k$ 与 $\boldsymbol A$ 的乘积为</p>
+<script type="math/tex; mode=display">
+k \boldsymbol A = \begin{pmatrix}
+ka_{11} & ka_{12} & \cdots & ka_{1n} \\
+ka_{21} & ka_{22} & \cdots & ka_{2n} \\
+\vdots & \vdots & & \vdots \\
+ka_{m1} & ka_{m2} & \cdots & ka_{mn} \\
+\end{pmatrix}</script><p>由定义 3 可知，数 $k$ 与矩阵 $\boldsymbol A$ 的乘积是 $\boldsymbol A$ 中的所有元素都要乘 $k$。</p>
+<p>根据数乘矩阵运算的定义可以知道，数量矩阵 $a \boldsymbol E_n$ 就是数 $a$ 与单位矩阵 $\boldsymbol E_n$ 的乘积。而且对任意矩阵 $\boldsymbol A$ 有，$- \boldsymbol A = (-) \boldsymbol A = (-a_{i, j})_{m \times n}$。</p>
+<p>矩阵的加法与数乘运算称为矩阵的<strong>线性运算</strong>，满足下面的运算律。</p>
+<p>设 $\boldsymbol A, \boldsymbol B$ 为 $m \times n$ 矩阵，$k, l$ 为常数。</p>
+<p>(1) 结合律：$(kl) \boldsymbol A = k(l \boldsymbol A) = l(k \boldsymbol A)$；</p>
+<p>(2) 分配律：$k( \boldsymbol A + \boldsymbol B) = k \boldsymbol A + k\boldsymbol B, (k + l) \boldsymbol A = k \boldsymbol A + l\boldsymbol A$。</p>
+<p><strong>定义 4</strong>：设矩阵 $\boldsymbol A = (a_{ij})_{m \times s}, \boldsymbol B = (b_{ij})_{s \times n}$。令 $\boldsymbol C = (c_{ij})_{m \times n}$ 是由下面的 $m \times n$ 个元素</p>
+<script type="math/tex; mode=display">
+c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj} \quad (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n)</script><p>构成的 $m$ 行 $n$ 列矩阵，称矩阵 $\boldsymbol C$ 为矩阵 $\boldsymbol A$ 与矩阵 $\boldsymbol B$ 的<strong>乘积</strong>，记为 $\boldsymbol C = \boldsymbol{AB}$。</p>
+<p>由此定义可知，两个矩阵 $\boldsymbol A = (a_{ij})$ 和 $\boldsymbol B = (b_{ij})$ 可以相乘当且仅当 $\boldsymbol A$ 的列数与 $\boldsymbol B$ 的行数相等。当 $\boldsymbol C = \boldsymbol{AB}$ 时，$\boldsymbol C$ 的行数 $= \boldsymbol A$ 的行数，$\boldsymbol C$ 的列数 $= \boldsymbol B$ 的列数。$\boldsymbol C$ 的第 $i$ 行第 $j$ 列元素等于矩阵 $\boldsymbol A$ 的第 $i$ 行元素与矩阵 $\boldsymbol B$ 的第 $j$ 列对应元素乘积的和，即</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+\cdots & \cdots & \cdots & \cdots \\
+a_{i1} & a_{i2} & \cdots & a_{is} \\
+\cdots & \cdots & \cdots & \cdots \\
+\end{pmatrix} \begin{pmatrix}
+\vdots & b_{1j} & \vdots \\
+\vdots & b_{2j} & \vdots \\
+\vdots & \vdots & \vdots \\
+\vdots & b_{sj} & \vdots \\
+\end{pmatrix} = \begin{pmatrix}
+& \vdots & \\
+\cdots & c_{ij} & \cdots \\
+& \vdots & \\
+\end{pmatrix}</script><p>其中，$c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj}, (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n)$。</p>
+<p>在矩阵的乘法中，必须注意矩阵相乘的顺序，若 $\boldsymbol A$ 是 $m \times n$ 矩阵，$\boldsymbol B$ 是 $n \times m$ 矩阵，则 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 均有意义，但 $\boldsymbol{AB}$ 是 $m$ 阶方阵，$\boldsymbol{BA}$ 是 $n$ 阶方阵。当 $m \ne n$ 时，$\boldsymbol{AB} \ne \boldsymbol{BA}$。即使 $m = n$，即 $\boldsymbol A, \boldsymbol B$ 是同阶方阵时，$\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 仍然可以不相等。</p>
+<p>然而，矩阵乘法不满足交换律和消去律，并不是说任意两个方阵相乘都不能交换，任意一个方阵都不能从矩阵等式的同侧消去。</p>
+<p>当两个矩阵 $\boldsymbol A$ 与 $\boldsymbol B$ 满足 $\boldsymbol{AB} = \boldsymbol{BA}$ 时，称 $\boldsymbol A$ 与 $\boldsymbol B$ 可交换。此时，$\boldsymbol A$ 与 $\boldsymbol B$ 必为同阶方阵。</p>
+<p>矩阵乘法满足下列运算律（假设运算都是有意义的）：</p>
+<p>(1) 结合律：$( \boldsymbol{AB}) \boldsymbol C = \boldsymbol A ( \boldsymbol{BC})$；</p>
+<p>(2) 对矩阵加法的分配律：$( \boldsymbol A + \boldsymbol B) \boldsymbol C = \boldsymbol{AC} + \boldsymbol{BC}, \boldsymbol A( \boldsymbol B + \boldsymbol C) = \boldsymbol{AB} + \boldsymbol{AC}$；</p>
+<p>(3) 与矩阵数乘的结合律：$k( \boldsymbol{AB}) = (k \boldsymbol A) \boldsymbol B = \boldsymbol A(k \boldsymbol B)$，$k$ 为任意实数；</p>
+<p>(4) 左、右单位元：$\boldsymbol E_m \boldsymbol A_{m \times n} = \boldsymbol A_{m \times n}, \boldsymbol A_{m \times n} \boldsymbol E_n = \boldsymbol A_{m \times n}$（其中 $\boldsymbol E_m, \boldsymbol E_n$ 分别为 $m$ 阶和 $n$ 阶单位矩阵）。</p>
+<p>关于矩阵乘法应注意：当 $\boldsymbol A = \boldsymbol B$ 时，在可乘条件下必可推出 $\boldsymbol{AC} = \boldsymbol{BC}$ 和 $\boldsymbol{CA} = \boldsymbol{CB}$，但未必有 $\boldsymbol{AC} = \boldsymbol{CB}$ 和 $\boldsymbol{CA} = \boldsymbol{BC}$。</p>
+<p>利用矩阵乘法，线性变换可表示为</p>
+<script type="math/tex; mode=display">
+\boldsymbol y = \boldsymbol{Ax}</script><p>其中 $\boldsymbol x = (x_1, x_2, \cdots, x_n)^ \mathrm T, y = (y_1 + y_2 + \cdots, y_n)^ \mathrm T, \boldsymbol A = (a_{ij})_{n \times n}$。且 $\boldsymbol A$ 称为这个线性变换的系数矩阵。</p>
+<p><strong>方阵的方幂</strong>：设 $\boldsymbol A$ 为 $n$ 阶方阵，由于矩阵乘法满足结合律，所以 $\underbrace{ \boldsymbol A \cdot \boldsymbol A \cdot \ \cdots \ \cdot \boldsymbol A}_{k \ \text{个}}$ 可以不加括号而有完全确定的意义。我们定义 $\boldsymbol A$ 的<strong>方幂</strong>（或称<strong>乘幂</strong>）为</p>
+<script type="math/tex; mode=display">
+\boldsymbol A^0 = \boldsymbol E, \boldsymbol A^1 = \boldsymbol A, \boldsymbol A^2 = \boldsymbol{AA},\boldsymbol A^k = \underbrace{ \boldsymbol{AA} \cdots \boldsymbol A}_{k \ \text{个}}</script><p>其中 $k$ 为正整数。</p>
+<p>由定义可知，$n$ 阶方阵的方幂适合下述运算律：</p>
+<script type="math/tex; mode=display">
+\boldsymbol A^k \boldsymbol A^l = \boldsymbol A^{k + l}, \quad ( \boldsymbol A^k)^l = \boldsymbol A^{kl}, \quad k, l \in \mathbb Z^+</script><p>由于矩阵乘法不满足交换律，所以对于两个 $n$ 阶方阵 $\boldsymbol A$ 与 $\boldsymbol B$，一般来说</p>
+<script type="math/tex; mode=display">
+( \boldsymbol{AB})^k \ne \boldsymbol A^k \boldsymbol B^k</script><p>设 $x$ 的 $m$ 次多项式</p>
+<script type="math/tex; mode=display">
+f(x) = a_0x^m + a_1x^{m - 1} + \cdots + a_{m - 1}x + a_m</script><p>$\boldsymbol A$ 为 $n$ 阶方阵，定义</p>
+<script type="math/tex; mode=display">
+f( \boldsymbol A) = a_0 \boldsymbol A^m + a_1 \boldsymbol A^{m - 1} + \cdots + a_{m - 1} \boldsymbol A + a_m \boldsymbol E</script><p>为 $\boldsymbol A$ 的 <strong>$m$ 次多项式</strong>。</p>
+<p><strong>定义 5</strong> 把矩阵 $\boldsymbol A$ 的多有行换成相应的列所得到的矩阵，成为矩阵 $\boldsymbol A$ 的<strong>转置矩阵</strong>，记为 $\boldsymbol A^ \mathrm T$ 或 $\boldsymbol A’$，即若</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}</script><p>则</p>
+<script type="math/tex; mode=display">
+\boldsymbol A^T = \begin{pmatrix}
+a_{11} & a_{21} & \cdots & a_{m1} \\
+a_{12} & a_{22} & \cdots & a_{m2} \\
+\vdots & \vdots & & \vdots \\
+a_{1n} & a_{2n} & \cdots & a_{mn} \\
+\end{pmatrix}</script><p>易见 $\boldsymbol A$ 与 $\boldsymbol A^ \mathrm T$ 互为转置矩阵。特别地，$n$ 维行（列）向量的转置矩阵为 $n$ 维列（行）向量。</p>
+<p>转置运算律（假设运算都是有意义的）：</p>
+<p>(1) 自反性：$( \boldsymbol A^ \mathrm T)^ \mathrm T = \boldsymbol A$；</p>
+<p>(2) 对加法的分配律：$( \boldsymbol A + \boldsymbol B)^ \mathrm T = \boldsymbol A^ \mathrm T$；</p>
+<p>(3) $(k \boldsymbol A)^ \mathrm T = k \boldsymbol A^ \mathrm T, k \in \mathbb R$；</p>
+<p>(4) 反序律：$( \boldsymbol{AB})^ \mathrm T = \boldsymbol B^ \mathrm T \boldsymbol A^ \mathrm T, ( \boldsymbol A_1 \boldsymbol A_2 \cdots \boldsymbol A_k)^ \mathrm T = \boldsymbol A_k^ \mathrm T \boldsymbol A_{k - 1}^ \mathrm T \cdots \boldsymbol A_1^ \mathrm T$。</p>
+<p><strong>定义 6</strong> 设 $\boldsymbol A = (a_{ij})$ 为 $n$ 阶矩阵，若 $\boldsymbol A$ 满足 $\boldsymbol A^ \mathrm T = \boldsymbol A$，也就是说 $\boldsymbol A$ 中元素满足：</p>
+<script type="math/tex; mode=display">
+a_{ij} = a_{ji}, \quad i, j = 1, 2, \cdots, n</script><p>则称 $\boldsymbol A$ 为<strong>对称矩阵</strong>。</p>
+<p>若 $\boldsymbol A$ 满足 $\boldsymbol A^ \mathrm T = - \boldsymbol A$，也就是说 $\boldsymbol A$ 中元素满足：</p>
+<script type="math/tex; mode=display">
+a_{ij} = -a_{ji}, \quad i, j = 1, 2, \cdots, n</script><p>此时必有 $a_{ii} = 0, i = 1, 2, \cdots, n$，则称 $\boldsymbol A$ 为<strong>反对称矩阵</strong>。</p>
+<p><strong>定义 7</strong> 由 $n$ 阶方阵 $\boldsymbol A$ 的元素按原来的顺序构成的行列式称为<strong>方阵 $\boldsymbol A$ 的行列式</strong>，记作 $| \boldsymbol A|$ 或 $\det( \boldsymbol A)$。即，如果</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}</script><p>则</p>
+<script type="math/tex; mode=display">
+| \boldsymbol A| = \det( \boldsymbol A) = \begin{vmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{vmatrix}</script><p><strong>注意</strong> 当且仅当 $\boldsymbol A = (a_{ij})$ 为方阵时，才可取行列式 $D = | \boldsymbol A| = |a_{ij}|_n$。对于不是方阵的矩阵是不可以取行列式的。</p>
+<p>方阵的行列式有如下性质：设 $\boldsymbol A, \boldsymbol B$ 为 $n$ 阶方阵，$k$ 为数，则</p>
+<p>(1) $| \boldsymbol A^ \mathrm T| = | \boldsymbol A|$；</p>
+<p>(2) $|k \boldsymbol A| = k^n | \boldsymbol A|$；</p>
+<p>(3) 行列式乘法规则：$| \boldsymbol{AB}| = | \boldsymbol A| \cdot | \boldsymbol B|$。</p>
+<p>对于 $n$ 阶方阵 $\boldsymbol A, \boldsymbol B$，一般来说 $\boldsymbol{AB} \ne \boldsymbol{BA}$，但由 (3) 可知总有</p>
+<script type="math/tex; mode=display">
+| \boldsymbol{AB}| = | \boldsymbol{BA}|</script><p><strong>定义 8</strong> 设 $\boldsymbol A$ 是一个 $n$ 阶方阵，若存在一个 $n$ 阶方阵 $\boldsymbol B$，使得</p>
+<script type="math/tex; mode=display">
+\boldsymbol{AB} = \boldsymbol{BA} = \boldsymbol E</script><p>则称 $\boldsymbol A$ 为<strong>可逆矩阵</strong>（或<strong>非奇异矩阵</strong>），也可称为<strong>可逆方阵</strong>或者<strong>可逆阵</strong>，并称 $\boldsymbol B$ 为 $\boldsymbol A$ 的<strong>逆矩阵</strong>。若这样的 $\boldsymbol B$ 不存在，则称 $\boldsymbol A$ 为<strong>不可逆矩阵</strong>（或<strong>奇异矩阵</strong>）。</p>
+<p>若矩阵 $\boldsymbol A$ 可逆，则 $\boldsymbol A$ 的逆矩阵是唯一的。这是因为若 $\boldsymbol B, \boldsymbol C$ 均为 $\boldsymbol A$ 的逆矩阵，则由定义可知</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\boldsymbol{AB} = \boldsymbol{BA} = \boldsymbol C \\
+\boldsymbol{AC} = \boldsymbol{CA} = \boldsymbol E \\
+\end{aligned}</script><p>从而</p>
+<script type="math/tex; mode=display">
+\boldsymbol B = \boldsymbol{EB} = \boldsymbol{C}( \boldsymbol{AB}) = \boldsymbol{CE} = \boldsymbol C</script><p>由于可逆矩阵 $\boldsymbol A$ 的逆矩阵是唯一的，记 $\boldsymbol A$ 的逆矩阵为 $\boldsymbol A^{-1}$。于是</p>
+<script type="math/tex; mode=display">
+\boldsymbol{AA}^{-1} = \boldsymbol A^{-1} \boldsymbol A = \boldsymbol E</script><p><strong>注：</strong>当 $\boldsymbol B$ 为 $\boldsymbol A$ 的逆矩阵时，$\boldsymbol B$ 也为可逆矩阵，且 $\boldsymbol A$ 也为 $\boldsymbol B$ 的逆矩阵，于是 $\boldsymbol A$ 与 $\boldsymbol B$ 互为逆矩阵。</p>
+<p><strong>定义 9</strong> 设 $\boldsymbol A = (a_{ij})_{n \times n}$，$A_{ij}$ 为 $\boldsymbol A$ 的元素 $a_{ij}$ 的代数余子式 $(i, j = 1, 2, \cdots, n)$，则矩阵</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+A_{11} & A_{21} & \cdots & A_{n1} \\
+A_{12} & A_{22} & \cdots & A_{n2} \\
+\vdots & \vdots & & \vdots \\
+A_{1n} & A_{2n} & \cdots & A_{nn} \\
+\end{pmatrix}</script><p>称为 $\boldsymbol A$ 的<strong>伴随矩阵</strong>，记作 $\boldsymbol A^\ast$。</p>
+<p><strong>定理 1</strong> $n$ 阶方阵 $\boldsymbol A$ 为可逆矩阵 $\Leftrightarrow | \boldsymbol A| \ne 0$。</p>
+<p>证明过程从略。该定理的证明给出了矩阵求逆的伴随矩阵方法：</p>
+<script type="math/tex; mode=display">
+\boldsymbol A^{-1} = \frac 1{| \boldsymbol A|} \boldsymbol A^\ast</script><p>设 $\boldsymbol A$ 为 $n$ 阶方阵，若 $| \boldsymbol A| = 0$，则 $\boldsymbol A$ 是奇异矩阵，若 $| \boldsymbol A| \ne 0$，则 $\boldsymbol A$ 是非奇异矩阵。</p>
+<p><strong>推论</strong> 设 $\boldsymbol A, \boldsymbol B$ 均为 $n$ 阶矩阵，并且满足 $\boldsymbol{AB} = \boldsymbol E$，则 $\boldsymbol A, \boldsymbol B$ 都可逆，且 $\boldsymbol A^{-1} = \boldsymbol B, \boldsymbol B^{-1} = \boldsymbol A$。</p>
+<p>这个推论表明，以后在验证一个矩阵是另一个矩阵的逆矩阵时，只需要证明等式 $\boldsymbol{AB} = \boldsymbol E$ 或 $\boldsymbol{BA} = \boldsymbol E$ 成立即可，而不需要按定义同时验证两个等式。</p>
+<p><strong>可逆矩阵的性质</strong></p>
+<p>可逆矩阵有如下基本性质：设 $\boldsymbol A, \boldsymbol B$ 为同阶的可逆方阵，常数 $k \ne 0$，则</p>
+<p>(1) 自反性：$\boldsymbol A^{-1}$ 为可逆矩阵，且 $( \boldsymbol A^{-1})^{-1} = \boldsymbol A$；</p>
+<p>(2) 数乘的逆：$k \boldsymbol A$ 为可逆矩阵，且 $(k \boldsymbol A)^{-1} = \dfrac 1k \boldsymbol A^{-1}$；</p>
+<p>(3) 行列式与逆：$| \boldsymbol A^{-1}| = \dfrac 1{| \boldsymbol A|} = | \boldsymbol A|^{-1}$；</p>
+<p>(4) 转置的逆：$\boldsymbol A^ \mathrm T$ 为可逆矩阵，且 $( \boldsymbol A^ \mathrm T)^{-1} = ( \boldsymbol A^{-1})^ \mathrm T$；</p>
+<p>(5) 反序律：$\boldsymbol{AB}$ 为可逆矩阵，且 $( \boldsymbol{AB})^{-1} = \boldsymbol B^{-1} \boldsymbol A^{-1}$。</p>
+<p><strong>定义（矩阵的子式）</strong></p>
+<p>在 $m \times n$ 矩阵 $\boldsymbol A$ 中，任意取定某 $k$ 行 $(i_1 &lt; i_2 &lt; \cdots &lt; i_k)$ 和某 $k$ 列 $(j_1 &lt; j_2 &lt; \cdots &lt; j_k), k\le \min \{m, n\}$。位于这些行与列交叉处的 $k^2$ 个元素按原来的相对顺序排成的 $k^2$ 阶行列式</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+a_{i_1 j_1} & a_{i_1 j_2} & \cdots & a_{i_1 j_k} \\
+a_{i_2 j_1} & a_{i_2 j_2} & \cdots & a_{i_2 j_k} \\
+\vdots & \vdots & & \vdots \\
+a_{i_k j_1} & a_{i_k j_2} & \cdots & a_{i_k j_k} \\
+\end{vmatrix}</script><p>称为 $\boldsymbol A$ 的一个 <strong>$k$ 阶子式</strong>。显然，对于确定的 $k$ 来说，在 $m \times n$ 矩阵 $\boldsymbol A$ 中，$k$ 阶子式的总个数为 $C_m^k \times C_n^k$。把 $\boldsymbol A$ 中对应不同的 $k$ 的所有的 $k$ 阶子式放在一起，可以分成两大类：值为零的与值不为零的。值不为零的子式称为<strong>非零子式</strong>。</p>
+<p><strong>定义 10</strong> 设在矩阵 $\boldsymbol A$ 中有一个 $r$ 阶非零子式，且所有的 $r + 1$ 阶子式（如果存在的话）全等于零,则称<strong>矩阵 $\boldsymbol A$ 的秩 (rank)</strong> 为 $r$。记为 $\mathrm r( \boldsymbol A) = r$。有时也可用秩 $( \boldsymbol A)$ 表示 $\boldsymbol A$ 的秩。零矩阵的秩规定为 $0$。</p>
+<p>由定义可以看出：</p>
+<p>(1) 若 $\boldsymbol A$ 为 $m \times n$ 矩阵，则 $\boldsymbol A$ 的秩不会大于矩阵的行数，也不会大于矩阵的列数，即 $\mathrm r( \boldsymbol A) \le \min \{ m, n\}$；</p>
+<p>(2) $\mathrm r( \boldsymbol A^ \mathrm T), \mathrm r(k \boldsymbol A) = \mathrm r( \boldsymbol A) \ (k \ne 0)$；</p>
+<p>(3) 若 $\mathrm r( \boldsymbol A) = r$，则 $\boldsymbol A$ 中所有大于 $r$ 阶的子式全为零，即 $r$ 为 $\boldsymbol A$ 中不等于零的子式的最大阶数；</p>
+<p>(4) 若 $\boldsymbol A$ 的所有 $r + 1$ 阶子式都为零，则 $\mathrm r( \boldsymbol A) &lt; r + 1$；</p>
+<p>(5) 若 $\boldsymbol A$ 中存在一个 $r$ 阶子式不为零，则 $\mathrm r( \boldsymbol A) \ge r$。</p>
+<p><strong>定义 11</strong> 对一个矩阵 $\boldsymbol A = (a_{ij})_{m \times n}$ 施行以下三种变换，称为矩阵的<strong>初等行变换</strong>。</p>
+<p>(1) 对换变换：对调 $\boldsymbol A$ 的某两行；</p>
+<p>(2) 数乘变换：用一个数 $k \ (k \ne 0)$ 乘 $\boldsymbol A$ 的某一行中的所有元素；</p>
+<p>(3) 倍加变换：把某一行的所有元素的 $k$ 倍加到令一行对应的元素上去。</p>
+<p>若把定义 11 中的行换成列，即得到矩阵的三种<strong>初等列变换</strong>。</p>
+<p>矩阵的初等行变换和初等列变换统称为矩阵的<strong>初等变换</strong>。</p>
+<p>三种初等变换都是可逆变换，且其逆是同一类型的初等变换。</p>
+<p><strong>定义 12</strong> 若矩阵 $\boldsymbol A$ 经过有限次初等变换变为 $\boldsymbol B$，则称 <strong>$\boldsymbol A$ 与 $\boldsymbol B$ 等价</strong>。记为 $\boldsymbol A \cong \boldsymbol B$。</p>
+<p>矩阵之间的等价关系有以下三条性质。</p>
+<p>(1) 反身性：$\boldsymbol A \cong \boldsymbol A$；</p>
+<p>(2) 对称性：若 $\boldsymbol A \cong \boldsymbol B$，则 $\boldsymbol B \cong \boldsymbol A$；</p>
+<p>(3) 传递性：若 $\boldsymbol A \cong \boldsymbol B, \boldsymbol B \cong \boldsymbol C$，则 $\boldsymbol A \cong \boldsymbol C$。</p>
+<p><strong>定理 2</strong> 初等变换不改变矩阵的秩。</p>
+<p>定理 2 说明，若 $\boldsymbol A \cong \boldsymbol B$，则 $\mathrm r( \boldsymbol A) = \mathrm r( \boldsymbol B)$。</p>
+<p><strong>定义（行阶梯形矩阵）</strong></p>
+<!-- 哎我看 Linalg and its Applications 入门的，第一章上来 linear system 就讲的这，真的亲切（ -->
+<p><strong>行阶梯形矩阵</strong>的特点是：</p>
+<p>(1) 如果存在全零行（元素全为零的行），则全零行都位于矩阵中非零行（元素不全为零的行）的下方；<br>(2) 各非零行中从左边数起的第一个非零元素（称为<strong>主元</strong>）的列指标 $j$ 随着行指标 $i$ 的递增而严格增大。<br>对于这样的矩阵，可画出一条阶梯线，线的下方全为 $0$；每个台阶只有一行，台阶数即是非零行数。</p>
+<p><strong>$m \times n$ 阶梯型矩阵</strong>的一般形状是</p>
+<p><img src="files/img/linalg/echelonForm.png" style="zoom:50%;" /></p>
+<p>其中 $\prod \limits_{i = 1}^r{a_{ij_i}} \ne 0, 1 \le j_1 &lt; j_2 &lt; \cdots &lt; j_r \le n$。</p>
+<p>对于一般的矩阵而言，要确定它的非零子式的最高阶数，并非一件容易的事情。但是，对于阶梯形矩阵来说，它的非零子式的最高阶数却是一目了然的。</p>
+<p>从直观上看，第 $i$ 个非零行从左边数起的第一个非零元素（即主元）为 $a_{ij_i}$，位于 $a_{ij_i}$ 下面的元素必须全为零。显然，$\boldsymbol T$ 有最高阶非零子式：</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+a_{1j_1} & \ast & \cdots & \ast \\
+& a_{2j_2} & \cdots & \ast \\
+& & \ddots & \vdots \\
+& & & a_{rj_r} \\
+\end{vmatrix}, \quad \prod_{i = 1}^r{a_{ij_i}} \ne 0</script><p>于是 $\mathrm r( \boldsymbol T) = r =$ “$\boldsymbol T$ 中非零行的行数”。</p>
+<p>如果对矩阵 $\boldsymbol A$ 施行初等行变换，得到其阶梯形矩阵后，进一步进行初等行变换，将阶梯形矩阵的主元素全化为 $1$，且这些主元素 $1$ 所在列的其他元素全为零，最后的矩阵称为 $\boldsymbol A$ 的<strong>简化的阶梯形矩阵</strong>或称为 $\boldsymbol A$ 的<strong>行最简形矩阵</strong>。</p>
+<p>再经过初等列变换，还可化为如下的<strong>等价标准型</strong>，其特点是左上角是单位矩阵。</p>
+<script type="math/tex; mode=display">
+\boldsymbol A \to \begin{pmatrix}
+1 & 0 & \cdots & 0 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 & 0 & \cdots & 0 \\
+\vdots & \vdots & & \vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & 1 & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 & 0 & \cdots & 0 \\
+\vdots & \vdots & & \vdots & \vdots & & \vdots \\
+0 & 0 & \cdots & 0 & 0 & \cdots & 0 \\
+\end{pmatrix} = \begin{pmatrix}
+\boldsymbol E_r & \boldsymbol 0 \\
+\boldsymbol 0 & \boldsymbol 0 \\
+\end{pmatrix} = \boldsymbol B</script><p>其中 $\boldsymbol E_r$ 是 $r$ 阶单位矩阵。</p>
+<p>若矩阵 $\boldsymbol A$ 可通过初等变换化为该形式，则称 $\boldsymbol A$ 等价于等价标准形 $\boldsymbol B$。若 $\boldsymbol A \cong \boldsymbol B$，则 $\boldsymbol A$ 与 $\boldsymbol B$ 有相同的等价标准型。</p>
+<p>若求矩阵的秩，则将矩阵化为行阶梯形即可，不必化为行最简形，更不必化为等价标准形。若要将矩阵化为等价标准形，一般须经初等行变换和初等列变换才能完成、</p>
+<p><strong>定义 13</strong> 设 $\boldsymbol A$ 为 $n$ 阶方阵，若 $\boldsymbol A \cong \boldsymbol E$，则称 $\boldsymbol A$ 为<strong>满秩矩阵</strong>，否则称为<strong>降秩矩阵</strong>。</p>
+<p>若 $\boldsymbol A \cong \boldsymbol E$，则 $\mathrm r( \boldsymbol A) = n$，从而 $| \boldsymbol A| \ne 0$，即满秩矩阵就是可逆矩阵，又称非奇异矩阵；降秩矩阵就是不可逆矩阵，也称奇异矩阵。</p>
+<p>用消元法求解线性方程组实际上就是对线性方程组进行初等变换。</p>
+<p><strong>定理 3</strong> $n$ 元齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 有非零解的充分必要条件是系数矩阵 $\boldsymbol A$ 的秩 $\mathrm r( \boldsymbol A) &lt; n$。</p>
+<p><strong>推论</strong> 含有 $n$ 个方程的 $n$ 元齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 有非零解的充分必要条件是 $| \boldsymbol A| = 0$。</p>
+<p><strong>定义 14</strong> 由单位矩阵 $\boldsymbol E$ 经过一次初等变换得到的矩阵称为<strong>初等矩阵</strong>。</p>
+<p>我们对 $n$ 阶单位矩阵 $\boldsymbol E$ 施行下述三种初等变换得到以下三类 $n$ 阶初等矩阵：</p>
+<p>(1) 交换 $\boldsymbol E$ 的第 $i, j$ 两行（列）$(i \ne j)$，得到的初等矩阵记为</p>
+<script type="math/tex; mode=display">
+\boldsymbol P_{ij} = \begin{pmatrix}
+1 \\
+& \ddots \\
+& & 0 & \cdots & \cdots & \cdots & 1 \\
+& & \vdots & 1 & & & \vdots \\
+& & \vdots & & \ddots & & \vdots \\
+& & \vdots & & & 1 & \vdots \\
+& & 1 & \cdots & \cdots & \cdots & 0 \\
+& & & & & & & \ddots \\
+& & & & & & & & 1
+\end{pmatrix}  \begin{matrix}
+\\ \\ i \text{-th row} \\ \\ \\ \\ \\ j \text{-th row} \\ \\ \\
+\end{matrix}</script><p>(2) 用非零常数 $k$ 乘 $\boldsymbol E$ 的第 $i$ 行（列），得到的初等矩阵记为</p>
+<script type="math/tex; mode=display">
+\boldsymbol D_i(k) = \begin{pmatrix}
+1 \\
+& \ddots \\
+& & 1 \\
+& & & k \\
+& & & & 1 \\
+& & & & & \ddots \\
+& & & & & & 1 \\
+\end{pmatrix} \begin{matrix}
+\\ \\ \\ i \text{-th row} \quad (k \ne 0) \\ \\ \\ \\
+\end{matrix}</script><p>(3) 将 $\boldsymbol E$ 的第 $j$ 行的 $k$ 被加到第 $i$ 行上去（或将第 $i$ 列的 $k$ 倍加到第 $j$ 列上去），得到的初等矩阵记为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\boldsymbol T_{ij}(k) = & \begin{pmatrix}
+1 \\
+& \ddots \\
+& & 1 & \cdots & k \\
+& & & \ddots & \vdots \\
+& & & & 1 \\
+& & & & & \ddots \\
+& & & & & & 1 \\
+\end{pmatrix} \begin{matrix}
+\\ \\ i \text{-th row} \\ \\ j \text{-th row} \\ \\ \\
+\end{matrix} \\
+& \begin{matrix}
+& & & & i \text{-th} & j \text{-th} \\
+& & & & \text{column} & \text{column} \\
+\end{matrix}
+\end{aligned}</script><p>将 $\boldsymbol E$ 的第 $i$ 行的 $k$ 被加到第 $j$ 行上去（或将第 $j$ 列的 $k$ 倍加到第 $i$ 列上去），得到的初等矩阵记为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\boldsymbol T_{ij}(k) = & \begin{pmatrix}
+1 \\
+& \ddots \\
+& & 1 \\
+& & \vdots & \ddots &\\
+& & 1 & \cdots & 1 \\
+& & & & & \ddots \\
+& & & & & & 1 \\
+\end{pmatrix} \begin{matrix}
+\\ \\ i \text{-th row} \\ \\ j \text{-th row} \\ \\ \\
+\end{matrix} \\
+& \begin{matrix}
+& & & & i \text{-th} & j \text{-th} \\
+& & & & \text{column} & \text{column} \\
+\end{matrix}
+\end{aligned}</script><p>以上这些初等矩阵中，空白处的元素均为 $0$。</p>
+<p>上述三类初等矩阵的记号分别取 Permutation, Diagonal, Triangular 的第一个字母，它们分别表示对换置换、对角型和三角形。</p>
+<p>用行列式性质容易证明：</p>
+<script type="math/tex; mode=display">
+| \boldsymbol P_{ij}| = -1, \quad | \boldsymbol D_i(k)| = k, \quad | \boldsymbol T_{ij}(k) = 1|</script><p>由初等矩阵的定义易得：</p>
+<script type="math/tex; mode=display">
+\boldsymbol P_{ij}^{-1} = \boldsymbol P_{ij}, \quad \boldsymbol D_i(k)^{-1} = \boldsymbol D_i \left( \frac 1k \right), \quad \boldsymbol T_{ij}(k)^{-1} = \boldsymbol T_{ij}(-k)</script><p>一般地，可以验证初等矩阵有如下功能：</p>
+<p>(1) $\boldsymbol P_{ij}$ 左（右）乘 $\boldsymbol A$ 就是互换 $\boldsymbol A$ 的第 $i$ 行（列）和第 $j$ 行（列）；</p>
+<p>(2) $\boldsymbol D_i(k)$ 左（右）乘 $\boldsymbol A$ 就是用非零数 $k$ 乘 $\boldsymbol A$ 的第 $i$ 行（列）；</p>
+<p>(3) $\boldsymbol T_{ij}(k)$ 左乘 $\boldsymbol A$ 就是把 $\boldsymbol A$ 中第 $j$ 行的 $k$ 倍加到第 $i$ 行上去；</p>
+<p>(4) $\boldsymbol T_{ij}(k)$ 右乘 $\boldsymbol A$ 就是把 $\boldsymbol A$ 中第 $i$ 列的 $k$ 倍加到第 $j$ 列上去。</p>
+<p><strong>定理 4</strong> 设 $\boldsymbol A$ 是一个 $m \times n$ 矩阵，对 $\boldsymbol A$ 施行一次初等行变换，相当于在 $\boldsymbol A$ 的左边乘上相应的 $m$ 阶初等矩阵；对 $\boldsymbol A$ 施行一次初等列变换，相当于在 $\boldsymbol A$ 的右边乘上相应的 $n$ 阶初等矩阵。</p>
+<p>可以对一个矩阵 $\boldsymbol A$ 施行若干次初等行、列变换化为等价标准形，由定理 4 可知，这些初等行、列变换相当于对矩阵 $\boldsymbol A$ 左、右乘有限个初等矩阵，将行变换对应的 $m$ 阶初等矩阵和列变换对应的 $n$ 阶初等矩阵分别记为</p>
+<script type="math/tex; mode=display">
+\boldsymbol P_1, \boldsymbol P_2, \cdots \boldsymbol P_t \text{ and } \boldsymbol Q_1, \boldsymbol Q_2, \cdots, \boldsymbol Q_s</script><p>若 $\mathrm r( \boldsymbol A) = r$，则有</p>
+<script type="math/tex; mode=display">
+\boldsymbol P_t \cdots \boldsymbol P_2 \boldsymbol P_1 \boldsymbol A \boldsymbol Q_1 \boldsymbol Q_2 \cdots \boldsymbol Q_s = \begin{pmatrix}
+\boldsymbol E_r & \boldsymbol 0 \\
+\boldsymbol 0 & \boldsymbol 0 \\
+\end{pmatrix}</script><p>令</p>
+<script type="math/tex; mode=display">
+\boldsymbol P = \boldsymbol P_t \cdots \boldsymbol P_2 \boldsymbol P_1, \quad \boldsymbol Q = \boldsymbol Q_1 \boldsymbol Q_2 \cdots \boldsymbol Q_s</script><p>由初等矩阵的可逆性可知，$m$ 阶矩阵 $\boldsymbol P$ 和 $n$ 阶矩阵 $\boldsymbol Q$ 都是可逆矩阵。上式可写成</p>
+<script type="math/tex; mode=display">
+\boldsymbol{PAQ} = \begin{pmatrix}
+\boldsymbol E_r & \boldsymbol 0 \\
+\boldsymbol 0 & \boldsymbol 0 \\
+\end{pmatrix}</script><p><strong>定理 5</strong> 设 $\boldsymbol A$ 为 $m \times n$ 矩阵，则存在 $m$ 阶矩阵 $\boldsymbol P$ 和 $n$ 阶矩阵 $\boldsymbol Q$，使得上式成立。</p>
+<p>若 $\boldsymbol A$ 是一个可逆的 $n$ 阶矩阵，则 $\boldsymbol A$ 必等价于单位矩阵，即存在有限个初等矩阵 $\boldsymbol Q_1, \boldsymbol Q_2, \cdots, \boldsymbol Q_r, \boldsymbol Q_{r + 1}, \cdots, Q_l$，使得</p>
+<script type="math/tex; mode=display">
+\boldsymbol Q_r \boldsymbol Q_{r - 1} \cdots \boldsymbol Q_1 \boldsymbol{AQ}_l \boldsymbol Q_{l - 1} \cdots \boldsymbol Q_{r + 1} = \boldsymbol E</script><p>等式两边左乘矩阵 $( \boldsymbol Q_r \boldsymbol Q_{r - 1} \cdots \boldsymbol Q_1)^{-1}$，右乘矩阵 $( \boldsymbol Q_l \boldsymbol Q_{l - 1} \cdots \boldsymbol Q_{r + 1})^{-1}$，得</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \boldsymbol Q_1^{-1} \cdots \boldsymbol Q_r^{-1} \boldsymbol Q_{r + 1}^{-1} \cdots \boldsymbol Q_l^{-1}</script><p>记 $\boldsymbol P_i = \boldsymbol Q_i^{-1} (i = 1, 2, \cdots, l)$，则 $\boldsymbol P_i$ 是初等矩阵，且</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \boldsymbol P_1 \boldsymbol P_2 \cdots \boldsymbol P_{l - 1} \boldsymbol P_l</script><p><strong>定理 6</strong> 可逆矩阵 $\boldsymbol A$ 可表示为有限个初等矩阵的乘积。</p>
+<p><strong>推论</strong> $m \times n$ 矩阵 $\boldsymbol A \cong \boldsymbol B$ 的充分必要条件是存在 $m$ 阶可逆矩阵 $\boldsymbol P$ 和 $n$ 阶可逆矩阵 $\boldsymbol Q$，使得 $\boldsymbol{PAQ} = \boldsymbol B$。</p>
+<p>从定理 6 可以得到矩阵求逆的一个简便有效的方法——初等矩阵求逆法。</p>
+<p>若 $\boldsymbol A$ 为 $n$ 阶可逆矩阵，则 $\boldsymbol A^{-1}$ 可表示为有限个初等矩阵的乘积，即 $\boldsymbol A^{-1} = \boldsymbol P_1 \boldsymbol P_2 \cdots \boldsymbol P_m$。由 $\boldsymbol A^{-1} \boldsymbol A = \boldsymbol E$，就有</p>
+<script type="math/tex; mode=display">
+( \boldsymbol P_1 \boldsymbol P_2 \cdots \boldsymbol P_m) \boldsymbol A = \boldsymbol E, \quad ( \boldsymbol P_1 \boldsymbol P_2 \cdots \boldsymbol P_m) \boldsymbol E = \boldsymbol A^{-1} \\</script><p>第一式表示 $\boldsymbol A$ 经过有限个初等行变换化为单位矩阵 $\boldsymbol E$，第二式表示 $\boldsymbol E$ 经过这些初等行变换化为 $\boldsymbol A^{-1}$。把上面的两个式子写在一起，则有</p>
+<script type="math/tex; mode=display">
+( \boldsymbol P_1 \boldsymbol P_2 \cdots \boldsymbol P_m) ( \begin{array}{c:c:c} \boldsymbol A & \boldsymbol  E  \end{array}) = ( \begin{array}{c:c:c} \boldsymbol E & \boldsymbol A^{-1} \end{array}) \\</script><p>即对 $n \times 2n$ 矩阵 $( \begin{array}{c:c:c} \boldsymbol A &amp; \boldsymbol E \end{array})$ 施行初等行变换，使 $\boldsymbol A$ 化成 $\boldsymbol E$，则 $\boldsymbol E$ 就化成了 $\boldsymbol A^{-1}$。</p>
+<p><strong>定义</strong> 常对矩阵采用分块的方法，即用一些贯穿于矩阵的横线和总线把矩阵分割成若干小块，每个小块叫做矩阵的<strong>子块（子矩阵）</strong>，以子块为元素的形式上的矩阵叫做<strong>分块矩阵</strong>。分块矩阵的每一行称为一个<strong>块行</strong>，每一列称为一个<strong>块列</strong>。</p>
+<p>$m \times n$ 矩阵 $\boldsymbol A = (a_{ij})$ 的分块矩阵的一般形状为</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+\boldsymbol A_{11} & \boldsymbol A_{12} & \cdots & \boldsymbol A_{1s} \\
+\boldsymbol A_{21} & \boldsymbol A_{22} & \cdots & \boldsymbol A_{2s} \\
+\vdots & \vdots & & \vdots \\
+\boldsymbol A_{r1} & \boldsymbol A_{r2} & \cdots & \boldsymbol A_{rs} \\
+\end{pmatrix} = ( \boldsymbol A_{ij})_{r \times s}</script><p>对于同一个矩阵可有不同的分块法。采用不同的分块方法得到的是不同的分块矩阵。</p>
+<p>对于任意一个 $m \times n$ 矩阵 $\boldsymbol A = (a_{ij})$，常采用以下两种特殊的分块方法。</p>
+<p><strong>行向量表示法</strong>： $A = \pmatrix{ \boldsymbol \alpha_1 \\ \boldsymbol \alpha_2 \\ \vdots \\ \boldsymbol \alpha_m}$，其中 $\alpha_i = (a_{i1}, a_{i2}, \cdots, a_{in}), i = 1, 2, \cdots, m$。</p>
+<p><strong>列向量表示法</strong>：$\boldsymbol A = ( \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_n)$，其中 $\boldsymbol \beta_j = \pmatrix{a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj}}, j = 1, 2, \cdots, n$。</p>
+<p>前者也称讲 $\boldsymbol A$ <strong>按行分块</strong>，后者也称将 $\boldsymbol A$ <strong>按列分块</strong>。</p>
+<p><strong>分块矩阵的运算</strong></p>
+<p><strong>加法</strong>： 把 $m \times n$ 矩阵 $\boldsymbol A$ 和 $\boldsymbol B$ 做同样的分块：</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+\boldsymbol A_{11} & \boldsymbol A_{12} & \cdots & \boldsymbol A_{1s} \\
+\boldsymbol A_{21} & \boldsymbol A_{22} & \cdots & \boldsymbol A_{2s} \\
+\vdots & \vdots & & \vdots \\
+\boldsymbol A_{r1} & \boldsymbol A_{r2} & \cdots & \boldsymbol A_{rs} \\
+\end{pmatrix}, \quad \boldsymbol B = \begin{pmatrix}
+\boldsymbol B_{11} & \boldsymbol B_{12} & \cdots & \boldsymbol B_{1s} \\
+\boldsymbol B_{21} & \boldsymbol B_{22} & \cdots & \boldsymbol B_{2s} \\
+\vdots & \vdots & & \vdots \\
+\boldsymbol B_{r1} & \boldsymbol B_{r2} & \cdots & \boldsymbol B_{rs} \\
+\end{pmatrix}</script><p>其中 $\boldsymbol A_{ij}$ 的行数 $= \boldsymbol B_{ij}$ 的行数，$\boldsymbol A_{ij}$ 的列数 $= \boldsymbol B_{ij}$ 的列数，$1 \le i \le r, 1 \le j \le s$，则</p>
+<script type="math/tex; mode=display">
+\boldsymbol A + \boldsymbol B = \begin{pmatrix}
+\boldsymbol A_{11} + \boldsymbol B_{11} & \boldsymbol A_{12} + \boldsymbol B_{12} & \cdots & \boldsymbol A_{1s} + \boldsymbol B_{1s} \\
+\boldsymbol A_{21} + \boldsymbol B_{21} & \boldsymbol A_{22} + \boldsymbol B_{22} & \cdots & \boldsymbol A_{2s} + \boldsymbol B_{2s} \\
+\vdots & \vdots & & \vdots \\
+\boldsymbol A_{r1} + \boldsymbol B_{r1} & \boldsymbol A_{r2} + \boldsymbol B_{r2} & \cdots & \boldsymbol A_{rs} + \boldsymbol B_{rs} \\
+\end{pmatrix}</script><p><strong>数乘</strong>：数 $k$ 与分块矩阵 $\boldsymbol A = ( \boldsymbol A_{ij})_{r \times s}$ 的乘积为</p>
+<script type="math/tex; mode=display">
+k \boldsymbol A = \begin{pmatrix}
+k \boldsymbol A_{11} & k \boldsymbol A_{12} & \cdots & k \boldsymbol A_{1s} \\
+k \boldsymbol A_{21} & k \boldsymbol A_{22} & \cdots & k \boldsymbol A_{2s} \\
+\vdots & \vdots & & \vdots \\
+k \boldsymbol A_{r1} & k \boldsymbol A_{r2} & \cdots & k \boldsymbol A_{rs} \\
+\end{pmatrix}</script><p><strong>转置</strong>：设 $\boldsymbol A = ( \boldsymbol A_{ij})_{r \times s}$，则其转置矩阵为</p>
+<script type="math/tex; mode=display">
+\boldsymbol A^T = \begin{pmatrix}
+\boldsymbol A_{11}^T & \boldsymbol A_{21}^T & \cdots & \boldsymbol A_{r1}^T \\
+\boldsymbol A_{12}^T & \boldsymbol A_{22}^T & \cdots & \boldsymbol A_{r2}^T \\
+\vdots & \vdots & & \vdots \\
+\boldsymbol A_{1s}^T & \boldsymbol A_{2s}^T & \cdots & \boldsymbol A_{rs}^T \\
+\end{pmatrix} = ( \boldsymbol B_{ij})_{r \times s}</script><p>其中 $\boldsymbol B_{ij} = \boldsymbol A_{ji}^ \mathrm T, i = 1, 2, \cdots, s; j = 1, 2, \cdots, r$。分块矩阵转置时，不但看作元素的子块之间要转置，而且每个子块是子矩阵，它内部也要转置。</p>
+<p><strong>乘法</strong>：设矩阵 $\boldsymbol A = (a_{ij})_{m \times p}, \boldsymbol B = (b_{ij})_{p \times n}$。利用分块矩阵计算乘积 $\boldsymbol{AB}$ 时，应使左边矩阵 $\boldsymbol A$ 的列分块方式与右边矩阵 $\boldsymbol B$ 的航分块方式一致，然后把矩阵的子块当作元素来看待，并且相乘时， $\boldsymbol A$ 的各子块分别左乘 $\boldsymbol B$ 的对应的子块。</p>
+<p>设 $\boldsymbol A, \boldsymbol B$ 的分块方式为</p>
+<!-- 放弃，再次截图摆烂 -->
+<p><img src="files/img/linalg/blocking.png" style="zoom: 50%;" /></p>
+<p>其中 $\boldsymbol A_{ik}$ 为 $m_i \times l_k$ 矩阵 $(i = 1, 2, \cdots, r; k = 1, 2, \cdots, s)$；$\boldsymbol B_{kj}$ 为 $l_k \times n_j$ 矩阵 $(k = 1, 2, \cdots, s; j = 1, 2, \cdots, t)$。且 $\boldsymbol A_{i1}, \boldsymbol A_{i2}, \cdots, \boldsymbol A_{is}$ 的列数分别等于 $\boldsymbol B_{1j}, \boldsymbol B_{2j}, \cdots, \boldsymbol B_{sj}$ 的行数，则</p>
+<script type="math/tex; mode=display">
+\boldsymbol{AB} = \boldsymbol C = \begin{pmatrix}
+\boldsymbol C_{11} & \boldsymbol C_{12} & \cdots & \boldsymbol C_{1t} \\
+\boldsymbol C_{21} & \boldsymbol C_{22} & \cdots & \boldsymbol C_{2t} \\
+\vdots & \vdots & & \vdots \\
+\boldsymbol C_{r1} & \boldsymbol C_{r2} & \cdots & \boldsymbol C_{rt} \\
+\end{pmatrix}</script><p>其中 $\boldsymbol C_{ij} = \boldsymbol A_{i1} \boldsymbol B_{1j} + \boldsymbol A_{i2} \boldsymbol B_{2j} + \cdots + \boldsymbol A_{is} \boldsymbol B_{sj} (i = 1, 2, \cdots, r; j = 1, 2, \cdots, t)$。</p>
+<p><strong>对角分块矩阵</strong>：形如</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+\boldsymbol A_1 \\
+& \boldsymbol A_2 \\
+& & \ddots \\
+& & & \boldsymbol A_r \\
+\end{pmatrix}</script><p>的分块矩阵称为<strong>分块对角矩阵</strong>或<strong>准对角矩阵</strong>。其中 $\boldsymbol A_1, \boldsymbol A_2, \cdots, \boldsymbol A_r$ 均为方阵。</p>
+<p>两个准对角矩阵的乘积为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \begin{pmatrix}
+\boldsymbol A_1 \\
+& \boldsymbol A_2 \\
+& & \ddots \\
+& & & \boldsymbol A_r \\
+\end{pmatrix} \begin{pmatrix}
+\boldsymbol B_1 \\
+& \boldsymbol B_2 \\
+& & \ddots \\
+& & & \boldsymbol B_r \\
+\end{pmatrix} \\
+& = \begin{pmatrix}
+\boldsymbol A_1 \boldsymbol B_1 \\
+& \boldsymbol A_2 \boldsymbol B_2 \\
+& & \ddots \\
+& & & \boldsymbol A_r \boldsymbol B_r \\
+\end{pmatrix}
+\end{aligned}</script><p>其中，对于每一个 $1 \le i \le r$，$\boldsymbol A_i$ 与 $\boldsymbol B_i$ 是同阶方阵（否则它们不能相乘）。</p>
+<p>准对角矩阵的逆矩阵</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+\boldsymbol A_1 \\
+& \boldsymbol A_2 \\
+& & \ddots \\
+& & & \boldsymbol A_r \\
+\end{pmatrix}^{-1} = \begin{pmatrix}
+\boldsymbol A_1^{-1} \\
+& \boldsymbol A_2^{-1} \\
+& & \ddots \\
+& & & \boldsymbol A_r^{-1} \\
+\end{pmatrix}</script><p>这里，每个 $\boldsymbol A_i (i = 1, 2, \cdots, r)$ 都是可逆方阵。</p>
+<p>形如</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+\boldsymbol A_{11} & \boldsymbol A_{12} & \cdots & \boldsymbol A_{1r} \\
+& \boldsymbol A_{22} & \cdots & \boldsymbol A_{2r} \\
+& & \ddots & \vdots \\
+& & & \boldsymbol A_{rr} \\
+\end{pmatrix}, \quad \boldsymbol A = \begin{pmatrix}
+\boldsymbol A_{11} \\
+\boldsymbol A_{21} & \boldsymbol A_{22} \\
+\vdots & \vdots & \ddots \\
+\boldsymbol A_{r1} & \boldsymbol A_{r2} & \cdots & \boldsymbol A_{rr} \\
+\end{pmatrix}</script><p>的分块矩阵分别称为<strong>准上三角矩阵</strong>和<strong>准下三角矩阵</strong>。它们都是分块三角矩阵。这里，每个主对角块 $\boldsymbol A_{ii}$ 都必须是方阵，但阶数可以不相同。</p>
+<p>上述两类特殊分块矩阵的行列式同为</p>
+<script type="math/tex; mode=display">
+| \boldsymbol A| = \prod_{i = 1}^r{| \boldsymbol A_{ii}|}</script><blockquote>
+<p>求逆这玩意实在是没法说，去课本看例子吧（</p>
+</blockquote>
+<div style="page-break-after:always"></div>
+
+<h3 id="空间向量、平面与直线-1"><a href="#空间向量、平面与直线-1" class="headerlink" title="空间向量、平面与直线"></a>空间向量、平面与直线</h3><h4 id="清单-2"><a href="#清单-2" class="headerlink" title="清单"></a>清单</h4><ul>
+<li>向量（矢量）<em>(三维以下)</em><ul>
+<li>向量的长度（模）</li>
+<li>自由向量</li>
+<li>特殊的向量<ul>
+<li>零向量</li>
+<li>单位向量</li>
+</ul>
+</li>
+<li>向量的空间关系与判定<ul>
+<li>相等性</li>
+<li>负向量</li>
+<li>平行（共线）<ul>
+<li>=&gt; 共面</li>
+</ul>
+</li>
+<li>夹角<ul>
+<li>余弦 -&gt; 坐标表示式</li>
+<li>=&gt; 正交（垂直）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量的线性运算<ul>
+<li>加法<ul>
+<li>定义<ul>
+<li>三角形法则</li>
+<li>平行四边形法则</li>
+</ul>
+</li>
+<li>=&gt; 减法</li>
+</ul>
+</li>
+<li>数乘<ul>
+<li>零元</li>
+<li>单位元</li>
+<li>结合律</li>
+<li>对两种加法的分配律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>坐标<ul>
+<li>利用坐标进行线性运算</li>
+</ul>
+</li>
+<li>数量积（点积、内积）<ul>
+<li>交换性</li>
+<li>齐次性</li>
+<li>可加性</li>
+<li>非负性</li>
+<li>坐标表示式</li>
+</ul>
+</li>
+<li>混合积<ul>
+<li>性质（5）</li>
+<li>几何意义：有向体积</li>
+</ul>
+</li>
+<li>向量积（叉积、外积）<ul>
+<li>模的几何意义</li>
+<li>反对称性</li>
+<li>齐次性</li>
+<li>对向量加法的分配律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间直角坐标系<ul>
+<li>右手规则</li>
+<li>坐标轴 =&gt; 坐标面</li>
+<li>卦限</li>
+<li>坐标<ul>
+<li>点</li>
+<li>向量<ul>
+<li>直角坐标系的基向量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向径</li>
+<li>定比分点</li>
+<li>向量模的坐标表示式</li>
+<li>两点间距离公式</li>
+<li>向量的方向角</li>
+<li>向量在轴上的投影<ul>
+<li>三个性质</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>平面与直线<ul>
+<li>平面的法向量</li>
+<li><strong>平面的方程</strong><ul>
+<li>点法式方程</li>
+<li>一般方程</li>
+<li>截距式方程</li>
+<li>三点式方程</li>
+</ul>
+</li>
+<li>直线的方向向量<ul>
+<li>方向数</li>
+<li>方向余弦</li>
+</ul>
+</li>
+<li>空间直线的方程<ul>
+<li>参数方程</li>
+<li>标准方程（点向式方程、对称方程）</li>
+<li>普通方程（已经方程）</li>
+<li>两点式方程</li>
+</ul>
+</li>
+<li>平面与空间直线相关的问题<ul>
+<li>两平面的夹角</li>
+<li>点到平面的距离</li>
+<li>点到直线的距离</li>
+<li>空间两直线间的关系</li>
+<li>直线与平面的夹角</li>
+<li>平面束方程</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-2"><a href="#课本原文-2" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>定义 1</strong> 既有大小、又有方向的量称为<strong>向量</strong>或<strong>矢量</strong>。</p>
+<p>在几何上，向量可以用一个有向线段来表示。设已给空间两点 $A, B$，以 $A$ 为起点，$B$ 为终点，这就确定了向量的方向，而 $A, B$ 两点间直线段的长度确定了向量的大小，这个向量记作 $\overrightarrow{AB}$。向量 $\overrightarrow{AB}$ 的大小也称为 $\overrightarrow{AB}$ 的<strong>长度</strong>或<strong>模</strong>，记作 $| \overrightarrow{AB}|$。通常用黑体希腊字母 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma, \cdots$ 或 $\boldsymbol a, \boldsymbol b, \boldsymbol c, \cdots$ 表示向量。解析几何中所说的向量只考虑它的大小和方向而不计较它的起点的未知，因此它可以平行移动，这种向量称为<strong>自由向量</strong>。</p>
+<p>如果两个向量 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$ 的大小相等，方向相同，则称这两个<strong>向量相等</strong>，记作 $\boldsymbol \alpha = \boldsymbol \beta$。</p>
+<p>如果两个向量 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$ 的大小相等，方向相反，则称 $\boldsymbol \beta$ 是 $\boldsymbol \alpha$ 的<strong>负向量</strong>，记作 $\boldsymbol \beta = -\boldsymbol \alpha$。显然 $\overrightarrow{BA} = - \overrightarrow{AB}$。</p>
+<p>长度为 $0$ 的向量称为<strong>零向量</strong>，即起点与重点重合的向量，记作 $\boldsymbol 0$，它的方向可以看作是任意的。</p>
+<p>长度为 $1$ 的向量叫做<strong>单位向量</strong>。任意非零向量 $\boldsymbol \alpha$ 的单位向量为 $\boldsymbol \alpha_0 = \dfrac{ \boldsymbol \alpha}{| \boldsymbol \alpha|}$，故 $\boldsymbol \alpha = | \boldsymbol \alpha| \boldsymbol \alpha_0$。</p>
+<p>如果两个非零向量的方向相同或者相反，就称这两个向量<strong>平行</strong>，向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 平行，记作 $\boldsymbol \alpha \parallel \boldsymbol \beta$。由于零向量的方向可以看作是任意的，因此可以认为零向量与任何向量都平行。</p>
+<p>当两个平行向量的起点放在同一点时，它们的终点和公共起点应在一条直线上，因此，两向量平行，又称向量<strong>共线</strong>。</p>
+<p>设有 $k \ (k \ge 3)$ 个向量，当把它们的起点放在同一点时，如果 $k$ 个终点和公共起点在一个平面上，就称这 $k$ 个向量<strong>共面</strong>。</p>
+<p><strong>定义 2</strong> 设有两个向量 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$，任取一点 $O$ 作向量 $\overrightarrow{OA} = \boldsymbol \alpha$，再以 $A$ 为起点作向量 $\overrightarrow{AB} = \boldsymbol \beta$，则向量 $\overrightarrow{OB} = \boldsymbol \gamma$，称为向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的和，记为 $\boldsymbol \alpha + \boldsymbol \beta$，即</p>
+<script type="math/tex; mode=display">
+\boldsymbol \gamma = \boldsymbol \alpha + \boldsymbol \beta</script><p>这样作出两个向量之和的方法叫做向量相加的<strong>三角形法则</strong>。</p>
+<p><strong>定义 3</strong> 从一点 $O$ 作向量 $\overrightarrow{OA} = \boldsymbol \alpha, \overrightarrow{OB} = \boldsymbol \beta$，再以 $OA, OB$ 为邻边作平行四边形 $OACB$，称向量 $\overrightarrow{OC} = \boldsymbol \gamma$ 为向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的。记作 $\boldsymbol \gamma = \overrightarrow{OC} = \overrightarrow{OA} + \overrightarrow{OB} = \boldsymbol \alpha + \boldsymbol \beta$。这称为向量加法的<strong>平行四边形法则</strong>。</p>
+<p><strong>向量的加法性质</strong></p>
+<p>(1) 交换律：$\boldsymbol \alpha + \boldsymbol \beta = \boldsymbol \beta + \boldsymbol \alpha$</p>
+<p>(2) 结合律：$( \boldsymbol \alpha + \boldsymbol \beta) + \boldsymbol \gamma = \boldsymbol \alpha + ( \boldsymbol \beta + \boldsymbol \gamma)$</p>
+<p>(3) 零元：$\boldsymbol \alpha + \boldsymbol 0 = \boldsymbol 0 + \boldsymbol \alpha = \boldsymbol \alpha$</p>
+<p>(4) 逆元：$\boldsymbol \alpha + (- \boldsymbol \alpha) = (- \boldsymbol \alpha) + \boldsymbol \alpha = \boldsymbol 0$</p>
+<p>由于向量的加法满足结合律，三个向量 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 之和可简记为 $\boldsymbol \alpha + \boldsymbol \beta + \boldsymbol \gamma$，而不必用括号来表示运算的顺序，$n$ 个向量 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n \ (n \ge 3)$ 之和可简记为</p>
+<script type="math/tex; mode=display">
+\sum_{i = 1}^n{ \boldsymbol \alpha_i} = \boldsymbol \alpha_1 + \boldsymbol \alpha_2 + \cdots + \boldsymbol \alpha_n</script><p>并按向量相加的三角形法则，可得 $n$ 个向量相加的法则如下：作 $\overrightarrow{OA_1} = \boldsymbol \alpha_1$，再由点 $A_1$ 作 $\overrightarrow{A_1A_2} = \boldsymbol \alpha_2$，以此类推，最后由 $\boldsymbol \alpha_{n - 1}$ 的终点 $A_{n - 1}$ 作 $\overrightarrow{A_{n - 1}A_n} = \boldsymbol \alpha_n$，则向量 $\overrightarrow{OA_n} = \sum \limits_{i = 1}^n{ \boldsymbol \alpha_i}$。</p>
+<p><strong>定义 4</strong> 向量 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$ 的<strong>差（减法）</strong>规定为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha - \boldsymbol \beta = \boldsymbol \alpha + (- \boldsymbol \beta)</script><p>按三角形法则，当向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的起点重合时，由 $\boldsymbol \beta$ 的终点指向 $\boldsymbol \alpha$ 的终点的那个向量即 $\boldsymbol \alpha - \boldsymbol \beta$。</p>
+<p><strong>定义 5</strong> 向量 $\boldsymbol \alpha$ 与实数 $\lambda$ 相乘是一个向量，记作 $\lambda \boldsymbol \alpha$，它的模为</p>
+<script type="math/tex; mode=display">
+| \lambda \boldsymbol \alpha| = | \lambda| | \boldsymbol \alpha|</script><p>当 $\lambda &gt; 0$ 时它的方向与 $\boldsymbol \alpha$ 相同，当 $\lambda &lt; 0$ 时与 $\boldsymbol \alpha$ 相反，当 $\lambda = 0$ 时，$| \lambda \boldsymbol \alpha| = 0$，即 $\lambda \boldsymbol \alpha = \boldsymbol 0$，这时它的方向可以是任意的。</p>
+<p>由上述定义可知：$\lambda \boldsymbol \alpha = \boldsymbol 0$ 的充分必要条件是 $\boldsymbol \alpha = \boldsymbol 0$ 或 $\lambda = 0$。</p>
+<p>特别地，当 $\lambda = -1$ 时，有 $(-1) \boldsymbol \alpha = - \boldsymbol \alpha$。</p>
+<p><strong>向量数乘的性质</strong></p>
+<p>(1) 单位元：$1 \cdot \boldsymbol \alpha = \boldsymbol \alpha$；</p>
+<p>(2) 结合律：$k(l \boldsymbol \alpha) = (kl) \boldsymbol \alpha$；</p>
+<p>(3) 对数量加法的分配律：$(k + l) \boldsymbol \alpha = k \boldsymbol \alpha + l \boldsymbol \alpha$；</p>
+<p>(4) 对向量加法的分配律：$k( \boldsymbol \alpha + \boldsymbol \beta) = k \boldsymbol \alpha + k \boldsymbol \beta$。</p>
+<p>向量加法与数乘统称为向量的<strong>线性运算</strong>。</p>
+<p><strong>定理 1</strong> 两个向量 $\boldsymbol \alpha, \boldsymbol \beta$ 贡献的充分必要条件是存在不全为零的数 $\lambda, \mu$，使 $\lambda \boldsymbol \alpha + \mu \boldsymbol \beta = \boldsymbol 0$。</p>
+<p><strong>定理 2</strong> 三个向量 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 共面的充分必要条件是存在不全为零的数 $k_1, k_2, k_3$，使 $k_1 \boldsymbol \alpha + k_2 \boldsymbol \beta + k_3 \boldsymbol \gamma = \boldsymbol 0$。</p>
+<p><strong>推论</strong> 设向量 $\boldsymbol \alpha, \boldsymbol \beta$ 不共线，若 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 共面，则存在唯一的实数组 $k_1, k_2$，使 $\boldsymbol \gamma = k_1 \boldsymbol \alpha + k_2 \boldsymbol \beta$。</p>
+<p><strong>定义 6</strong> 在空间取定一点 $O$ 称为原点，再取过 $O$ 点的三条两两互相垂直的有向直线，这三条有向直线的正向单位向量分别为 $\boldsymbol i, \boldsymbol j, \boldsymbol k$，三条有向直线称为坐标轴，依次记为 $x$ 轴、$y$ 轴、$z$ 轴。这样就建立起<strong>空间直角坐标系</strong>，称为 $Oxyz$ 坐标系。</p>
+<p>通常把 $x$ 轴和 $y$ 轴配置在水平面上，而 $z$ 轴则是铅垂线；它们的正向通常符合<strong>右手规则</strong>，即以右手握住 $x$ 轴，当右手的四个手指从 $x$ 轴正向以 $\dfrac \pi 2$ 角度转向 $y$ 轴正向时，大拇指的指向 就是 $z$ 轴的正向。</p>
+<p>三条坐标轴中的任意两条可以确定一个平面，这样定出的三个平面统称为<strong>坐标面</strong>。$x$ 轴和 $y$ 轴所确定的坐标面叫作 $xOy$ 平面，另两个由 $y$ 轴和 $z$ 轴和由 $x$ 轴及 $z$ 轴所确定的坐标面，分别叫作 $yOz$ 平面和 $zOx$ 平面。三个坐标面把空间分成八个部分，每一部分叫作一个<strong>卦限</strong>。含有 $x$ 轴、$y$ 轴与 $z$ 轴正半轴的那个卦叫作第一卦限，表示为 $\mathrm I(+, +, +)$，含有 $x$ 轴负半轴、$y$ 轴与 $z$ 轴正半轴的那个卦叫作第二卦限，表示为 $\mathrm{II}(-, +, +)$，类似地，八个卦限可分别表示为</p>
+<script type="math/tex; mode=display">
+\begin{array}{lll}
+&\mathrm I(+, +, +), &\mathrm{II}(-, +, +), &\mathrm{III}(-, -, +), &\mathrm{IV}(+, -, +), \\
+&\mathrm V(+, +, -), &\mathrm{VI}(-, +, -), &\mathrm{VII}(-, -, -), &\mathrm{VIII}(+, -, -)
+\end{array}</script><p><img src="/files/img/linalg/decomposition.png" alt=""></p>
+<p>任给一个向量 $\boldsymbol r$，对应有空间一点 $M$，使 $\boldsymbol r = \overrightarrow{OM}$。以 $OM$ 为对角线、三条坐标轴为楼作长方体 $RHMK-OPNQ$，如图所示，有</p>
+<script type="math/tex; mode=display">
+\boldsymbol r = \overrightarrow{OM} = \overrightarrow{OP} + \overrightarrow{PN} + \overrightarrow{NM} = \overrightarrow{OP} + \overrightarrow{OQ} + \overrightarrow{OR}</script><p>设</p>
+<script type="math/tex; mode=display">
+\overrightarrow{OP} = x \boldsymbol i, \quad \overrightarrow{OQ} = y \boldsymbol j, \quad \overrightarrow{OR} = z \boldsymbol k</script><p>则</p>
+<script type="math/tex; mode=display">
+\boldsymbol r = \overrightarrow{OM} = x \boldsymbol i + y \boldsymbol j + z \boldsymbol k</script><p>上式称为向量 $\boldsymbol r$ 的坐标分解式，$x \boldsymbol i, y \boldsymbol j, z \boldsymbol k$ 称为向量 $\boldsymbol r$ 沿三个坐标轴方向的分向量。</p>
+<p>给定了向量 $\boldsymbol r$，就确定了点 $M$ 及 $\overrightarrow{OP}, \overrightarrow{OQ}, \overrightarrow{OR}$ 三个分向量，进而确定了 $x, y, z$ 三个有序数；反之，给定三个有序数 $x, y, z$，就确定了向量 $\boldsymbol r$ 与点 $M$。于是点 $M$、向量 $\boldsymbol r$ 与三个有序数 $x, y, z$ 之间有一一对应关系</p>
+<script type="math/tex; mode=display">
+M \leftrightarrow \boldsymbol r = \overrightarrow{OM} = x \boldsymbol i + y \boldsymbol j + z \boldsymbol k \leftrightarrow (x, y, z)</script><p>据此，定义：有序数 $x, y, z$ 称为向量 $\boldsymbol r$ 在直角坐标系 $Oxyz$ 中的<strong>坐标</strong>，记作 $\boldsymbol r = (x, y, z)$，有序数 $x, y, z$ 也称为点 $M$ 在直角坐标系 $Oxyz$ 中的坐标，记作 $M(x, y, z)$。</p>
+<p>向量 $\boldsymbol r = \overrightarrow{OM}$ 称为点 $M$ 关于原点 $O$ 的<strong>向径</strong>。上述定义表明，一个点与该点的向径有相同的坐标。记号 $(x, y, z)$ 既表示点 $M$，又表示向量 $\overrightarrow{OM}$。</p>
+<p>三个单位向量 $\boldsymbol i, \boldsymbol j, \boldsymbol k$ 的坐标为</p>
+<script type="math/tex; mode=display">
+\boldsymbol i = (1, 0, 0), \quad \boldsymbol j = (0, 1, 0), \quad \boldsymbol k = (0, 0, 1)</script><p><strong>利用坐标进行向量的线性运算</strong></p>
+<p>利用向量的坐标，可得向量的加法、减法以及向量与数的乘法运算如下：</p>
+<p>设</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = (x_1, y_1, z_1), \quad \boldsymbol \beta = (x_2, y_2, z_2)</script><p>即</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = x_1 \boldsymbol i + y_1 \boldsymbol j + z_1 \boldsymbol k, \quad \boldsymbol \beta = x_2 \boldsymbol i + y_2 \boldsymbol j + z_2 \boldsymbol k</script><p>利用向量加法的交换律与结合律，以及向量与数的乘法的结合律与分配律，有</p>
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+\boldsymbol \alpha \pm \boldsymbol \beta = (x_1 \pm x_2) \boldsymbol i + (y_1 \pm y_2) \boldsymbol j + (z_1 \pm z_2) \boldsymbol k \\
+\lambda \boldsymbol \alpha = \lambda x_1 \boldsymbol i + \lambda y_1 \boldsymbol j + \lambda z_1 \boldsymbol k \\
+\end{array}</script><p>由坐标的唯一性可知，</p>
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+\boldsymbol \alpha \pm \boldsymbol \beta = (x_1 \pm x_2, y_1 \pm y_2, z_1 \pm z_2) \\
+\lambda \boldsymbol \alpha = ( \lambda x_1, \lambda y_1, \lambda z_1) \\
+\end{array}</script><p>由此可见，对向量进行加、减以及与数相乘的运算，只需对向量的各个坐标分别进行相应的数量运算就可以了。</p>
+<p><strong>定比分点</strong> 设点 $A(x_1, y_1, z_1), B(x_2, y_2, z_2), C(x_3, y_3, z_3)$ 共线，而且点 $C$ 分线段 $AB$ 为比值为 $\lambda$ 的两端，即 $\overrightarrow{AC} = \lambda \overrightarrow{CB}$，则</p>
+<script type="math/tex; mode=display">
+x_3 = \frac{x_1 + \lambda x_2}{1 + \lambda}, \quad y_3 = \frac{y_1 + \lambda y_2}{1 + \lambda}, \quad z_3 = \frac{z_1 + \lambda z_2}{1 + \lambda}</script><p><strong>向量的模与两点间的距离公式</strong></p>
+<p>设向量 $\boldsymbol r = (x, y, z)$，作向量 $\overrightarrow{OM} = \boldsymbol r$，如前文图所示，有</p>
+<script type="math/tex; mode=display">
+\boldsymbol r = \overrightarrow{OM} = \overrightarrow{OP} + \overrightarrow{OQ} + \overrightarrow{OR}</script><p>按勾股定理可得</p>
+<script type="math/tex; mode=display">
+| \boldsymbol r| = |OM| = \sqrt{|OP|^2 + |PQ|^2 + |OR|^2}</script><p>由</p>
+<script type="math/tex; mode=display">
+\overrightarrow{OP} = x \boldsymbol i, \quad \overrightarrow{OQ} = y \boldsymbol j, \quad \overrightarrow{OR} = z \boldsymbol k</script><p>有</p>
+<script type="math/tex; mode=display">
+|OP| = |x|, \quad |OQ| = |y|, \quad |OR| = |z|</script><p>于是得向量<strong>模</strong>的坐标表达式</p>
+<script type="math/tex; mode=display">
+| \boldsymbol r| = \sqrt{x^2 + y^2 + z^2}</script><p>设点 $A(x_1, y_1, z_1), B(x_2, y_2, z_2)$，则点 $A$ 与点 $B$ 间的距离 $|AB|$ 就是向量 $\overrightarrow{AB}$ 的模。由</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\overrightarrow{AB} & = \overrightarrow{OB} - \overrightarrow{OA} \\
+& = (x_2, y_2, z_2) - (x_1, y_1, z_1) \\
+& = (x_2 - x_1, y_2 - y_1, z_2 - z_1)
+\end{aligned}</script><p>即得 $A, B$ 两点间的距离</p>
+<script type="math/tex; mode=display">
+|AB| = | \overrightarrow{AB}| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}</script><p><strong>方向角与方向余弦</strong></p>
+<p><strong>定义 7</strong> 设有两个非零向量 $\boldsymbol \alpha, \boldsymbol \beta$，任取空间一点 $O$，作 $\overrightarrow{OA} = \boldsymbol \alpha, \overrightarrow{OB} = \boldsymbol \beta$，规定不超过 $\pi$ 的 $\angle AOB$（设 $\varphi = \angle AOB, 0 \le \varphi \le \pi$）为<strong>向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的夹角</strong>，记作 $\varphi = \left&lt; \widehat{ \boldsymbol \alpha, \boldsymbol \beta} \right&gt;$。如果 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 中有一个是零向量，规定它们的夹角可以取 $0$ 与 $\pi$ 之间的任意值。</p>
+<p><strong>定义 8</strong> 设在直角坐标系中，向量 $\overrightarrow{OM}$ 与三个坐标向量 $\boldsymbol i, \boldsymbol j, \boldsymbol k$ 的夹角分别为 $\alpha, \beta, \gamma$，称它们为向量 $\overrightarrow{OM}$ 的<strong>方向角</strong>，$\cos \alpha, \cos \beta, \cos \gamma$ 称为 $\overrightarrow{OM}$ 的方向余弦。</p>
+<p><img src="/files/img/linalg/directionAngle.png" alt=""></p>
+<p>如图所示，设 $\boldsymbol r = \overrightarrow{OM} = (x, y, z)$，由于 $x$ 是有向线段 $\overrightarrow{OP}$ 的值，$MP \perp OP$，故</p>
+<script type="math/tex; mode=display">
+\cos \alpha = \frac x{|OM|} = \frac x{| \boldsymbol  r|}</script><p>类似可知</p>
+<script type="math/tex; mode=display">
+\cos \beta = \frac y{|OM|} = \frac y{| \boldsymbol  r|}, \quad \cos \gamma = \frac z{|OM|} = \frac z{| \boldsymbol  r|}</script><p>从而</p>
+<script type="math/tex; mode=display">
+( \cos \alpha, \cos \beta, \cos \gamma) = \left( \frac x{ \boldsymbol r}, \frac y{| \boldsymbol r|}, \frac z{| \boldsymbol r|} \right) = \frac 1{ \boldsymbol r}(x, y, z) = \frac{ \boldsymbol r}{| \boldsymbol r|} = \boldsymbol e</script><p>由此可得</p>
+<script type="math/tex; mode=display">
+\cos^2 \alpha + \cos^2 \beta + \cos^2 \gamma = 1</script><p><strong>向量在轴上的投影</strong></p>
+<p><img src="/files/img/linalg/project.png" alt=""></p>
+<p><strong>定义 9</strong> 如图，取定点 $O$ 及单位向量 $\boldsymbol e$ 确定 $u$ 轴，任给向量 $\boldsymbol r$，作 $\overrightarrow{OM} = \boldsymbol r$，再过点 $M$ 作与 $u$ 轴垂直的平面交 $u$ 轴于点 $M’$，则点 $M’$ 称为<strong>点 $M$ 在 $u$ 轴上的投影</strong>，向量 $\overrightarrow{OM’}$ 称为 $\boldsymbol r$ 在 $u$ 轴上的分量。设 $\overrightarrow{OM’} = \lambda \boldsymbol e$，则数 $\lambda$ 称为<strong>向量 $\boldsymbol r$ 在 $u$ 轴上的投影</strong>。记作 $\operatorname{Prj}_u \boldsymbol r$ 或 $( \boldsymbol r)_u$。</p>
+<p>由定义 9 知，向量 $\boldsymbol \alpha = (a_x, a_y, a_z)$ 在直角坐标系 $Oxyz$ 的坐标就是 $\boldsymbol \alpha$ 在三条坐标轴上的投影，即</p>
+<script type="math/tex; mode=display">
+\operatorname{Prj}_x \boldsymbol \alpha = a_x, \quad \operatorname{Prj}_y \alpha = a_y, \quad \operatorname{Prj}_z \boldsymbol \alpha = a_z</script><p>由此可知，向量的投影具有与坐标相同的性质：</p>
+<p><strong>性质 1</strong> $\operatorname{Prj}_u \boldsymbol \alpha = | \boldsymbol \alpha| \cos \varphi$，其中 $\varphi$ 是向量 $\boldsymbol \alpha$ 与 $u$ 轴的夹角；</p>
+<p><strong>性质 2</strong> $\operatorname{Prj}_u( \boldsymbol \alpha + \boldsymbol \beta) = \operatorname{Prj}_u \boldsymbol \alpha + \operatorname{Prj}_u \boldsymbol \beta$；</p>
+<p><strong>性质 3</strong> $\operatorname{Prj}_u( \lambda \boldsymbol \alpha) = \lambda \operatorname{Prj}_u \boldsymbol \alpha$。</p>
+<p><strong>定义 10</strong> 两个向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的<strong>数量积</strong>（又称为<strong>点积</strong>或<strong>内积</strong>）是一个实数，它等于这两个向量的长度与它们的夹角 $\theta = \left&lt; \widehat{ \boldsymbol \alpha, \boldsymbol \beta} \right&gt;$ 余弦的乘积，记作 $( \boldsymbol \alpha, \boldsymbol \beta)$ 或 $\boldsymbol \alpha \cdot \boldsymbol \beta$，即有</p>
+<script type="math/tex; mode=display">
+( \boldsymbol \alpha, \boldsymbol \beta) = \boldsymbol \alpha \cdot \boldsymbol \beta = | \boldsymbol \alpha| | \boldsymbol \beta| \cos \theta = x \in \mathbb R</script><p>其中 $\theta$ 的取值范围是 $0 \le \theta \le \pi$。于是向量的长度（模）表示为</p>
+<script type="math/tex; mode=display">
+| \boldsymbol \alpha| = \sqrt{ \boldsymbol \alpha^2} = \sqrt{ ( \boldsymbol \alpha, \boldsymbol \alpha)}</script><p>若 $( \boldsymbol \alpha, \boldsymbol \beta) = 0$，则称 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ <strong>正交</strong>，记作 $\boldsymbol \alpha \perp \boldsymbol \beta$。两个向量正交即它们的夹角为 $\theta = \dfrac \pi 2$。规定零向量与任意向量正交。例如，直角坐标系中的基向量 $\boldsymbol i, \boldsymbol j, \boldsymbol k$ 就是两两正交的向量。</p>
+<p>由于 $| \boldsymbol \beta| \cos \theta = | \boldsymbol \beta| \cos \left&lt; \widehat{ \boldsymbol \alpha, \boldsymbol \beta} \right&gt;$，当 $\boldsymbol \alpha \ne \boldsymbol 0$ 时是向量 $\boldsymbol \beta$ 在向量 $\boldsymbol \alpha$ 方向上的投影，用 $\operatorname{Prj}_{ \boldsymbol \alpha} \boldsymbol \beta$ 来表示这个投影，便有</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha \cdot \boldsymbol \beta = | \boldsymbol \alpha| \operatorname{Prj}_{ \boldsymbol \alpha} \boldsymbol \beta</script><p>同理，当 $\boldsymbol \beta \ne \boldsymbol 0$ 时有</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha \cdot \boldsymbol \beta = | \boldsymbol \beta| \operatorname{Prj}_{ \boldsymbol \beta} \boldsymbol \alpha</script><p>这就是说，两个向量的数量积等于其中一个向量的模和另一个向量在这个向量的方向是的投影的乘积。</p>
+<p><strong>内积的基本性质</strong></p>
+<p>(1) 交换性：$( \boldsymbol \alpha, \boldsymbol \beta) = ( \boldsymbol \beta, \boldsymbol \alpha)$；</p>
+<p>(2) 齐次性：$( \lambda \boldsymbol \alpha, \boldsymbol \beta) = \lambda( \boldsymbol \alpha, \boldsymbol \beta), \forall \lambda \in \mathbb R$；</p>
+<p>(3) 可加性：$( \boldsymbol \alpha + \boldsymbol \beta, \boldsymbol \gamma) = ( \boldsymbol \alpha, \boldsymbol \gamma) + ( \boldsymbol \beta, \boldsymbol \gamma)$；</p>
+<p>(4) 非负性：$( \boldsymbol \alpha, \boldsymbol \alpha ) = | \boldsymbol \alpha |^2 \ge 0$，当且仅当 $\boldsymbol \alpha = \boldsymbol 0$ 时，等号成立。</p>
+<p>直角坐标系下两个向量的数量级的坐标表示式：</p>
+<p>设 $\boldsymbol \alpha = x_1 \boldsymbol i + y_1 \boldsymbol j + z_1 \boldsymbol k, \boldsymbol \beta = x_2 \boldsymbol i + y_2 \boldsymbol j + z_2 \boldsymbol k$，则</p>
+<script type="math/tex; mode=display">
+( \boldsymbol \alpha, \boldsymbol \beta) = x_1 x_2 + y_1 y_2 + z_1 z_2</script><p>由于 $( \boldsymbol \alpha, \boldsymbol \beta) = | \boldsymbol \alpha| | \boldsymbol \beta| \cos \theta$，当 $\boldsymbol \alpha, \boldsymbol \beta$ 均为非零向量时，有</p>
+<script type="math/tex; mode=display">
+\cos \theta = \frac{( \boldsymbol \alpha, \boldsymbol \beta)}{| \boldsymbol \alpha| | \boldsymbol \beta|}</script><p>以数量积的坐标表示式及向量的模的坐标表示式代入上式，就得</p>
+<script type="math/tex; mode=display">
+\cos \theta = \frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{ \sqrt{x_1^2 + y_1^2 + z_1^2} \cdot \sqrt{x_2^2 + y_2^2 + z_2^2}}</script><p>这就是两向量夹角余弦的坐标表示式。</p>
+<p><strong>定义 11</strong> 两个向量 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$ 的向量积（又称为<strong>叉积</strong>或<strong>外积</strong>）$\boldsymbol \alpha \times \boldsymbol \beta$ 是一个向量，其模是以 $\boldsymbol \alpha, \boldsymbol \beta$ 为边的平行四边形的面积，即 $| \boldsymbol \alpha \times \boldsymbol \beta| = | \boldsymbol \alpha| | \boldsymbol \beta| \sin \left&lt; \widehat{ \boldsymbol \alpha, \boldsymbol \beta} \right&gt;$</p>
+<p>其方向与 $\boldsymbol \alpha, \boldsymbol \beta$ 均垂直，且使 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \alpha \times \boldsymbol \beta$ 构成右手系。</p>
+<p>由定义可知，对于两个非零向量 $\boldsymbol \alpha, \boldsymbol \beta$，如果 $\boldsymbol \alpha \times \boldsymbol \beta = \boldsymbol 0$，那么 $\boldsymbol \alpha \parallel \boldsymbol \beta$；反之，如果 $\boldsymbol \alpha \parallel \boldsymbol \beta$，那么 $\boldsymbol \alpha \times \boldsymbol \beta = \boldsymbol 0$。</p>
+<p>由于可以认为零向量与任何向量都平行，因此有结论：向量 $\boldsymbol \alpha \parallel \boldsymbol \beta$ 的充分必要条件是 $\boldsymbol \alpha \times \boldsymbol \beta = \boldsymbol 0$。显然，对于任何向量 $\boldsymbol \alpha$，都有 $\boldsymbol \alpha \times \boldsymbol \alpha = \boldsymbol 0$。</p>
+<p><strong>向量积的基本性质</strong></p>
+<p>(1) 反对称性：$\boldsymbol \alpha \times \boldsymbol \beta = - \boldsymbol \beta \times \boldsymbol \alpha$；</p>
+<p>(2) 齐次性：$( \lambda \boldsymbol \alpha) \times \boldsymbol \beta = \boldsymbol \alpha \times ( \lambda \boldsymbol \beta) = \lambda( \boldsymbol \alpha \times \boldsymbol \beta), \lambda \in \mathbb R$；</p>
+<p>(3) 对向量加法的分配律：$( \boldsymbol \alpha + \boldsymbol \beta) \times \boldsymbol \gamma = \boldsymbol \alpha \times \boldsymbol \gamma + \boldsymbol \beta \times \boldsymbol \gamma$。</p>
+<p><strong>定义 12</strong> 已知三个向量 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$，先作向量 $\boldsymbol \alpha, \boldsymbol \beta$ 的向量积 $\boldsymbol \alpha \times \boldsymbol \beta$，把所得到的向量与第三个向量 $\boldsymbol \gamma$ 再作数量级 $( \boldsymbol \alpha \times \boldsymbol \beta) \cdot \boldsymbol \gamma$，这样得到的数量叫做三向量 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 的混合积。记作 $( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma)$ 或 $[ \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma]$。</p>
+<p><strong>混合积的性质</strong></p>
+<p>(1) 轮换对称性：$( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma) = ( \boldsymbol \beta, \boldsymbol \gamma, \boldsymbol \alpha) = ( \boldsymbol \gamma, \boldsymbol \alpha, \boldsymbol \beta)$；</p>
+<p>(2) $( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma) = -( \boldsymbol \beta, \boldsymbol \alpha, \boldsymbol \gamma)$；</p>
+<p>(3) $(k \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma) = ( \boldsymbol \alpha, k \boldsymbol \beta, \boldsymbol \gamma) = ( \boldsymbol \alpha, \boldsymbol \beta, k \boldsymbol \gamma) = k( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma)$；</p>
+<p>(4) $( \boldsymbol \alpha_1 + \boldsymbol \alpha_2, \boldsymbol \beta, \boldsymbol \gamma) = ( \boldsymbol \alpha_1, \boldsymbol \beta, \boldsymbol \gamma) + ( \boldsymbol \alpha_2, \boldsymbol \beta, \boldsymbol \gamma)$；</p>
+<p>(5) $( \boldsymbol \alpha, \boldsymbol \alpha, \boldsymbol \gamma) = 0$。</p>
+<p>设 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 是三个不共面的向量，过点 $O$ 作一个以 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 为棱的平行六面体，其高为 $h$，体积为 $V$，并作 $\boldsymbol \alpha \times \boldsymbol \beta$，记 $\boldsymbol \alpha \times \boldsymbol \beta$ 与 $\boldsymbol \gamma$ 的夹角为 $\theta$。由于底面是平行四边形，可用 $| \boldsymbol \alpha \times \boldsymbol \beta|$ 表示其面积，高应与地面垂直，因而高与 $\boldsymbol \alpha \times \boldsymbol \beta$ 共线，其长度正好是 $\boldsymbol \gamma$ 在 $\boldsymbol \alpha \times \boldsymbol \beta$ 上的投影的绝对值，即</p>
+<script type="math/tex; mode=display">
+h = | \boldsymbol \gamma| | \cos \left< \widehat{ \boldsymbol \alpha \times \boldsymbol \beta, \boldsymbol \gamma} \right> |</script><p>因此</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+V & = | \boldsymbol \alpha \times \boldsymbol \beta| | \boldsymbol \gamma| | cos \left< \widehat{ \boldsymbol \alpha \times \boldsymbol \beta, \boldsymbol \gamma} \right> | \\
+& = |( \boldsymbol \alpha \times \boldsymbol \beta) \cdot \boldsymbol \gamma| \\
+& = |( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma)|
+\end{aligned}</script><p>当 $\left&lt; \widehat{ \boldsymbol \alpha \times \boldsymbol \beta, \boldsymbol \gamma} \right&gt; &lt; \dfrac \pi 2$ 时，$\cos \left&lt; \widehat{ \boldsymbol \alpha \times \boldsymbol \beta, \boldsymbol \gamma} \right&gt; &gt; 0$，即 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 符合右手坐标系，$V = ( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma)$；当 $\left&lt; \widehat{ \boldsymbol \alpha \times \boldsymbol \beta, \boldsymbol \gamma} \right&gt; &gt; \dfrac \pi 2$ 时，$\cos \left&lt; \widehat{ \boldsymbol \alpha \times \boldsymbol \beta, \boldsymbol \gamma } \right&gt; &lt; 0$，即 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 符合左手坐标系，$V = - ( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma)$。称混合积 $( \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma)$ 表示以 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 为棱的平行六面体的<strong>有向体积</strong>。</p>
+<p><strong>平面的方程</strong></p>
+<p>在直角坐标系下，给定一个点 $M_0(x_0, y_0, z_0)$ 和一个非零向量 $\boldsymbol n = (A, B, C)$，那么就可以唯一确定一个平面 $\pi$，使 $\pi$ 通过点 $M_0$ 且与 $\boldsymbol n$ 垂直，向量 $\boldsymbol n$ 称为平面 $\pi$ 的<strong>法向量</strong>。</p>
+<p>设 $M(x, y, z)$ 是空间中的任一点，那么点 $M$ 在平面 $\pi$ 上的充分必要条件是向量 $\overrightarrow{M_0M}$ 与平面的法向量 $\boldsymbol n$ 垂直，即他们的数量积等于零：</p>
+<script type="math/tex; mode=display">
+\boldsymbol n \cdot \overrightarrow{M_0M} = 0</script><p>由于 $\boldsymbol n = (A, B, C), \overrightarrow{M_0M} = (x - x_0, y - y_0, z - z_0)$，所以有</p>
+<script type="math/tex; mode=display">
+A(x - x_0) + B(y - y_0) + C(z - z_0) = 0</script><p>这就是平面 $\pi$ 上任一点 $M$ 的坐标 $x, y, z$ 所满足的方程。因为它是由平面 $\pi$ 上的一点 $M_0(x_0, y_0, z_0)$ 和它的一个法向量 $\boldsymbol n = (A, B, C)$ 所确定的。所以就称为<strong>平面的点法式方程</strong>。</p>
+<p>把它展开，并记 $D = -(Ax_0 + By_0 + Cz_0)$，则有</p>
+<script type="math/tex; mode=display">
+Ax + By + Cz + D = 0</script><p>它是一个三元一次方程，称为<strong>平面的一般方程</strong>，$\boldsymbol n = (A, B, C)$ 是它的一个法向量。任何一个三元一次方程都表示一个平面。</p>
+<p>特别地，若 $\boldsymbol n \parallel \boldsymbol i$，即平面 $\pi$ 平行于 $yOz$ 平面时，若点 $(x_0, 0, 0)$ 在平面 $\pi$ 上，则 $\pi$ 的方程为 $Ax + D = 0$ 或 $x = x_0$。</p>
+<p>类似地，当平面 $\pi$ 平行于 $xOz$ 或 $xOy$ 平面时，$\pi$ 的方程分别为 $By + D = 0$ 或 $Cz + D = 0$。</p>
+<p>若 $\boldsymbol n \perp \boldsymbol i$，即平面 $\pi$ 平行于 $x$ 轴，此时 $\boldsymbol n = (0, B, C)$，$\pi$ 的方程为 $By + Cz + D = 0$。若平面 $\pi$ 平行于 $y$ 轴或 $z$ 轴时，平面 $\pi$ 的方程分别为 $Ax + Cz + D = 0$ 或 $Ax + By + D = 0$。</p>
+<p>若平面 $\pi$ 过原点 $O(0, 0, 0)$，则 $\pi$ 的方程为 $Ax + By + Cz = 0$。</p>
+<p>若平面 $\pi$ 过 $z$ 轴，则 $\pi$ 的方程为 $Ax + By = 0$。</p>
+<p><strong>引例</strong> 已知一平面过三点 $(a, 0, 0), (0, b, 0), (0, 0, c), abc \ne 0$，求该平面的方程</p>
+<p>设平面方程为 $Ax + By + Cz + D = 0$，将所给三点分别代入方程，即可得</p>
+<script type="math/tex; mode=display">
+A = - \frac Da, \quad B = - \frac Db, \quad C = - \frac Dc</script><p>代入原方程得</p>
+<script type="math/tex; mode=display">
+
+- \frac Da x - \frac Db y - \frac Dz + D = 0</script><p>两边同除以 $-D$，并移项后得</p>
+<script type="math/tex; mode=display">
+\frac xa + \frac yb + \frac zc = 1</script><p>上式称为<strong>平面的截距式方程</strong>，$a, b, c$ 称为平面在 $x, y, z$ 轴上的截距。</p>
+<p><strong>引例</strong> 已知 $P_0(x_0, y_0, z_0), A(x_1, y_1, z_1), B(x_2, y_2, z_2)$ 是不共线的三点，求过这三点的平面方程。</p>
+<p>设 $P(x, y, z)$ 是所求平面上任一点，则 $\overrightarrow{P_0P}, \overrightarrow{P_0A}, \overrightarrow{P_0B}$ 共面，根据混合积公式，可得平面 $\pi$ 的方程为</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+x - x_0 & y - y_0 & z - z_0 \\
+x_1 - x_0 & y_1 - y_0 & z_1 - z_0 \\
+x_2 - x_0 & y_2 - y_0 & z_2 - z_0 \\
+\end{vmatrix} = 0</script><p>上式称为<strong>平面的三点式方程</strong>。</p>
+<p><strong>两平面的夹角</strong></p>
+<p>设有平面</p>
+<script type="math/tex; mode=display">
+\begin{array}{}
+\pi_1 = A_1 x + B_1 y + C_1 z + D_1 = 0 \\
+\pi_2 = A_2 x + A_2 y + C_2 z + D_2 = 0 \\
+\end{array}</script><p>它们的法向量分别为 $\boldsymbol n_1 = (A_1, B_1, C_1), \boldsymbol n_2 = (A_2, B_2, C_2)$。规定两平面 $\pi_1$ 和 $\pi_2$ 的夹角 $\theta \ (0 \le \theta \le \dfrac \pi 2)$ 为两平面法向量 $\boldsymbol n_1, \boldsymbol n_2$ 所夹的不超过 $\dfrac \pi 2$ 的角，此时有</p>
+<script type="math/tex; mode=display">
+\cos \theta = \frac{| \boldsymbol n_1 \cdot \boldsymbol n_2|}{| \boldsymbol n_1| \cdot | \boldsymbol n_2|} = \frac{|A_1 A_2 + B_1 B_2 + C_1 C_2|}{ \sqrt{A_1^2 + B_1^2 + C_1^2} \sqrt{A_2^2 + B_2^2 + C_2^2}}</script><p>由此可以推出：</p>
+<p>(1) $\pi_1, \pi_2$ 平行 $\Leftrightarrow \dfrac{A_1}{A_2} = \dfrac{B_1}{B_2} = \dfrac{C_1}{C_2} \ne \dfrac{D_1}{D_2}$；</p>
+<p>(2) $\pi_1, \pi_2$ 重合 $\Leftrightarrow \dfrac{A_1}{A_2} = \dfrac{B_1}{B_2} = \dfrac{C_1}{C_2} = \dfrac{D_1}{D_2}$；</p>
+<p>(3) $\pi_1, \pi_2$ 垂直 $\Leftrightarrow \boldsymbol n_1 \cdot \boldsymbol n_2 = 0 \Leftrightarrow A_1 A_2 + B_1 B_2 + C_1 C_2 = 0$。</p>
+<p><strong>点到平面的距离</strong></p>
+<p>设 $P_0(x_0, y_0, z_0)$ 是平面 $\pi: Ax + By + C_z + D = 0$ 外的一点，在平面 $\pi$ 上任取一点 $P(x_1, y_1, z_1)$，作 $\overrightarrow{PP_0}$ 在平面 $\pi$ 法向量上的投影向量 $\overrightarrow{PQ}$，则向量 $\overrightarrow{PQ}$ 的长 $| \overrightarrow{PQ}|$ 即为 $P_0$ 到平面 $\pi$ 的距离 $d$。</p>
+<p>平面 $\pi$ 的单位法向量为</p>
+<script type="math/tex; mode=display">
+n^0 = \dfrac{(A, B, C)}{ \sqrt{A^2 + B^2 + C^2}}</script><p>点 $P(x_1, y_1, z_1)$ 在平面 $\pi$ 上，故有</p>
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+Ax_1 + By_1 + Cz_1 = -D \\
+\begin{aligned}
+d = |\overrightarrow{PP_0} \cdot \boldsymbol n^0| & = \frac{|(x_0 - x_1, y_0 - y_1, z_0 - z_1) \cdot (A, B, C)|}{ \sqrt{A^2 + B^2 + C^2}} \\
+& = \frac{|Ax_0 + By_0 + Cz_0 - (Ax_1 + By_1 + Cz_1)|}{ \sqrt{A^2 + B^2 + C^2}} \\
+& = \frac{|Ax_0 + By_0 + Cz_0 + D|}{ \sqrt{A^2 + B^2 + C^2}}
+\end{aligned}
+\end{array}</script><p><strong>空间直线的方程</strong></p>
+<p>如果一个非零向量平行于一条已知的直线，这个向量就称为这条直线的方向向量。容易知道，直线上任一向量都平行于该直线的方向向量。</p>
+<p>由于过空间一点可作且只能作一条直线平行于一已知直线，所以，若已知直线 $L$ 上一点 $M_0(x_0, y_0, z_0)$ 和它的一个方向向量 $\boldsymbol s = (l, m, n)$，则直线就完全确定了。设 $M(x, y, z)$ 是直线 $L$ 上的任一点，则应有 $\overrightarrow{M_0M} \parallel \boldsymbol s$，于是得</p>
+<script type="math/tex; mode=display">
+\overrightarrow{M_0M} = t \boldsymbol s</script><p>上式写成坐标形式为</p>
+<script type="math/tex; mode=display">
+(x - x_0, y - y_0, z - z_0) = t(l, m, n)</script><p>即</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = x_0 + lt \\
+y = y_0 + mt \\
+z = z_0 + nt \\
+\end{cases}</script><p>其中 $t$ 为参数。此方程称为直线 $L$ 的<strong>参数方程</strong>。</p>
+<p>从直线的参数方程中消去参数 $t$，可得</p>
+<script type="math/tex; mode=display">
+\frac{x - x_0} l = \frac{y - y_0} m = \frac{z - z_0} n</script><p>此方程称为直线 $L$ 的<strong>标准方程</strong>或<strong>点向式方程</strong>或<strong>对称方程</strong>。</p>
+<p>直线的任一方向向量 $\boldsymbol s$ 的坐标 $l, m, n$ 都叫作该直线的一组<strong>方向数</strong>，而向量 $\boldsymbol s$ 的方向余弦叫作该直线的<strong>方向余弦</strong>。</p>
+<p>当 $l, m, n$ 中有一个或两个为零时，则理解如下。</p>
+<p>(1) 若 $l = 0, m \ne 0, n \ne 0$，则标准方程理解为</p>
+<script type="math/tex; mode=display">
+x - x_0 = 0, \quad \frac{y - y_0} m = \frac{z - z_0} n</script><p>(2) 若 $l = 0, m = 0, n \ne 0$，则标准方程理解为</p>
+<script type="math/tex; mode=display">
+x - x_0 = 0, \quad y = y_0 = 0</script><p>直线的标准方程也可等价地写成</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\dfrac{x - x_0} l = \dfrac{y - y_0} m \\
+\dfrac{x - x_0} l = \dfrac{z - z_0} n \\
+\end{cases}</script><p>其中每一个方程都表示一个平面，而直线 $L$ 可看成是这两个平面的交线。</p>
+<p>一般地，两相交平面的联立方程</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+A_1 x + B_1 y + C_1 z + D_1 = 0 \\
+A_2 x + B_2 y + C_2 z + D_2 = 0 \\
+\end{cases}</script><p>表示它们的交线 $L$，称此方程为 $L$ 的<strong>普通方程</strong>或<strong>一般方程</strong>。</p>
+<p><strong>引例</strong> 设直线 $L$ 过两个已知点 $A(x_0, y_0, z_0), B(x_1, y_1, z_1)$，求 $L$ 的方程。</p>
+<p>取方向向量为 $\boldsymbol s = \overrightarrow{AB} = (x_1 - x_0, y_1 - y_0, z_1 - z_0)$，代入直线的标准方程，得</p>
+<script type="math/tex; mode=display">
+\frac{x - x_0}{x_1 - x_0} = \frac{y - y_0}{y_1 - y_0} = \frac{z - z_0}{z_1 - z_0}</script><p>上述方程称为直线的<strong>两点式方程</strong>。</p>
+<blockquote>
+<p>例题：给定直线的一般方程，求其标准方程和参数方程。</p>
+</blockquote>
+<p><strong>点到直线的距离</strong></p>
+<p>已知直线 $L: \dfrac{x - x_0}l = \dfrac{y - y_0}m = \dfrac{z - z_0} n$ 及直线外一点 $M_0(x_1, y_1, z_1)$。设点 $M_0$ 在直线 $L$ 的投影点为 $M$，点 $M$ 到直线 $L$ 的距离为 $d = | \overrightarrow{M_0M}|$。</p>
+<p>若要求两条平行直线的距离，则只需在一条直线上任取一点，求这个点到另一条直线的距离即可。</p>
+<blockquote>
+<p>太抽象了，例子在课本 P90~P91</p>
+</blockquote>
+<p><strong>空间两直线间的关系</strong></p>
+<p>设空间两条直线的方程分别为</p>
+<script type="math/tex; mode=display">
+L_1: \frac{x - x_1}{l_1} = \frac{y - y_1}{m_1} = \frac{z - z_1}{n_1} \quad L_2: \frac{x - x_2}{l_2} = \frac{y - y_2}{m_2} = \frac{z - z_2}{n_2}</script><p>取 $L_1$ 上的点 $M_1(x_1, y_1, z_1)$，$L_2$ 上的点 $M_2(x_2, y_2, z_2)$，两直线的方向向量分别记为 $\boldsymbol s_1$ 和 $\boldsymbol s_2$，则</p>
+<p>(1) $L_1$ 与 $L_2$ 共面 $\Leftrightarrow ( \overrightarrow{M_1M_2}, \boldsymbol s_1, \boldsymbol s_2) = 0$；</p>
+<p>(2) $L_1$ 与 $L_2$ 异面 $\Leftrightarrow ( \overrightarrow{M_1M_2}, \boldsymbol s_1, \boldsymbol s_2) \ne 0$。</p>
+<p>两直线 $L_1$ 与 $L_2$ 之间的夹角 $\theta$ 规定为两方向向量 $\boldsymbol s_1$ 和 $\boldsymbol s_2$ 所夹的不超过 $\dfrac \pi 2$ 的角，于是有</p>
+<script type="math/tex; mode=display">
+\cos \theta = \frac{ \boldsymbol s_1 \cdot \boldsymbol s_2}{| \boldsymbol s_1| | \boldsymbol s_2|} = \frac{|l_1 l_2 + m_1 m_2 + n_1 n_2|}{ \sqrt{l_1^2 + m_1^2 + n_1^2} \sqrt{l_2^2 + m_2^2 + n_2^2}}</script><p><strong>直线与平面的夹角</strong></p>
+<p>直线 $L$ 与平面 $\pi$ 的夹角 $\varphi$ 是指 $L$ 与它在平面上的投影直线 $L’$ 的夹角，一般取锐角。</p>
+<p>设直线方程 $L: \dfrac{x - x_0}l = \dfrac{y - y_0}m = \dfrac{z - z_0}n$，平面方程 $Ax + By + Cz + D = 0$，则直线与平面的夹角 $\varphi$ 满足</p>
+<script type="math/tex; mode=display">
+\sin \varphi = \cos \left( \frac \pi 2 - \varphi \right) = \frac{| \boldsymbol n \cdot \boldsymbol s|}{| \boldsymbol n| | \boldsymbol s|} = \frac{|Al + Bm + Cn|}{ \sqrt{A^2 + B^2 + C^2} \sqrt{l^2 + m^2 + n^2}}</script><p><strong>平面束方程</strong></p>
+<p>若平面 $\pi_1$ 与 $\pi_2$ 不平行，则它们必相交。设它们的方程为</p>
+<script type="math/tex; mode=display">
+\begin{array}{}
+\pi_1: A_1x + B_1y + C_1z + D_1 = 0 \\
+\pi_2: A_2x + B_2y + C_2z + D_2 = 0 \\
+\end{array}</script><p>$\pi_1$ 与 $\pi_2$ 的交线为直线 $L$，过 $L$ 有无穷多个平面，这些平面的集合称为由平面 $\pi_1$ 与 $\pi_2$ 所确定的<strong>平面束</strong>。该平面束的方程可以写为</p>
+<script type="math/tex; mode=display">
+\lambda(A_1x + B_1y + C_1z + D_1) + \mu(A_2x + B_2y + C_2z + D_2) = 0</script><p>其中 $\lambda, \mu$ 不同时为零。</p>
+<div style="page-break-after:always"></div>
+
+<h3 id="向量组的线性相关性-1"><a href="#向量组的线性相关性-1" class="headerlink" title="向量组的线性相关性"></a>向量组的线性相关性</h3><h4 id="清单-3"><a href="#清单-3" class="headerlink" title="清单"></a>清单</h4><ul>
+<li>$n$ 维向量<ul>
+<li>分量</li>
+<li>行向量</li>
+<li>列向量</li>
+<li>零向量</li>
+<li>负向量</li>
+<li>单位坐标向量</li>
+<li>向量的运算<ul>
+<li>线性运算<ul>
+<li>加法 =&gt; 减法</li>
+<li>数乘</li>
+<li>运算律<ul>
+<li>加法交换律</li>
+<li>加法结合律</li>
+<li>加法零元</li>
+<li>加法逆元</li>
+<li>加法单位元</li>
+<li>数乘单位元</li>
+<li>数乘对向量加法的分配律</li>
+<li>数乘对数量加法的分配律</li>
+<li>数乘结合律</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>线性组合<ul>
+<li>组合系数（表出系数）</li>
+<li><strong>线性表出（线性表示）</strong></li>
+<li><strong>线性相关 &lt;=&gt; 线性无关</strong><ul>
+<li>相关系数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>向量组<ul>
+<li>行向量组、列向量组</li>
+<li>向量组等价<ul>
+<li>等价关系：反身性、对称性、传递性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>极大线性无关向量组（极大无关组）</p>
+<blockquote>
+<p>明明是 <strong>极大线性无关组</strong> 这个名字用得更多些</p>
+</blockquote>
+</li>
+<li>向量组的秩<ul>
+<li>行秩</li>
+<li>列秩</li>
+</ul>
+</li>
+<li>向量空间<ul>
+<li>子空间</li>
+<li>零空间</li>
+<li><strong>向量生成（张成）的向量空间</strong></li>
+<li><strong>基</strong><ul>
+<li>基向量</li>
+<li>坐标</li>
+</ul>
+</li>
+<li>维数</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-3"><a href="#课本原文-3" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>定义 1</strong> 由 $n$ 个数 $a_1, a_2, \cdots, a_n$ 组成的有序数组</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)</script><p>称为一个 <strong>$n$ 维向量</strong>，数 $a_i$ 称为该向量的<strong>第 $i$ 个分量 $(i = 1, 2, \cdots, n)$</strong>。</p>
+<p>分量为实数的向量称为实向量，分量为复数的向量称为复向量。如无特殊说明，本书中的向量都指实向量。</p>
+<p>向量可以写成一行：$(a_1, a_2, \cdots, a_n)$；也可以写成一列</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = \pmatrix{a_1 \\ a_2 \\ \vdots \\ a_n}</script><p>前者称为<strong>行向量</strong>，后者称为<strong>列向量</strong>。列向量也可以写成 $(a_1, a_2, \cdots, a_n)^ \mathrm T$ 的形式。</p>
+<p>用小写黑体字母 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol x, \boldsymbol y, \cdots$ 来表示向量，用带下标的非黑体字母 $a_i, b_i, x_i, y_i, \cdots$ 表示向量的分量。本书下面所讨论的向量若未写出具体形式，也没有指明是行向量还是列向量时，都当作列向量。</p>
+<p>$n$ 维列向量是解析几何中向量的推广，当 $n &gt; 3$ 时，$n$ 维向量没有直观的几何意义，只是沿用了几何上的述语。</p>
+<p>可用矩阵方法定义向量：一个 $n$ 为行向量定义为一个 $1 \times n$ 矩阵</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)</script><p>一个 $n$ 维列向量定义为一个 $n \times 1$ 矩阵</p>
+<script type="math/tex; mode=display">
+\boldsymbol \beta = \pmatrix{b_1 \\ b_2 \\ \vdots \\ b_n}</script><p>这样向量又是一种特殊的矩阵，因此，向量相等、零向量、负向量的定义及向量运算的定义都与矩阵的相应的定义一致。<br><strong>规定</strong>：所有分量都是零的 $n$ 维向量称为 <strong>$n$ 维零向量</strong>，记作 $\boldsymbol 0$，即</p>
+<script type="math/tex; mode=display">
+\boldsymbol 0 = (0, 0, \cdots, 0)</script><p>向量 $\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)$ 的各个分量都取相反数组成的向量，称为 $\boldsymbol \alpha$ 的<strong>负向量</strong>，记作<br>$- \boldsymbol \alpha = (-a_1, -a_2, \cdots, -a_n)$<br>如果两个 $n$ 维向量 $\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)$ 与 $\boldsymbol \beta = (b_1, b_2, \cdots, b_n)$ 的对应分量都相等，即 $a_i = b_i \ (i = 1, 2, \cdots, n)$，则称向量 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 相等，记作 $\boldsymbol \alpha = \boldsymbol \beta$。</p>
+<p><strong>定义 2</strong>（向量的加法）设 $n$ 维向量 $\boldsymbol \alpha = (a_1, a_2, \cdots, a_n), \boldsymbol \beta = (b_1, b_2, \cdots, b_n)$，则 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的和是向量</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha + \boldsymbol \beta = (a_1 + b_1, a_2 + b_2, \cdots, a_n + b_n)</script><p>利用负向量的概念，还可以定义向量的减法为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha - \boldsymbol \beta = \boldsymbol \alpha + ( - \boldsymbol \beta) = (a_1 - b_1, a_2 - b_2, \cdots, a_n - b_n)</script><p><strong>定义 3</strong>（数与向量的乘法）设 $\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)$ 是一个 $n$ 维向量，$k$ 为一个实数，则实数 $k$ 与 $\boldsymbol \alpha$ 的乘积称为数乘响亮，简称为<strong>数乘</strong>，记作 $k \boldsymbol \alpha$，并且</p>
+<script type="math/tex; mode=display">
+k \boldsymbol \alpha = k(a_1, a_2, \cdots, a_n)</script><p><strong>约定</strong>：对于任意实数 $k$ 以及任意的 $n$ 维向量 $\boldsymbol \alpha$，都有 $k \boldsymbol \alpha = \boldsymbol \alpha k$。</p>
+<p>以上是就行向量的情形定义了向量的加法、减法与数乘运算、对列向量的情形可完全类似地定义向量的加法、减法与数乘运算。</p>
+<p>向量的加法运算及数乘运算统称为向量的线性运算，这是向量最基本的运算、</p>
+<p>向量的运算满足下列 8 条运算规律：设 $\boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma$ 都是 $n$ 维向量，$k, l$ 是任意实数，则</p>
+<p>(1) 加法交换律：$\boldsymbol \alpha + \boldsymbol \beta = \boldsymbol \beta + \boldsymbol \alpha$；</p>
+<p>(2) 加法结合律：$(\boldsymbol \alpha + \boldsymbol \beta) + \boldsymbol \gamma = \boldsymbol \alpha + (\boldsymbol \beta + \boldsymbol \gamma)$；</p>
+<p>(3) 加法零元：$\boldsymbol \alpha + \boldsymbol 0 = \boldsymbol 0 + \boldsymbol \alpha$；</p>
+<p>(4) 加法逆元：$\boldsymbol \alpha + (- \boldsymbol \alpha) = \boldsymbol 0$;</p>
+<p>(5) 数乘单位元：$1 \times \boldsymbol \alpha = \boldsymbol \alpha$;</p>
+<p>(6) 数乘对向量加法的分配律：$k( \boldsymbol \alpha + \boldsymbol \beta = k \boldsymbol \alpha + k \boldsymbol \beta)$；</p>
+<p>(7) 数乘对数量加法的分配律：$(k + l) \boldsymbol \alpha = k \boldsymbol \alpha + l \boldsymbol \alpha$；</p>
+<p>(8) 数乘结合律：$(kl) \boldsymbol \alpha = k(l \boldsymbol \alpha)$。</p>
+<p><strong>向量组的线性相关性</strong></p>
+<p>空间两个非零向量 $\boldsymbol \alpha, \boldsymbol \beta$ 互相平行，则可表示为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \beta = k \boldsymbol \alpha</script><p>$k$ 为实数。若 $\boldsymbol \alpha, \boldsymbol \beta$ 共面的任一向量 $\boldsymbol \gamma$ 可由 $\boldsymbol \alpha, \boldsymbol \beta$ 表示为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \gamma = k_1 \boldsymbol \alpha + k_2 \boldsymbol \beta, \quad k_1, k_2 \in \mathbb R</script><p>称 $\boldsymbol \gamma$ 可由 $\boldsymbol \alpha, \boldsymbol \beta$ 线性表示或 $\boldsymbol \gamma$ 是 $\boldsymbol \alpha, \boldsymbol \beta$ 的线性组合。</p>
+<p><strong>定义 4</strong> 设 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 是一组 $n$ 维向量，$k_1, k_2, \cdots, k_m$ 是一组实常数，则称</p>
+<script type="math/tex; mode=display">
+k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_m \boldsymbol \alpha_m</script><p>为 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 的一个线性组合；常数 $k_1, k_2, \cdots, k_m$ 为该线性组合的<strong>组合系数</strong>。</p>
+<p>若一个 $n$ 维向量 $\boldsymbol \beta$ 可以表示成</p>
+<script type="math/tex; mode=display">
+k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_m \boldsymbol \alpha_m</script><p>则称 $\boldsymbol \beta$ 是 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 的<strong>线性组合</strong>，或称 $\boldsymbol \beta$ 可用 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ <strong>线性表出（线性表示）</strong>。仍称 $k_1, k_2, \cdots, k_m$ 为<strong>组合系数</strong>，或<strong>表出系数</strong>。</p>
+<p>若干个同维数的向量所组成的集合叫做向量组，$m$ 个向量 $\boldsymbol \alpha_1, \boldsymbol  \alpha_2, \cdots, \boldsymbol \alpha_m$ 组成的向量组可记为</p>
+<script type="math/tex; mode=display">
+R: \boldsymbol \alpha_1, \boldsymbol  \alpha_2, \cdots, \boldsymbol \alpha_m \quad \text{or} \quad R = \{ \boldsymbol \alpha_1, \boldsymbol  \alpha_2, \cdots, \boldsymbol \alpha_m \}</script><p>例如矩阵 $\boldsymbol A = (a_{ij})_{m \times n}$ 可以看成由 $n$ 个 $m$ 维列向量</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha_j = \pmatrix{a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj}} \quad (j = 1, 2, \cdots, n)</script><p>组成的向量组。称 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 是矩阵 $\boldsymbol A$ 的列向量组。</p>
+<p>矩阵 $\boldsymbol A$ 又可以看成由 $m$ 个 $n$ 维行向量</p>
+<script type="math/tex; mode=display">
+\boldsymbol \beta_i = (a_{i1}, a_{i2}, \cdots, a_{in}) \quad (i = 1, 2, \cdots, m)</script><p>组成的列向量组，称 $\boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_m$ 为矩阵 $\boldsymbol A$ 的行向量组。</p>
+<p>对于线性方程组 $\boldsymbol{Ax} = \boldsymbol b$，视 $\boldsymbol A$ 为列向量组成的向量组，那么方程组可写成</p>
+<script type="math/tex; mode=display">
+k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_n \boldsymbol \alpha_n = \boldsymbol b</script><p>因而讨论方程组 $\boldsymbol{Ax} = \boldsymbol b$ 是否有解的问题实际上就是讨论 $\boldsymbol b$ 能否由 $\boldsymbol A$ 的列向量组线性表出。</p>
+<p>考虑下面的 $n$ 位<strong>单位坐标向量</strong>：</p>
+<script type="math/tex; mode=display">
+\boldsymbol \varepsilon_i = (0, \cdots, 0, 1, 0, \cdots, 0) \quad (i = 1, 2, \cdots, n)</script><p>$\boldsymbol \varepsilon_i$ 中第 $i$ 个分量为 $i$，其余分量都为 $0$。显然，然以一个 $n$ 维向量 $\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)$ 都可以唯一地表示为这 $n$ 个标准单位向量的线性组合：</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = a_1 \boldsymbol \varepsilon_1 + a_2 \boldsymbol \varepsilon_2 + \cdots + a_n \boldsymbol \varepsilon_n</script><p><strong>定义 5</strong> 设有 $n$ 维向量 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$，若存在 $m$ 个<strong>不全为零</strong>的实数 $k_1, k_2, \cdots, k_m$，使得</p>
+<script type="math/tex; mode=display">
+k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_m \boldsymbol \alpha_m = \boldsymbol 0</script><p>则称 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ <strong>线性相关</strong>，称 $k_1, k_2, \cdots, k_m$ 为<strong>相关系数</strong>。否则，称 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ <strong>线性无关</strong>。换言之，向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ <strong>线性无关</strong>当且仅当 $k_1 = k_2 = \cdots = k_m = 0$ 时，上式成立。</p>
+<p><strong>定理 1</strong> $n$ 维向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m \ (m \ge 2)$ 线性相关 $\Leftrightarrow$ 至少存在某个 $\boldsymbol \alpha_i$ 是其余向量的线性组合。</p>
+<p>即 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m \ (m \ge 2)$ 线性相关 $\Leftrightarrow$ 至少存在某个 $\boldsymbol \alpha_i$ 都不能由其余向量线性表出。</p>
+<p>由定义 5 易知：</p>
+<!-- 下面每条后都是句号不是分号，不是打错了，原书就是这样的 -->
+<p>(1) 任意一个含有零向量的向量必为线性相关组。</p>
+<p>(2) 单个向量 $\boldsymbol \alpha$ 线性相关 $\Leftrightarrow \boldsymbol \alpha = \boldsymbol 0$，即单个向量 $\boldsymbol \alpha$ 线性无关 $\Leftrightarrow \boldsymbol \alpha \ne \boldsymbol 0$。</p>
+<p>(3) 两个非零的 $n$ 维向量 $\boldsymbol \alpha, \boldsymbol \beta$ 线性相关当且仅当存在不全为零的数 $k, l$ 使得</p>
+<script type="math/tex; mode=display">
+k \boldsymbol \alpha + l \boldsymbol \beta = \boldsymbol 0, \quad \text{i.e. } \boldsymbol \alpha = - \frac lk \boldsymbol \beta \text{ or }\boldsymbol \beta = - \frac kl \boldsymbol \alpha</script><p>这说明 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 共线，即它们的对应分量成比例。</p>
+<p>一般地，判断一个向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性相关的基本方法和步骤是：</p>
+<p>(1) 假定存在一组数 $k_1, k_2, \cdots, k_m$，使</p>
+<script type="math/tex; mode=display">
+k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_n \boldsymbol \alpha_n = \boldsymbol 0</script><p>(2) 应用向量的线性运算和向量相等的定义，列出含未知量 $k_1, k_2, \cdots, k_m$ 的齐次线性方程组；</p>
+<p>(3) 判断方程组有无非零解；</p>
+<p>(4) 如果有非零解，则 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性相关；如仅有零解，则 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性无关。</p>
+<p><strong>定理 2</strong> 如果向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性无关，而向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m, \boldsymbol \beta$ 线性相关，则 $\boldsymbol \beta$ 可以用 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性表出，且表示法是唯一的。</p>
+<p><strong>定理 3</strong> 若 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r$ 线性相关，则 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r, \boldsymbol \alpha_{r + 1}, \cdots, \boldsymbol \alpha_m$ 也线性相关。</p>
+<p><strong>推论</strong> 若向量组中含有零向量，则此向量组线性相关。</p>
+<p>由此推论可知，线性无关向量组中一定不含零向量。</p>
+<p><strong>定理 4</strong> 设有两个向量组</p>
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+R: \boldsymbol \alpha_j = (a_{1j}, a_{2j}, \cdots, a_{nj})^ \mathrm T \quad (j = 1, 2, \cdots, m) \\
+S: \boldsymbol \beta_j = (a_{p_1j}, a_{p_2j}, \cdots, a_{p_nj})^ \mathrm T \quad (j = 1, 2, \cdots, m)
+\end{array}</script><p>其中 $p_1p_2 \cdots p_n$ 是自然数 $1, 2, \cdots, n$ 的某个确定的排列，则向量组 $R$ 与向量组 $S$ 的线性相关性相同。</p>
+<p>定理 4 是对列向量叙述的，对行向量显然也有相同的结论。</p>
+<p><strong>定理 5</strong> 设有两个向量组，它们的前 $r$ 个分量对应相同：</p>
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+R: \boldsymbol \alpha_j = (a_{1j}, a_{2j}, \cdots, a_{rj})^ \mathrm T \quad (j = 1, 2, \cdots, m) \\
+S: \boldsymbol \beta_j = (a_{1j}, a_{2j}, \cdots, a_{rj}, a_{r + 1,j})^ \mathrm T \quad (j = 1, 2, \cdots, m)
+\end{array}</script><p>如果 $\boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_m$ 为线性相关组，则 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 必为线性相关组。</p>
+<p>把向量组 $\boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_m$ 称为向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 的“接长”向量组，而把向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 称为向量组 $\boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_m$ 的“截短”向量组。</p>
+<p>定理 5 可以简述为“线性相关向量组的截短向量组必线性相关”。它的等价说法是“线性无关向量组的接长向量组必线性无关”。</p>
+<p><strong>推论</strong> $r$ 维向量组的每个向量添上 $n - r$ 个分量，成为 $n$ 维向量组。若 $r$ 维向量组线性无关，则 $n$ 维向量组也线性无关。</p>
+<p>向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 构成矩阵 $\boldsymbol A = ( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m)$，由前面的讨论知，向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性相关的充分必要条件是线性方程组</p>
+<script type="math/tex; mode=display">
+x_1 \boldsymbol \alpha_1 + x_2 \boldsymbol \alpha_2 + \cdots + x_m \boldsymbol \alpha_m = \boldsymbol 0</script><p>即 $\boldsymbol{Ax} = \boldsymbol 0$ 有非零解。</p>
+<p><strong>定理 6</strong> 向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性相关的充分必要条件是它所构成的矩阵 $\boldsymbol A = ( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m)$ 的秩小于向量的个数 $m$；该向量组线性无关的充分必要条件是 $\mathrm r( \boldsymbol A) = m$。</p>
+<p><strong>推论 1</strong> $n$ 个 $n$ 维向量线性无关的充分必要条件是它们构成的方阵的行列式不等于零。</p>
+<p><strong>推论 2</strong> 当 $m &gt; n$ 时，$m$ 个 $n$ 维向量一定线性相关。</p>
+<p><strong>定义 6</strong> 设有两个 $n$ 维向量组</p>
+<script type="math/tex; mode=display">
+R = \{ \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r \}, \quad S = \{ \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_s \}</script><p>若向量组 $R$ 中的每个向量 $\boldsymbol \alpha_i$ 都可以由向量组 $S$ 中的向量 $\boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_s$ 线性表出，则称向量组 $R$ 可以由向量组 $S$ 线性表出。又若向量组 $S$ 可以由向量组 $R$ 线性表出，则称这两个<strong>向量组等价</strong>。</p>
+<p>设向量组 $R$ 可由向量组 $S$ 线性表示为</p>
+<script type="math/tex; mode=display">
+\left \{ \begin{array}{ccc}
+\boldsymbol \alpha_1 = k_{11} \boldsymbol \beta_1 + k_{21} \boldsymbol \beta_2 + \cdots + k_{s1} \boldsymbol \beta_s \\
+\boldsymbol \alpha_2 = k_{12} \boldsymbol \beta_1 + k_{22} \boldsymbol \beta_2 + \cdots + k_{s2} \boldsymbol \beta_s \\
+\vdots \\
+\boldsymbol \alpha_r = k_{1r} \boldsymbol \beta_1 + k_{2r} \boldsymbol \beta_2 + \cdots + k_{sr} \boldsymbol \beta_s \\
+\end{array} \right.</script><p>用矩阵乘法的形式可表示为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha_i = ( \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_s) \pmatrix{k_{1i} \\ k_{2i} \\ \vdots \\ k_{si} \\ } \quad (i = 1, 2, \cdots, r)</script><p>于是上式又可表示为</p>
+<script type="math/tex; mode=display">
+( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r ) = ( \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_s) \begin{pmatrix}
+k_{11} & k_{12} & \cdots & k_{1r} \\
+k_{21} & k_{22} & \cdots & k_{2r} \\
+\vdots & \vdots & & \vdots \\
+k_{s1} & k_{s2} & \cdots & k_{sr} \\
+\end{pmatrix}</script><p>设矩阵 $\boldsymbol A = ( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r ), \boldsymbol B = ( \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_s), \boldsymbol K = (k_{ij})_{s \times r}$，则可把上式写成矩阵的形式</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \boldsymbol{BK}</script><p>可见向量组 $R$ 由向量组 $S$ 线性表示可简记为上式所示的矩阵乘法；反之若有上式的矩阵形式，则可把矩阵 $\boldsymbol A$ 的列向量看作矩阵 $\boldsymbol B$ 的列向量的线性表示。</p>
+<p>容易证明向量组的线性表出关系具有传递性，即若有三个向量组</p>
+<script type="math/tex; mode=display">
+R = \{ \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r \}, \quad S = \{ \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_s \}, \quad T = \{ \boldsymbol \gamma_1, \boldsymbol \gamma_2, \cdots, \boldsymbol \gamma_t \}</script><p>如果 $R$ 可由 $S$ 线性表出，$S$ 可由 $T$ 线性表出，则 $R$ 必可由 $T$ 线性表出。</p>
+<p>向量组之间的等价关系必有下列基本性质：设 $R, S, T$ 为三个同维向量组，则有</p>
+<p>(1) <strong>反身性</strong>：$R$ 与 $R$ 必自身等价；</p>
+<p>(2) <strong>对称性</strong>：若 $R$ 与 $S$ 等价，则 $S$ 必与 $R$ 等价；</p>
+<p>(3) <strong>传递性</strong>：若 $R$ 与 $S$ 等价，$S$ 与 $T$ 等价，则 $R$ 必与 $T$ 等价。</p>
+<p>在数学中，把具有上述三个性质的关系称为<strong>等价关系</strong>。</p>
+<p><strong>定义 7</strong> 设 $T$ 是若干个（有限或无限多个）向量组成的向量组。若存在 $T$ 的一个部分组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r$ 满足以下条件：</p>
+<p>(1) $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r$ 线性无关；</p>
+<p>(2) 对于任意一个向量 $\boldsymbol \beta \in T$，向量组 $\boldsymbol \beta, \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r$ 都线性相关，</p>
+<p>则称 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots \boldsymbol \alpha_r$ 为 $T$ 的一个<strong>极大线性无关向量组</strong>，简称为<strong>极大无关组</strong>。极大线性无关组所含向量的个数 $r$ 称为<strong>向量组 $T$ 的秩</strong>。</p>
+<p>只含零向量的向量组没有极大线性无关组，规定它的秩为 $0$。</p>
+<p><strong>定理 7</strong> 向量组 $T$ 与它的任意一个极大无关组等价，因而 $T$ 的任意两个极大无关组等价。</p>
+<p>$\mathbb R^n$ 中的任意 $n + 1$ 个向量一定线性相关。</p>
+<p><strong>定理 8</strong> 设向量组 $R$ 的秩为 $r$，向量组 $S$ 的秩为 $s$ 若向量组 $R$ 可由向量组 $S$ 线性表出，则必有 $r \le s$。</p>
+<p><strong>推论 1</strong> 等价的向量组必有相同的秩。</p>
+<p><strong>推论 2</strong> 任意两个线性无关的等价向量组所含向量的个数相等。</p>
+<p>设 $\boldsymbol A$ 是一个 $m \times n$ 矩阵</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}</script><p>将矩阵 $\boldsymbol A$ 分别按行分块和按列分块，得</p>
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+\boldsymbol A = \pmatrix{ \boldsymbol \alpha_1 \\ \boldsymbol \alpha_2 \\ \vdots \\ \boldsymbol \alpha_m}, \quad \boldsymbol \alpha_i = (a_{i1}, a_{i2}, \cdots, a_{in}) \quad (i = 1, 2, \cdots, m) \\
+\boldsymbol A = ( \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_n), \quad \boldsymbol \beta_j = \pmatrix{a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj}} \quad (j = 1, 2, \cdots, n)
+\end{array}</script><p>于是 $m \times n$ 矩阵 $\boldsymbol A$ 对应两个向量组（分别为 $n$ 维行向量组和 $m$ 维列向量组：</p>
+<script type="math/tex; mode=display">
+M = \{ \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m \}, \quad N = \{ \boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_n \}</script><p>称 $M$ 为 $\boldsymbol A$ 的<strong>行向量组</strong>，称 $N$ 为 $\boldsymbol A$ 的<strong>列向量组</strong>。</p>
+<p><strong>定义 8</strong> 矩阵 $\boldsymbol A$ 的行向量组 $M$ 的秩称为 $\boldsymbol A$ 的<strong>行秩</strong>；列向量组 $N$ 的秩称为 $\boldsymbol A$ 的<strong>列秩</strong>。</p>
+<p><strong>定理 9</strong> 矩阵的秩等于它的列秩，也等于它的行秩。</p>
+<p><strong>定理 10</strong> 矩阵 $\boldsymbol A$ 经过初等行变换化为矩阵 $\boldsymbol B$，则 $\boldsymbol A$ 的列向量组的任一部分组与 $\boldsymbol B$ 的列向量组的对应的部分组有相同的线性组合关系。</p>
+<p><strong>定理</strong> $\mathrm r( \boldsymbol{AB}) \le \min \{ \mathrm r( \boldsymbol A), \mathrm r( \boldsymbol B) \}$，$\mathrm r( \boldsymbol A + \boldsymbol B) \le \mathrm r( \boldsymbol A) + \boldsymbol r( \boldsymbol B)$</p>
+<p><strong>定理</strong> 设向量组 $R$ 能由向量组 $S$ 线性表出，且它们的秩相等，则向量组 $R$ 和向量组 $S$ 等价。</p>
+<p><strong>定义 9</strong> 设 $V$ 是 $n$ 为向量构成的非空集合，且满足</p>
+<p>(1) 若 $\boldsymbol \alpha, \boldsymbol \beta \in V$，则 $\boldsymbol \alpha + \boldsymbol \beta \in V$；</p>
+<p>(2) 若 $\forall \boldsymbol \alpha \in V$，及 $\forall k \in \mathbb R$，都有 $k \boldsymbol \alpha \in V$。</p>
+<p>则称集合 $V$ 是<strong>向量空间</strong>。</p>
+<p>上述两个条件可以合并成以下条件：</p>
+<p>对任意向量 $\boldsymbol \alpha, \boldsymbol \beta \in V$ 和任意常数 $k, l \in \mathbb R$，都有 $k \boldsymbol \alpha + l \boldsymbol \beta \in V$。</p>
+<p><strong>定义 10</strong> 设 $V_1$ 和 $V_2$ 都是向量空间，且 $V_1 \sube V2$，则称 $V_1$ 是 $V_2$ 的<strong>子空间</strong>。</p>
+<p>任何一个由 $n$ 维向量所组成的向量空间 $V$ 都满足 $V \sube \mathbb R^n$，于是 $V$ 是 $\mathbb R^n$ 的一个子空间。</p>
+<p>为了叙述方便，常把 $\mathbb R^n$ 中的子空间简称为<strong>向量空间</strong>。它未必是 $\mathbb R^n$ 本身。</p>
+<blockquote>
+<p>说实话我没看明白课本这段在 bb 啥</p>
+</blockquote>
+<p>特别地，$V = \{ \boldsymbol 0 \}$ 是向量空间。称为<strong>零空间</strong>。</p>
+<p>由向量空间的非空性和两个封闭性易见，在任意一个向量空间 $V$ 中一定包含零向量。我们可以把零向量称为向量空间的“原点”。</p>
+<p><strong>定义</strong> 任意取定向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m \in \mathbb R^n$，则可证明由它们的线性组合全体所组成的向量集合</p>
+<script type="math/tex; mode=display">
+V = \{ \boldsymbol \alpha = k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_m \boldsymbol \alpha_m \mid \forall k_i \in \mathbb R, j = 1, 2, \cdots, m \}</script><p>是 $\mathbb R^n$ 中的一个向量空间，记为 $V = L( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n)$，并称它为由 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ <strong>生成的向量空间</strong>。</p>
+<p><strong>定义 11</strong> 设 $V$ 是 $\mathbb R^n$ 的一个子空间。若 $V$ 中的向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r$ 满足：</p>
+<p>(1) $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r$ 线性无关；</p>
+<p>(2) $V$ 中的任意一个向量 $\boldsymbol \alpha$ 都可由向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r$ 线性表出：即存在常数 $k_1, k_2, \cdots, k_r \in \mathbb R$ 使得</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 + \cdots + k_r \boldsymbol \alpha_r</script><p>则称向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_r$ 为向量空间 $V$ 的一个<strong>基</strong>，其中每个 $\boldsymbol \alpha_i \ (i = 1, 2, \cdots, r)$ 都称为<strong>基向量</strong>。其中所含向量的个数 $r$ 称为 $V$ 的<strong>维数</strong>，记为 $\dim V = r$，并称 $V$ 为 $r$ 维向量空间。</p>
+<p>零空间的维数规定为 $0$。</p>
+<p>由基的定义可知，向量空间 $V$ 的一个基，实际上就是向量集合 $V$ 中的一个极大线性无关组，$V$ 的维数就是极大无关组中所含向量的个数，也即 $V$ 的秩。</p>
+<p>$\mathbb R^n$ 中任意 $n$ 个线性无关的向量都是 $\mathbb R^n$ 的一个基。</p>
+<p><strong>定义 12</strong> 设 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n$ 是 $n$ 维向量空间的一个基，向量空间 $V$ 中的任意一个向量 $\boldsymbol \alpha$ 都可唯一地表示为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \alpha = x_1 \boldsymbol \alpha_1 + x_2 \boldsymbol \alpha_2 + \cdots + x_n \boldsymbol \alpha_n</script><p>$\boldsymbol \alpha_i \ (i = 1, 2, \cdots, n)$ 的系数构成的有序数组 $x_1, x_2, \cdots, x_n$ 称为向量 $\boldsymbol \alpha$ 在基 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n$ 下的<strong>坐标</strong>。</p>
+<div style="page-break-after:always"></div>
+
+<h3 id="线性方程组-1"><a href="#线性方程组-1" class="headerlink" title="线性方程组"></a>线性方程组</h3><h4 id="清单-4"><a href="#清单-4" class="headerlink" title="清单"></a>清单</h4><ul>
+<li><strong>齐次线性方程组</strong><ul>
+<li>组成<ul>
+<li>$m \times n$ 系数矩阵</li>
+<li>$n$ 维未知列向量</li>
+<li>$m$ 维零列向量</li>
+</ul>
+</li>
+<li>解向量（解）<ul>
+<li>零解 &lt;=&gt; 非零解</li>
+<li>解空间</li>
+<li>基础解系<ul>
+<li>解向量组</li>
+</ul>
+</li>
+<li>通解</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>非齐次线性方程组</strong><ul>
+<li>增广矩阵</li>
+<li>解的存在性<ul>
+<li>相容 &lt;=&gt; 不相容</li>
+</ul>
+</li>
+<li>导出组</li>
+<li>通解 / 特解</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-4"><a href="#课本原文-4" class="headerlink" title="课本原文"></a>课本原文</h4><p>齐次线性方程组的一般形式为</p>
+<script type="math/tex; mode=display">
+\left \{ \begin{array}{ccc}
+a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n = 0 \\
+a_{21} x_2 + a_{22} x_2 + \cdots + a_{2n} x_n = 0 \\
+\vdots \\
+a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n = 0 \\
+\end{array} \right.</script><p>设</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}, \quad \boldsymbol x = \pmatrix{x_1 \\ x_2 \\ \vdots \\ x_n}, \quad \boldsymbol 0 = \pmatrix{0 \\ 0 \\ \vdots \\ 0}</script><p>常把上述齐次线性方程组简写成</p>
+<script type="math/tex; mode=display">
+\boldsymbol{Ax} = \boldsymbol 0</script><p>称 $\boldsymbol{Ax} = \boldsymbol 0$ 中的 $\boldsymbol A$ 为<strong>系数矩阵</strong>，$\boldsymbol x$ 为 <strong>$n$ 维未知列向量</strong>， $\boldsymbol 0$ 为 <strong>$m$ 维零列向量</strong>。</p>
+<p><strong>定义 1</strong> 设 $\boldsymbol A$ 是 $m \times n$ 矩阵，满足 $\boldsymbol{A \xi} = \boldsymbol 0$ 的 $n$ 维列向量 $\boldsymbol \xi = (\xi_1, \xi_2, \cdots, \xi_n)^\mathrm T$ 称为 $\boldsymbol{Ax} = \boldsymbol 0$ 的<strong>解向量</strong>。</p>
+<p>也可把解向量 $\boldsymbol \xi$ 简称为 $\boldsymbol{Ax} = \boldsymbol 0$ 的<strong>解</strong>。$n$ 维零列向量 $\boldsymbol 0$ 显然是 $\boldsymbol{Ax} = \boldsymbol 0$ 的解，称为<strong>零解</strong>。$\boldsymbol{Ax} = \boldsymbol 0$ 的其他解称为<strong>非零解</strong>。</p>
+<p>若把 $\boldsymbol A$ 看作由列向量组构成的矩阵，设</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = ( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n)</script><p>则方程组 $\boldsymbol{A \xi} = \boldsymbol 0$ 可表示为向量组合的形式</p>
+<script type="math/tex; mode=display">
+x_1 \boldsymbol \alpha_1 + x_2 \boldsymbol \alpha_2 + \cdots + x_n \boldsymbol \alpha_n = \boldsymbol 0</script><p>上面给出了齐次线性方程组的三种不同的形式，它们表示同一个线性方程组。</p>
+<p>考虑由 $\boldsymbol{Ax} = \boldsymbol 0$ 的解的全体所组成的向量集合</p>
+<script type="math/tex; mode=display">
+S = \{ \boldsymbol \xi \mid \boldsymbol{A \xi} = \boldsymbol 0 \}</script><p>容易证明 $S$ 有以下性质：</p>
+<p><strong>性质 1</strong> 若 $\boldsymbol \xi_1, \boldsymbol \xi_2$ 是齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的解，则 $\boldsymbol \xi_1, \boldsymbol \xi_2$ 也是 $\boldsymbol{Ax} = \boldsymbol 0$ 的解。</p>
+<p><strong>性质 2</strong> 若 $\boldsymbol \xi$ 是齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的解，$k$ 是任意实数，则 $k \boldsymbol \xi$ 也是 $\boldsymbol{Ax} = \boldsymbol 0$ 的解。</p>
+<p>由性质 1，性质 2 可得：</p>
+<p>(1) 若 $\boldsymbol \xi_1, \boldsymbol \xi_2 \in S$，则 $\boldsymbol \xi_1 + \boldsymbol \xi_2 \in S$；</p>
+<p>(2) 若 $\boldsymbol \xi \in S, k \in \mathbb R$，则 $k \boldsymbol \xi \in S$</p>
+<p>这说明集合 $S$ 对向量的加法和数乘两种运算是封闭的，且 $n$ 维零列向量 $\boldsymbol 0$ 一定是 $\boldsymbol{Ax} = \boldsymbol 0$ 的解，这说明 $S$ 不是空集，因此 $S$ 构成一个向量空间。把 $S$ 称为 $\boldsymbol{Ax} = \boldsymbol 0$ 的<strong>解空间</strong>。</p>
+<p><strong>定义 2</strong> 齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的解空间 $S$ 中的任意一个基 $\{ \boldsymbol \xi_1, \boldsymbol \xi_2, \cdots, \boldsymbol \xi_s\}$，都称为 $\boldsymbol{Ax} = \boldsymbol 0$ 的<strong>基础解系</strong>。</p>
+<p>若 $\{ \boldsymbol \xi_1, \boldsymbol \xi_2, \cdots, \boldsymbol \xi_s\}$ 为齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的一个基础解系，则必须满足两个条件：</p>
+<p>(1) $\boldsymbol \xi_1, \boldsymbol \xi_2, \cdots, \boldsymbol \xi_s$ 是 $\boldsymbol{Ax} = \boldsymbol 0$ 的线性无关的<strong>解向量组</strong>；</p>
+<p>(2) 此方程组的任意一个解都可表为 $\boldsymbol \xi_1, \boldsymbol \xi_2, \cdots, \boldsymbol \xi_s$ 的线性组合，即</p>
+<script type="math/tex; mode=display">
+\boldsymbol \xi = k_1 \boldsymbol \xi_1 + k_2 \boldsymbol \xi_2 +  \cdots + k_s \boldsymbol \xi_s, \quad k_1, k_2, \cdots, k_n \in \mathbb R</script><blockquote>
+<p>此处解齐次线性方程组的一般步骤见课本</p>
+</blockquote>
+<p><strong>定理 1</strong> 设 $\boldsymbol A$ 是 $m \times n$ 矩阵，$\mathrm r( \boldsymbol A) = r$，则</p>
+<p>(1) $\boldsymbol{Ax} = \boldsymbol 0$ 的基础解系中的解向量个数为 $n - r$；</p>
+<p>(2) $\boldsymbol{Ax} = \boldsymbol 0$ 的任意 $n - r$ 个线性无关的解向量都是它的基础解系；</p>
+<p>(3) 设 $\boldsymbol \xi_1, \boldsymbol \xi_2, \cdots, \boldsymbol \xi_{n - r}$ 是 $\boldsymbol{Ax} = \boldsymbol 0$ 的任意一个基础解系，则 $\boldsymbol{Ax} = \boldsymbol 0$ 的所有解为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \xi = k_1 \boldsymbol \xi_1 + k_2 \boldsymbol \xi_2 +  \cdots + k_{n - r} \boldsymbol \xi_{n - r}</script><p>其中 $k_1, k_2, \cdots, k_{n - r}$ 为任意实数。</p>
+<p>称上式为齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的<strong>通解</strong>。</p>
+<p><strong>推论</strong> (1) 设 $\boldsymbol A$ 是 $m \times n$ 矩阵，则</p>
+<p>$\boldsymbol{Ax} = \boldsymbol 0$ 只有零解 $\Leftrightarrow \mathrm r( \boldsymbol A)= n$。此时，$\boldsymbol{Ax} = \boldsymbol 0$ 没有基础解系；</p>
+<p>$\boldsymbol{Ax} = \boldsymbol 0$ 有非零解 $\Leftrightarrow \mathrm r( \boldsymbol A) &lt; n$。此时，$\boldsymbol{Ax} = \boldsymbol 0$ 有无穷多个基础解系。</p>
+<p>当 $m &lt; n$ 时，$\boldsymbol{Ax} = \boldsymbol 0$ 必有非零解，因此必有无穷多个基础解系。</p>
+<blockquote>
+<p>当 $n &gt; m$ 时，$n$ 个 $m$ 维向量一定线性相关。</p>
+</blockquote>
+<p>(2) 当 $\boldsymbol A$ 是 $n$ 阶方阵时，$\boldsymbol{Ax} = \boldsymbol 0$ 只有零解 $\Leftrightarrow | \boldsymbol A| \ne 0$。$\boldsymbol{Ax} = \boldsymbol 0$ 有非零解 $\Leftrightarrow | \boldsymbol A| = 0$。</p>
+<blockquote>
+<p>齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的求通解方法：先把系数矩阵 $\boldsymbol A$ 用初等行变换化成行最简形矩阵 $\boldsymbol T$，则 $\boldsymbol{Ax} = \boldsymbol 0$ 与 $\boldsymbol{Tx} = \boldsymbol 0$ 是同解的，只需要求出 $\boldsymbol{Tx} = \boldsymbol 0$ 的通解，它就是 $\boldsymbol{Ax} = \boldsymbol 0$ 的通解。</p>
+</blockquote>
+<p><strong>推论</strong> 同解的齐次线性方程组的系数矩阵必有相同的秩。</p>
+<blockquote>
+<p>设 $\boldsymbol A$ 是 $m \times n$ 实矩阵，则 $\mathrm r( \boldsymbol A^\mathrm T \boldsymbol A) = \mathrm r( \boldsymbol A) = \mathrm r( \boldsymbol{AA}^\mathrm T)$。</p>
+</blockquote>
+<p>非齐次线性方程组的一般形式为</p>
+<script type="math/tex; mode=display">
+\left \{ \begin{array}{ccc}
+a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n = b_1 \\
+a_{21} x_2 + a_{22} x_2 + \cdots + a_{2n} x_n = b_2 \\
+\vdots \\
+a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n = b_n \\
+\end{array} \right.</script><p>设</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{pmatrix}, \quad \boldsymbol x = \pmatrix{x_1 \\ x_2 \\ \vdots \\ x_n}, \quad \boldsymbol b = \pmatrix{b_1 \\ b_2 \\ \vdots \\ b_m}</script><p>常把上述齐次线性方程组简写成</p>
+<script type="math/tex; mode=display">
+\boldsymbol{Ax} = \boldsymbol b</script><p>把 $\boldsymbol A$ 看作由列向量组构成的矩阵，设</p>
+<script type="math/tex; mode=display">
+\boldsymbol A = ( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n)</script><p>则上述方程组也可写成向量形式</p>
+<script type="math/tex; mode=display">
+x_1 \boldsymbol \alpha_1 + x_2 \boldsymbol \alpha_2 + \cdots + x_n \boldsymbol \alpha_n = \boldsymbol b</script><p>$\boldsymbol A$ 称为线性方程组的系数矩阵，分块矩阵 $\boldsymbol B = ( \begin{array}{c:c} \boldsymbol A &amp; \boldsymbol b \end{array} )$ 称为 $\boldsymbol{Ax} = \boldsymbol b$ 的<strong>增广矩阵</strong>。</p>
+<p>满足 $\boldsymbol{A \eta} = \boldsymbol b$ 的 $n$ 维列向量 $\boldsymbol \eta$ 称为 $\boldsymbol{Ax} = \boldsymbol b$ 的解向量，可简称为它的<strong>解</strong>。若方程组有解，则称它是<strong>相容的</strong>；否则，称它是<strong>不相容的</strong>。</p>
+<p><strong>定理 2</strong> $n$ 元非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 有解的充分必要条件是：它的系数矩阵 $\boldsymbol A$ 的秩等于它的增广矩阵 $\boldsymbol B$ 的秩。</p>
+<p>在非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 中令 $\boldsymbol b = \boldsymbol 0$ 得到的齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol 0$，称为与 $\boldsymbol{Ax} = \boldsymbol b$ 对应的齐次方程组，或者称为方程组 $\boldsymbol{Ax} = \boldsymbol b$ 的<strong>导出组</strong>。</p>
+<p><strong>性质 3</strong> 如果 $\boldsymbol \eta_1, \boldsymbol \eta_2$ 是非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 的解，则 $\boldsymbol \xi = \boldsymbol \eta_1 - \boldsymbol \eta_2$ 是 $\boldsymbol{Ax} = \boldsymbol 0$ 的解。</p>
+<p><strong>性质 4</strong> 如果 $\boldsymbol \eta$ 是非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 的解，$\boldsymbol \xi$ 是 $\boldsymbol{Ax} = \boldsymbol 0$ 的解，则 $\boldsymbol \xi + \boldsymbol \eta$ 必是 $\boldsymbol{Ax} = \boldsymbol b$ 的解。</p>
+<p><strong>定理 3</strong>（$\boldsymbol{Ax} = \boldsymbol b$ 的<strong>解的结构定理</strong>）设非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 有解，则它的<strong>一般解（通解）</strong>为</p>
+<script type="math/tex; mode=display">
+\boldsymbol x = \boldsymbol \xi = \boldsymbol \eta^\ast</script><p>其中 $\boldsymbol \eta^\ast$ 是 $\boldsymbol{Ax} = \boldsymbol b$ 的一个特解，$\boldsymbol \xi$ 是对应的齐次方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的一般解。</p>
+<p>设 $m \times n$ 矩阵 $\boldsymbol A$ 的秩是 $r$，齐次方程组 $\boldsymbol{Ax} = \boldsymbol 0$ 的一个基础解系为 $\{ \boldsymbol \xi_1, \boldsymbol \xi_2, \cdots, \boldsymbol \xi_{n - r} \}$，则 $\boldsymbol{Ax} = \boldsymbol 0$ 的通解为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \xi = k_1 \boldsymbol \xi_1 + k_2 \boldsymbol \xi_2 + \cdots + k_{n - r} \boldsymbol \xi_{n - r}</script><p>从而非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 的一般解为</p>
+<script type="math/tex; mode=display">
+\boldsymbol \eta = \boldsymbol \eta^\ast + k_1 \boldsymbol \xi_1 + k_2 \boldsymbol \xi_2 + \cdots + k_{n - r} \boldsymbol \xi_{n - r}</script><p>上式即为非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 的<strong>通解</strong>。$\boldsymbol \eta^\ast$ 为 $\boldsymbol{Ax} = \boldsymbol b$ 的一个<strong>特解</strong>。</p>
+<p>非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 解的情形归纳如下：</p>
+<p>(1) 若 $\mathrm r( \boldsymbol A) \ne \mathrm r( \boldsymbol B)$，则方程组 $\boldsymbol{Ax} = \boldsymbol b$ 无解；</p>
+<p>(2) 若 $\mathrm r( \boldsymbol A) = \mathrm r( \boldsymbol B) = r$，则方程组 $\boldsymbol{Ax} = \boldsymbol b$ 有解；</p>
+<p>① 当 $r = n$ 时，方程组 $\boldsymbol{Ax} = \boldsymbol b$ 有唯一解；</p>
+<p>② 当 $r &lt; n$ 时，方程组 $\boldsymbol{Ax} = \boldsymbol b$ 有无穷多个解，其通解如上式。</p>
+<blockquote>
+<p>非齐次线性方程组 $\boldsymbol{Ax} = \boldsymbol b$ 的求通解方法：只用初等行变换把增广矩阵 $\boldsymbol B = ( \begin{array}{c:c} \boldsymbol A &amp; \boldsymbol b \end{array} )$ 化成行最简形矩阵 $( \begin{array}{ccc} \boldsymbol T &amp; \boldsymbol d \end{array} )$，写出等价的方程组 $\boldsymbol{Tx} = \boldsymbol d$，求出其通解，此即 $\boldsymbol{Ax} = \boldsymbol b$ 的通解。</p>
+<p>求非齐次线性方程组的特解的方法是任意的。最方便的方法是把自由未知量的值都取为零。</p>
+</blockquote>
+<div style="page-break-after:always"></div>
+
+<h3 id="特征值与特征向量-1"><a href="#特征值与特征向量-1" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h3><h4 id="清单-5"><a href="#清单-5" class="headerlink" title="清单"></a>清单</h4><ul>
+<li>特征方程<ul>
+<li>特征多项式</li>
+<li>特征值</li>
+<li>特征向量</li>
+</ul>
+</li>
+<li>矩阵的迹</li>
+<li>矩阵的相似关系<ul>
+<li><strong>矩阵的对角化</strong><ul>
+<li>可对角化 &lt;=&gt; 相似于对角矩阵</li>
+</ul>
+</li>
+<li>相似标准型</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-5"><a href="#课本原文-5" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>定义 1</strong> 设 $\boldsymbol A$ 为 $n$ 阶方阵。如果存在数 $\lambda$ 和非零向量使得 $\boldsymbol{A \alpha} = \lambda \boldsymbol \alpha$，则称 $\lambda$ 为 $\boldsymbol A$ 的特征值，称 $\boldsymbol \alpha$ 为 $\boldsymbol A$ 的属于特征值 $\lambda$ 的特征向量（或 $\boldsymbol A$ 的对应于特征值 $\lambda$ 的特征向量)。</p>
+<p>将 $\boldsymbol{A \alpha} = \lambda \boldsymbol \alpha$ 改写成 $( \lambda \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$，这说明对于特征值 $\lambda$，齐次线性方程组 $( \lambda \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$ 有非零解的，$\boldsymbol \alpha$ 就是齐次线性方程组 $( \lambda \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$ 的一个非零解。反之，若齐次线性方程组 $( \lambda_0 \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$ 有非零解 $\boldsymbol \alpha_0$，则数 $\lambda_0$ 是 $\boldsymbol A$ 的特征值，$\boldsymbol \alpha_0$ 是 $\boldsymbol A$ 的属于特征值 $\lambda_0$ 的特征向量，这就是说数 $\lambda$ 是 $\boldsymbol A$ 的特征值当且仅当齐次线性方程组 $( \lambda \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$ 有非零解。而齐次线性方程组 $( \lambda \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$ 有非零解的充分必要条件是 $| \lambda \boldsymbol E - \boldsymbol A | = 0$。因此数 $\lambda$ 是 $\boldsymbol A$ 的特征值当且仅当 $| \lambda \boldsymbol E - \boldsymbol A | = 0$。</p>
+<p><strong>定义 2</strong> 设 $\boldsymbol A = (a_{ij})$ 为 $n$ 阶方阵，</p>
+<script type="math/tex; mode=display">
+| \lambda \boldsymbol E - \boldsymbol A | = \begin{vmatrix}
+\lambda - a_{11} & -a_{12} & \cdots & -a_{1n} \\
+-a_{21} & \lambda - a_{22} & \cdots & -a_{2n} \\
+\vdots & \vdots & & \vdots \\
+-a_{n1} & -a_{n2} & \cdots & \lambda - a_{nn} \\
+\end{vmatrix}</script><p>是一个关于 $\lambda$ 的 $n$ 次多项式，称为 $\boldsymbol A$ 的特征多项式。方程 $| \lambda \boldsymbol E - \boldsymbol A | = 0$ 是一个以 $\lambda$ 为未知量的一元 $n$ 次方程，称为 $\boldsymbol A$ 的<strong>特征方程</strong>。</p>
+<p>显然，$\boldsymbol A$ 的特征值就是 $\boldsymbol A$ 的特征方程的根（因而将特征值也称为特征根)。$n$ 阶方阵 $\boldsymbol A$ 的特征方程在复数范围内有 $n$ 个根（重根按重数计），所以 $n$ 阶方阵 $\boldsymbol A$ 在复数范围内有 $n$ 个特征值。对于 $\boldsymbol A$ 的特征值 $\lambda$，$\boldsymbol A$ 的属于特征值 $\lambda$ 的特征向量就是齐次线性方程组 $( \lambda \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$ 的非零解。</p>
+<p><strong>性质 1</strong> 若 $\boldsymbol \alpha_1, \boldsymbol \alpha_2$ 都是 $\boldsymbol A$ 的属于特征值 $\lambda_0$ 的特征向量，则对任意使 $k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2 \ne \boldsymbol 0$ 的数 $k_1, k_2$，$\boldsymbol \alpha = k_1 \boldsymbol \alpha_1 + k_2 \boldsymbol \alpha_2$ 仍是 $\boldsymbol A$ 的属于特征值 $\lambda_0$ 的特征向量。</p>
+<p>由此可见，$\boldsymbol A$ 的属于同一个特征值 $\lambda_0$ 的若干个特征向量的任意非零线性组合也是 $\boldsymbol A$ 的属于特征值 $\lambda_0$ 的特征向量。</p>
+<p><strong>性质 2</strong> 设 $\lambda_1, \lambda_2, \cdots, \lambda_n$ 为 $n$ 阶方阵 $\boldsymbol A = (a_{ij})$ 的 $n$ 个特征值，则</p>
+<p>(1) $\lambda_1 \lambda_2 \cdots \lambda_n = | \boldsymbol A|$；</p>
+<p>(2) $\lambda_1 + \lambda_2 + \cdots + \lambda_n = a_{11} + a_{22} + \cdots + a_{nn}$。</p>
+<p>记 $a_{11} + a_{22} + \cdots + a_{nn}$ 为 $\tr \boldsymbol A$，称为 $\boldsymbol A$ 的<strong>迹</strong>。</p>
+<p><strong>推论 1</strong> 设 $\boldsymbol A$ 为 $n$ 阶方阵，则 $| \boldsymbol A| = 0$ 的充分必要条件是 $\lambda = 0$ 为 $\boldsymbol A$ 的特征值。</p>
+<p><strong>性质 3</strong> $n$ 阶方阵 $\boldsymbol A$ 与它的转置矩阵 $\boldsymbol A^\mathrm T$ 有相同的特征多项式，因而有相同的特征值。</p>
+<blockquote>
+<p>$\boldsymbol A$ 与 $\boldsymbol A^\mathrm T$ 的属于同一特征值的特征向量可能是不相同的。</p>
+</blockquote>
+<p><strong>性质 4</strong> 若 $\lambda$ 为 $\boldsymbol A$ 的特征值，则对任意多项式 $f(x) = a_m x^m + a_{m - 1} x^{m - 1} + \cdots + a_1 x + a_0$，$f(\lambda)$ 为 $f( \boldsymbol A)$ 的特征值，其中 $f( \boldsymbol A) = a_m \boldsymbol A^m + a_{m - 1} \boldsymbol A^{m - 1} + \cdots + a_1 \boldsymbol A + a_0 \boldsymbol E$ 为与 $f(x)$ 对应的 $\boldsymbol A$ 的矩阵多项式；当 $\boldsymbol A$ 可逆时，$\dfrac 1 \lambda$ 是 $\boldsymbol A^{-1}$ 的特征值。</p>
+<blockquote>
+<p>从证明中发现，$\boldsymbol A$ 与 $f( \boldsymbol A)$ 及 $\boldsymbol A^{-1}$（在可逆的前提下）有相同的特征向量 $\boldsymbol \alpha$。</p>
+</blockquote>
+<p><strong>定义 3</strong> 设 $\boldsymbol A, \boldsymbol B$ 为 $n$ 阶方阵。如果存在某个 $n$ 阶可逆矩阵 $\boldsymbol P$，使得 $\boldsymbol B = \boldsymbol P^{-1} \boldsymbol{AP}$，则称 $\boldsymbol B$ 是 $\boldsymbol A$ 的<strong>相似</strong>矩阵，或称 $\boldsymbol A$ 与 $\boldsymbol B$ 相似，记为 $\boldsymbol A \sim \boldsymbol B$。</p>
+<p>方阵之间的“相似”关系具有以下三条性质，因此是一种等价关系。</p>
+<p>(1) <strong>反身性</strong>：$\boldsymbol A \sim \boldsymbol A$，即任意一个方阵都与自己相似。</p>
+<p>(2) <strong>对称性</strong>：若 $\boldsymbol A \sim \boldsymbol B$，则 $\boldsymbol B \sim \boldsymbol A$。</p>
+<p>(3) <strong>传递性</strong>：若 $\boldsymbol A \sim \boldsymbol B, \boldsymbol B \sim \boldsymbol C$，则 $\boldsymbol A \sim \boldsymbol C$。</p>
+<p><strong>性质 5</strong> 如果 $\boldsymbol A \sim \boldsymbol B$，则 $\boldsymbol A$ 与 $\boldsymbol B$ 有相同的特征多项式，因而有相同的特征值与行列式。</p>
+<p><strong>性质 6</strong> 如果 $\boldsymbol A \sim \boldsymbol B$，则 $f( \boldsymbol A) \sim f( \boldsymbol B)$。</p>
+<p><strong>性质 7</strong> 如果 $\boldsymbol A \sim \boldsymbol B$，$\boldsymbol A$ 可逆，则 $\boldsymbol B$ 可逆，且 $\boldsymbol A^{-1} \sim \boldsymbol B^{-1}$。</p>
+<p>若对于方阵 $\boldsymbol A$ 能找到可逆的矩阵 $\boldsymbol P$，使得 $\boldsymbol P^{-1} = \boldsymbol{AP}$ 为对角矩阵，此时 <strong>$\boldsymbol A$ 可对角化</strong>。</p>
+<p><strong>定理 1</strong> $n$ 阶方阵 $\boldsymbol A$ 相似于对角矩阵的充分必要条件是 $\boldsymbol A$ 有 $n$ 个线性无关的特征向量。</p>
+<blockquote>
+<p>只要找出 $\boldsymbol A$ 的 $n$ 个线性无关的特征向量 $\boldsymbol p_1, \boldsymbol p_2, \cdots, \boldsymbol p_n$，以它们为列向量构成 $\boldsymbol P = ( \boldsymbol p_1, \boldsymbol p_2, \cdots, \boldsymbol p_n)$，则 $\boldsymbol P^{-1} \boldsymbol{AP}$ 为对角矩阵。这个对角矩阵称为 $\boldsymbol A$ 的相似标准形，其对角元素恰好为 $\boldsymbol A$ 的 $n$ 个特征值。</p>
+</blockquote>
+<p><strong>定义 4</strong> 如果存在可逆矩阵 $\boldsymbol P$，使得 $\boldsymbol P^{-1} \boldsymbol{AP} = \boldsymbol \Lambda$ 为对角矩阵则称对角矩阵 $\boldsymbol \Lambda$ 为 $\boldsymbol A$ 的<strong>相似标准型</strong>。</p>
+<p>在求矩阵 $\boldsymbol A$ 的相似标准形 $\boldsymbol \Lambda$ 时，$\boldsymbol \Lambda$ 的对角元可以是按任意顺序排列的。但是 $\boldsymbol P$ 的各列的排列次序与 $\boldsymbol \Lambda$ 中各个对角元（即 $\boldsymbol A$ 的全体特征值）的排列次序必须互相对应，$\boldsymbol P$ 的第 $k$ 列所对应的特征值就是 $\boldsymbol \Lambda$ 的第 $k$ 个对角元素 $(k = 1, 2, \cdots, n)$。</p>
+<p><strong>定理 2</strong> 设 $\lambda_1, \lambda_2, \cdots, \lambda_k$ 是 $n$ 阶方阵 $\boldsymbol A$ 的两两不同的特征值,$\boldsymbol p_i$ 是 $\boldsymbol A$ 的属于 $\lambda_i$ 的特征向量 $(1 \le i \le k)$，则 $\boldsymbol p_1, \boldsymbol p_2, \cdots, \boldsymbol p_k$ 线性无关。</p>
+<p><strong>推论 2</strong> 如果 $n$ 阶方阵 $\boldsymbol A$ 有 $n$ 个两两不同的特征值，则 $\boldsymbol A$ 可对角化。</p>
+<p><strong>推论 3</strong> 设 $\lambda_1, \lambda_2, \cdots, \lambda_m$ 是 $n$ 阶方阵 $\boldsymbol A$ 两两不同的特征值，$\boldsymbol p_{i1}, \boldsymbol p_{i2}, \cdots, \boldsymbol p_{ir_i}$ 是 $\boldsymbol A$ 的属于 $\lambda_i$ 的线性无关的特征向量 $(1 \le i \le m)$，则</p>
+<script type="math/tex; mode=display">
+\boldsymbol p_{11}, \boldsymbol p_{12}, \cdots, \boldsymbol p_{1r_1}, \boldsymbol p_{21}, \boldsymbol p_{22}, \cdots, \boldsymbol p_{2r_2}, \cdots, \boldsymbol p_{m1}, \boldsymbol p_{m2}, \cdots, \boldsymbol p_{mr_m}</script><p>（共 $r_1 + r_2 + \cdots + r_m$ 个向量）仍线性无关。</p>
+<blockquote>
+<p>将属于不同特征值的线性无关的特征向量合并在一起，可以组成个数更多的线性无关的特征向量组。</p>
+</blockquote>
+<p><strong>定理 3</strong> 设 $\lambda_0$ 是 $n$ 阶方阵 $\boldsymbol A$ 的重数为 $k$ 的特征值，对应于 $\lambda_0$，$\boldsymbol A$ 最多有 $m$ 个线性无关的特征向量，则 $m \le k$。</p>
+<blockquote>
+<p>对应于每个特征值，矩阵能有的线性无关的特征向量个数不会超过这个特征值的重数。</p>
+</blockquote>
+<p><strong>定理 4</strong> 方阵 $\boldsymbol A$ 可对角化的充分必要条件是对应于 $\boldsymbol A$ 的任意特征值 $\lambda$，$\boldsymbol A$ 有 $k$ 个线性无关的特征向量，其中 $k$ 是 $\lambda$ 作为特征值的重数。</p>
+<div style="page-break-after:always"></div>
+
+<h3 id="二次型-1"><a href="#二次型-1" class="headerlink" title="二次型"></a>二次型</h3><h4 id="清单-6"><a href="#清单-6" class="headerlink" title="清单"></a>清单</h4><ul>
+<li>$n$ 维向量<ul>
+<li>内积</li>
+<li>柯西不等式</li>
+<li>向量的长度（范数）<ul>
+<li>单位向量</li>
+</ul>
+</li>
+<li>向量的夹角<ul>
+<li>正交<ul>
+<li><strong>施密特正交化方法</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>共轭向量</li>
+</ul>
+</li>
+<li>矩阵<ul>
+<li>正交矩阵（正交变换）<ul>
+<li><strong>5 个性质</strong></li>
+</ul>
+</li>
+<li>实对称矩阵<ul>
+<li><strong>3 个性质定理</strong></li>
+<li><strong>实对称矩阵对角化的一般方法</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二次型<ul>
+<li>二次型的矩阵<ul>
+<li><strong>矩阵的合同</strong></li>
+</ul>
+</li>
+<li>二次型的秩</li>
+<li>标准形<ul>
+<li>将二次型化为标准形的一般方法<ul>
+<li><strong>正交变换</strong></li>
+<li>配方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>规范形<ul>
+<li><strong>正惯性指数</strong>、负惯性指数、符号差</li>
+</ul>
+</li>
+<li>正定二次型、正定矩阵<ul>
+<li>半正定、负定、半负定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-6"><a href="#课本原文-6" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>定义 1</strong> 设 $\mathbb R^n$ 中向量 $\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)^\mathrm T, \boldsymbol \beta = (b_1, b_2, \cdots, b_n)^\mathrm T$，令</p>
+<script type="math/tex; mode=display">
+( \boldsymbol \alpha, \boldsymbol \beta) = \boldsymbol \alpha^\mathrm T \boldsymbol \beta = \sum_{i = 1}^n{a_i b_i}</script><p>称 $( \boldsymbol \alpha, \boldsymbol \beta)$ 为 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的内积。</p>
+<p>向量的内积运算具有以下基本性质：</p>
+<p>(1) 对称性（交换律）：$\forall \boldsymbol \alpha, \boldsymbol \beta \in \mathbb R^n, ( \boldsymbol \alpha, \boldsymbol \beta) = ( \boldsymbol \beta, \boldsymbol \alpha)$。</p>
+<p>(2) 线性性（对加法的分配律、数量乘法）：$\forall \boldsymbol \alpha, \boldsymbol \beta, \boldsymbol \gamma \in \mathbb R^n, ( \boldsymbol \alpha + \boldsymbol \beta, \boldsymbol \gamma) = ( \boldsymbol \alpha, \boldsymbol \gamma) + ( \boldsymbol \beta, \boldsymbol \gamma)$；且 $\forall \boldsymbol \alpha, \boldsymbol \beta \in \mathbb R^n, k \in \mathbb R, (k \boldsymbol \alpha, \boldsymbol \beta) = k( \boldsymbol \alpha, \boldsymbol \beta)$。</p>
+<p>(3) 正定性：$\forall \boldsymbol \alpha = \mathbb R^n, ( \boldsymbol \alpha, \boldsymbol \alpha) \ge 0$，且 $( \boldsymbol \alpha, \boldsymbol \alpha) = 0 \Leftrightarrow \boldsymbol \alpha = \boldsymbol 0$。</p>
+<p><strong>定理 1（柯西不等式）</strong> $\forall \boldsymbol \alpha, \boldsymbol \beta \in \mathbb R^n$，</p>
+<script type="math/tex; mode=display">
+( \boldsymbol \alpha, \boldsymbol \beta)^2 \le ( \boldsymbol \alpha, \boldsymbol \alpha) (\boldsymbol \beta, \boldsymbol \beta)</script><p>等号当且仅当 $\boldsymbol \alpha$ 和 $\boldsymbol \beta$ 线性相关时成立。</p>
+<p><strong>定义 2</strong> 设 $\boldsymbol \alpha \in \mathbb R^n$，令 $| \boldsymbol \alpha | = \sqrt{( \boldsymbol \alpha, \boldsymbol \alpha)}$，称 $| \boldsymbol \alpha |$ 为 $\boldsymbol \alpha$ 的长度。当 $| \boldsymbol \alpha | = 1$ 时，称 $\boldsymbol \alpha$ 为<strong>单位向量</strong>。</p>
+<p>很明显，$\boldsymbol \alpha = (a_1, a_2, \cdots, a_n)^\mathrm T$ 为单位向量当且仅当 $\displaystyle \sum_{i = 1}^n{a_i^2} = 1$。</p>
+<p>向量的长度有以下三条基本性质</p>
+<p>(1) 非负性：$\forall \boldsymbol \alpha \in \mathbb R^n$，$| \boldsymbol \alpha | \ge 0$ 且 $| \boldsymbol \alpha | = 0 \Leftrightarrow \boldsymbol \alpha = \boldsymbol 0$。</p>
+<p>(2) 齐次性：$\forall \boldsymbol \alpha \in \mathbb R^n, k \in \mathbb R$，</p>
+<script type="math/tex; mode=display">
+\| k\boldsymbol \alpha \| = \sqrt{(k \boldsymbol \alpha, k \boldsymbol \alpha)} = \sqrt{k^2 (\boldsymbol \alpha, \boldsymbol \alpha)} = |k| \times \| \boldsymbol \alpha \|</script><p>这里，$|k|$ 是数 $k$ 的绝对值。</p>
+<p>由 (2) 可知：当 $\boldsymbol \alpha \ne \boldsymbol 0$ 时，$\left | \dfrac 1{ | \boldsymbol \alpha |} \boldsymbol \alpha \right | = \dfrac 1{ | \boldsymbol \alpha |} \times | \boldsymbol \alpha | = 1$。也就是说，$\dfrac{ \boldsymbol \alpha}{ | \boldsymbol \alpha |}$ 是单位向量，称为向量 $\boldsymbol \alpha$ 的单位化。</p>
+<p>(3) 三角不等式：$\forall \boldsymbol \alpha, \boldsymbol \beta \in \mathbb R^n, | \boldsymbol \alpha + \boldsymbol \beta | \le | \boldsymbol \alpha | + | \boldsymbol \beta |$。</p>
+<p><strong>定义 3</strong> 设 $\boldsymbol \alpha, \boldsymbol \beta$ 为 $\mathbb R^n$ 中的非零向量，称 $\theta = \arccos \dfrac{( \boldsymbol \alpha, \boldsymbol \beta)}{ | \boldsymbol \alpha | | \boldsymbol \beta |}$ 为 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ 的夹角。、</p>
+<p>特别地，当 $\theta = \dfrac \pi 2$ 即 $( \boldsymbol \alpha, \boldsymbol \beta) = 0$ 时，称 $\boldsymbol \alpha$ 与 $\boldsymbol \beta$ <strong>正交</strong>。记为 $\boldsymbol \alpha \perp \boldsymbol \beta$。</p>
+<p>零向量与其他向量的夹角是不确定的，我们认为两向量与任意向量都正交。</p>
+<p><strong>定义 4</strong> 如果 $\mathbb R^n$ 中的非零向量 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 两两正交，则称向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 为正交向量组。由单位向量构成的正交向量组称为标准正交向量组或规范正交向量组。</p>
+<p><strong>定理 2</strong> 设 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 为正交向量组，则 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 线性无关。</p>
+<p>$\mathbb R^n$ 中任意 $n$ 个线性无关的向量都可作为 $\mathbb R^n$ 的一组基，因此根据定理 2，$\mathbb R^n$ 中 $n$ 个向量构成的正交向量组一定是 $\mathbb R^n$ 的一组基。</p>
+<p><strong>定义 5</strong> 如果 $\mathbb R^n$ 中的 $n$ 个向量 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 构成一个正交向量组，则称 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 为 $\mathbb R^n$ 的一组正交基。由单位向量构成的正交基称为标准正交基或规范正交基。</p>
+<p><strong>定理 3（施密特正交化方法）</strong> 设 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 是 $\mathbb R^n$ 中线性无关的向量组。令</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \boldsymbol \beta_1 = \boldsymbol \alpha_1 \\
+& \boldsymbol \beta_2 = \boldsymbol \alpha_2 - \frac{( \boldsymbol \alpha_2, \boldsymbol \beta_1 )}{( \boldsymbol \beta_1, \boldsymbol \beta_1 )} \boldsymbol \beta_1 \\
+& \boldsymbol \beta_3 = \boldsymbol \alpha_3 - \frac{( \boldsymbol \alpha_3, \boldsymbol \beta_1 )}{( \boldsymbol \beta_1, \boldsymbol \beta_1 )} \boldsymbol \beta_1 - \frac{( \boldsymbol \alpha_3, \boldsymbol \beta_2)}{( \boldsymbol \beta_2, \boldsymbol \beta_2)} \boldsymbol \beta_2 \\
+& \ \  \vdots \\
+& \boldsymbol \beta_m = \boldsymbol \alpha_m - \frac{( \boldsymbol \alpha_m, \boldsymbol \beta_1 )}{( \boldsymbol \beta_1, \boldsymbol \beta_1 )} \boldsymbol \beta_1 - \frac{( \boldsymbol \alpha_m, \boldsymbol \beta_2)}{( \boldsymbol \beta_2, \boldsymbol \beta_2)} \boldsymbol \beta_2 - \cdots - \frac{( \boldsymbol \alpha_m, \boldsymbol \beta_{m - 1} )}{( \boldsymbol \beta_{m - 1}, \boldsymbol \beta_{m - 1} )} \boldsymbol \beta_{m - 1} \\
+\end{aligned}</script><p>则 $\boldsymbol \beta_1, \boldsymbol \beta_2, \cdots, \boldsymbol \beta_m$ 两两正交且与 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_m$ 等价。</p>
+<blockquote>
+<script type="math/tex; mode=display">
+\boldsymbol \beta_n = \boldsymbol \alpha_n - \sum_{i = 1}^{n - 1}{ \frac{( \boldsymbol \alpha_n, \boldsymbol \beta_i)}{( \boldsymbol \beta_i, \boldsymbol \beta_i)} \boldsymbol \beta_i}</script></blockquote>
+<p><strong>定义 6</strong> 如果实方阵 $\boldsymbol A$ 满足 $\boldsymbol A^\mathrm T \boldsymbol A = \boldsymbol E$，则称 $\boldsymbol A$ 为正交矩阵。</p>
+<p><strong>性质 1</strong> 如果 $\boldsymbol A$ 是正交矩阵，则 $| \boldsymbol A| = 1$ 或 $| \boldsymbol A| = -1$。</p>
+<p><strong>性质 2</strong> $\boldsymbol A$ 是正交矩阵 $\Leftrightarrow \boldsymbol A^\mathrm T = \boldsymbol A^{-1}$。</p>
+<p><strong>性质 3</strong> $\boldsymbol A$ 是正交矩阵 $\Leftrightarrow \boldsymbol A^\mathrm T$ 是正交矩阵。</p>
+<p><strong>性质 4</strong> 如果 $\boldsymbol A, \boldsymbol B$ 都是 $n$ 阶正交矩阵，则 $\boldsymbol{AB}$ 也是正交矩阵。</p>
+<blockquote>
+<p>有限个正交矩阵的乘积一定是正交矩阵。</p>
+</blockquote>
+<p><strong>性质 5</strong> $\boldsymbol A$ 是 $n$ 阶正交矩阵 $\Leftrightarrow \boldsymbol A$ 的列向量组是 $\mathbb R^n$ 的一组标准正交基。</p>
+<blockquote>
+<p>$\boldsymbol x$ 为 $n$ 维单位列向量，$\boldsymbol H = \boldsymbol E - 2 \boldsymbol{xx}^\mathrm T$ 既是对称矩阵又是正交矩阵，而且有 $\boldsymbol{Hx} = - \boldsymbol x$。称 $\boldsymbol H$ 为<strong>镜像矩阵</strong>。</p>
+</blockquote>
+<p><strong>定义 7</strong> 设 $\boldsymbol A$ 是 $n$ 阶正交矩阵，$\boldsymbol x, \boldsymbol y$ 是两个 $n$ 维列向量，则称线性变换 $\boldsymbol y = \boldsymbol{Ax}$ 为正交变换。</p>
+<p>可以说明 $| y | = | x |$，且 $( \boldsymbol{A \alpha}, \boldsymbol{A \beta}) = ( \boldsymbol \alpha, \boldsymbol \beta)$。</p>
+<p>这说明正交变换保持 $\mathbb R^n$ 中向量的长度不变，同时保持向量之间的夹角不变。正因为如此，当用正交变换来进行坐标变换时，能将标准正交基变成标准正交基，相当于是将“直角坐标系”变成“直角坐标系”。</p>
+<p><strong>定义 8</strong> 也 $\boldsymbol x = (x_1, x_2, \cdots, x_n)^\mathrm T$ 为复向量，成 $\overline{\boldsymbol x} = ( \overline x_1, \overline x_2, \cdots, \overline x_n)^\mathrm T$ 为 $\boldsymbol x$ 的共轭向量，其中 $\overline x_i$ 表示 $x_i$ 的共轭复数 $(i = 1, 2, \cdots, n)$。</p>
+<p><strong>定理 4</strong> 设 $\boldsymbol A$ 为实对称矩阵，则 $\boldsymbol A$ 的特征值都是实数。</p>
+<p><strong>注：</strong>对于实对称矩阵 $\boldsymbol A$，因为其特征值是实数，所以对应的特征向量可取为实向量。</p>
+<p><strong>定理 5</strong> 设 $\boldsymbol A$ 为实对称矩阵，则 $\boldsymbol A$ 的对应于不同特征值的特征向量是正交的。</p>
+<p><strong>定理 6</strong> 设 $\boldsymbol A$ 为 $n$ 阶实对称矩阵，则存在 $n$ 阶正交矩阵 $\boldsymbol O$，使得</p>
+<script type="math/tex; mode=display">
+\boldsymbol O^{-1} \boldsymbol{AO} = \boldsymbol O^\mathrm T \boldsymbol{AO} = \operatorname{diag}( \lambda_1, \lambda_2, \cdots, \lambda_n)</script><p>其中 $\lambda_1, \lambda_2, \cdots, \lambda_n$ 是 $\boldsymbol A$ 的 $n$ 个特征值。</p>
+<p><strong>注：</strong>若存在正交矩阵 $\boldsymbol P$，使得 $\boldsymbol P^{-1} \boldsymbol{AP} = \boldsymbol B$，则称<strong>矩阵 $\boldsymbol A$ 正交相似于矩阵 $\boldsymbol B$</strong>。</p>
+<blockquote>
+<p>$n$ 阶实对称方阵 $\boldsymbol A$ 正交相似于对角矩阵。</p>
+<p>设 $\boldsymbol A$ 为实对称矩阵，可按以下步骤求出 $n$ 阶正交矩阵 $\boldsymbol O$，使得 $\boldsymbol O^\mathrm{-1} \boldsymbol{AO}$ 为对角矩阵 $\boldsymbol \Lambda$。</p>
+<p>(1) 求特征方程 $| \lambda \boldsymbol E - \boldsymbol A | = 0$ 的全部根，即 $\boldsymbol A$ 的全部特征值。设 $\boldsymbol A$ 的全体亮亮不同的特征值为 $\lambda_1, \lambda_2, \cdots, \lambda_m$，$\lambda_i$ 的重数为 $r_i \ (r_1 + r_2 + \cdots + r_m = n)$。</p>
+<p>(2) 对每个 $\lambda_i \ (i = 1, 2, \cdots, m)$，求解齐次线性方程组 $( \lambda_i \boldsymbol E - \boldsymbol A) \boldsymbol x = \boldsymbol 0$。</p>
+<p>设基础解系为 $\boldsymbol \xi_{i1}, \boldsymbol \xi_{i2}, \cdots, \boldsymbol \xi_{ir_i}$（因为 $\lambda_i$ 的重数为 $r_i$，所以基础解系中含有 $r_i$ 个向量）。</p>
+<p>将基础解系 $\boldsymbol \xi_{i1}, \boldsymbol \xi_{i2}, \cdots, \boldsymbol \xi_{ir_i}$ 标准正交化，得到 $\boldsymbol A$ 的对应于 $\lambda_i$ 的 $r_i$ 个两两正交的单位特征向量 $\boldsymbol p_{i1}, \boldsymbol p_{i2}, \cdots, \boldsymbol p_{ir_i}$。</p>
+<p>(3) 将上面求出的全体两两正交的单位特征向量作为列向量构成正交矩阵 $\boldsymbol O$，则 $\boldsymbol O^{-1} \boldsymbol{AO}$ 为对角矩阵 $\boldsymbol \Lambda$。</p>
+<p><strong>注：</strong>在不计对角元素顺序的意义下对角矩阵 $\boldsymbol \Lambda$ 是唯一的，但正交矩阵 $\boldsymbol O$ 是不唯一的。请注意 $\boldsymbol O$ 的第 $i$ 列所对应的特征值一定是对角矩阵 $\boldsymbol \Lambda$ 的第 $i$ 个对角元素，$i = 1, 2, \cdots, n$。</p>
+</blockquote>
+<p><strong>定义 9</strong> 含有 $n$ 个未知量 $x_1, x_2, \cdots, x_n$ 的实系数二次齐次多项式</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x_1, x_2, \cdots, x_n) & = \ \ \ a_{11}x_1^2 + 2 a_{12} x_1 x_2 + 2 a_{13} x_1 x_3 + \cdots + 2 a_{1n} x_1 x_n \\
+& \ \ \ + a_{22} x_2^2 + 2 a_{23} x_2 x_3 + \cdots + 2 a_{2n} x_2 x_n \\
+& \ \ \ + a_{33} x_3^2 + \cdots + 2 a_{3n} x_3 x_n \\
+& \ \ \ + \cdots \\
+& \ \ \ + a_{n - 1, n - 1} x_{n - 1}^2 + 2 a_{n - 1, n} x_{n - 1} x_n \\
+& \ \ \ + a_{nn} x_n^2
+\end{aligned}</script><p>称为（$n$ 元）实二次型，简记为 $f$。</p>
+<p>本课程只讨论实二次型，如果没有特殊说明，以下提到的二次型均指实二次型。</p>
+<p>令 $a_{ji} = a_{ij} \ (1 \le i &lt; j \le n)$，则</p>
+<script type="math/tex; mode=display">
+2 a_{ij} x_i x_j = a_{ij} x_i x_j + a_{ji} x_j x_i \quad (1 \le i < j \le n)</script><p>于是上式可以写成矩阵形式。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x_1, x_2, \cdots, x_n) & = \ \ \ a_{11} x_1^2 + a_{12} x_1 x_2 + \cdots + a_{1n} x_1 x_n \\
+& \ \ \ + a_{21} x_2 x_1 + a_{22} x_2^2 + \cdots + a_{2n} x_2 x_n \\
+& \ \ \ + \cdots \\
+& \ \ \ + a_{n1} x_n x_1 + a_{n2} x_n x_2 + \cdots + a_{nn} x_n \\
+& = \ \ \ x_1(a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n) \\
+& \ \ \ + x_2(a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n) \\
+& \ \ \ + \cdots \\
+& \ \ \ + x_n(a_{n1} x_1 + a_{n2} x_2 + \cdots + a_{nn} x_n) \\
+& = \ \ \ (x_1, x_2, \cdots, x_n) \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{pmatrix} \pmatrix{x_1 \\ x_2 \\ \vdots \\ x_n}
+\end{aligned}</script><p>即 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$，其中</p>
+<script type="math/tex; mode=display">
+\boldsymbol x = \pmatrix{x_1 \\ x_2 \\ \vdots \\ x_n}, \quad \boldsymbol A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{pmatrix}</script><p>为 $n$ 阶实对称矩阵。</p>
+<p>$n$ 元二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 与 $n$ 阶实对称矩阵 $\boldsymbol A = (a_{ij})_{n \times n}$ 是一一对应的。称 $\boldsymbol A$ 是<strong>二次型 $f$ 的矩阵</strong>，$f$ 是<strong>以 $\boldsymbol A$ 为矩阵的二次型</strong>，$\boldsymbol A$ 的秩 $\mathrm r( \boldsymbol A)$ 称为<strong>二次型 $f$ 的秩</strong>。</p>
+<p><strong>定义 10</strong> 只含平方项的二次型</p>
+<script type="math/tex; mode=display">
+f(x_1, x_2, \cdots, x_n) = d_1 x_1^2 + d_2 x_2^2 + \cdots + d_n x_n^2</script><p>称为<strong>二次型的标准形</strong>。其对应的矩阵为对角矩阵 $\boldsymbol \Lambda = \operatorname{diag}(d_1, d_2, \cdots, d_n)$。</p>
+<p>我们要讨论的问题是，对于一个一般的 $n$ 元二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$，是否可以通过适当的坐标变换 $\boldsymbol x = \boldsymbol{Cy}$，使 $f = \boldsymbol x^\mathrm T \boldsymbol{Ax} = ( \boldsymbol{Cy})^\mathrm T \boldsymbol A ( \boldsymbol{Cy}) = \boldsymbol y^\mathrm T ( \boldsymbol C^\mathrm T \boldsymbol{AC}) \boldsymbol y$ 为标准形。</p>
+<p>做坐标变换 $\boldsymbol x = \boldsymbol{Cy}$，就是在 $\mathbb R^n$ 中另取一组新基，使原来坐标为 $\boldsymbol x = (x_1, x_2, \cdots, x_n)^\mathrm T$ 的向量在新基下的坐标变为 $\boldsymbol y = (y_1, y_2, \cdots, y_n)^\mathrm T$，且 $\boldsymbol x = \boldsymbol{Cy}$。设 $\boldsymbol C = ( \boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n)$，不难发现，在新基下坐标为 $\boldsymbol y = \boldsymbol \varepsilon_1 = (1, 0, \cdots, 0)^\mathrm T$ 的向量，原来的坐标为 $\boldsymbol x = \boldsymbol{Cy} = \boldsymbol \alpha_1$；在新基下坐标依次为 $\boldsymbol \varepsilon_2, \boldsymbol \varepsilon_3, \cdots, \boldsymbol \varepsilon_n$ 的向量，原来的坐标依次为 $\boldsymbol \alpha_2, \boldsymbol \alpha_3, \cdots, \boldsymbol \alpha_n$。这说明新取的基就是 $\boldsymbol C$ 的列向量组 $\boldsymbol \alpha_1, \boldsymbol \alpha_2, \cdots, \boldsymbol \alpha_n$。因此 $\boldsymbol C$ 是可逆的。称 $\boldsymbol x = \boldsymbol{Cy}$ 为可逆线性变换（也称为非异线性变换或非退化的线性变换）。</p>
+<p>对于上面给定的二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$，只要找到可逆矩阵 $\boldsymbol C$，使得 $\boldsymbol C^\mathrm T \boldsymbol{AC} = \boldsymbol \Lambda$ 为对角矩阵，则可将 $f$ 化为标准形：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f & = \boldsymbol x^\mathrm T \boldsymbol{Ax} = ( \boldsymbol{Cy})^\mathrm T \boldsymbol A ( \boldsymbol{Cy}) = \boldsymbol y^\mathrm T ( \boldsymbol C^\mathrm T \boldsymbol{AC}) \boldsymbol y = \boldsymbol y^\mathrm T \boldsymbol{ \Lambda y} \\
+& = d_1 y_1^2 + d_2 y_2^2 + \cdots + d_n y_n^2
+\end{aligned}</script><p>其中 $d_1, d_2, \cdots, d_n$ 是对角矩阵 $\boldsymbol \Lambda$ 的 $n$ 个对角元。</p>
+<p>在变量 $y_1, y_2, \cdots, y_n$ 下，二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 的矩阵为 $\boldsymbol B = \boldsymbol C^\mathrm T \boldsymbol{AC}$，称 $\boldsymbol B$ 为 $\boldsymbol A$ 的合同矩阵。</p>
+<p><strong>定义 11</strong> 如果对于 $n$ 阶方阵 $\boldsymbol A$ 和 $\boldsymbol B$，存在 $n$ 阶可逆矩阵 $\boldsymbol P$，使得 $\boldsymbol B = \boldsymbol P^\mathrm T \boldsymbol{AP}$，则称 $\boldsymbol A$ 与 $\boldsymbol B$ 合同，记为 $\boldsymbol A \simeq \boldsymbol B$。</p>
+<p>由于左乘或右乘可逆矩阵都不会改变矩阵的秩，所以若 $\boldsymbol A \simeq \boldsymbol B$，则 $\mathrm r( \boldsymbol A) = \mathrm r( \boldsymbol B)$。</p>
+<p>方阵之间的合同关系也是一种等价关系，即具有反身性、对称性、传递性三条性质。</p>
+<p>只要找到可逆矩阵 $\boldsymbol C$，使 $\boldsymbol B = \boldsymbol C^\mathrm T \boldsymbol{AC} = \boldsymbol \Lambda$ 为对角矩阵，再做线性变换 $\boldsymbol x = \boldsymbol{Cy}$（实际上是做坐标变换 $\boldsymbol x = \boldsymbol{Cy}$，即建立新的坐标系，使旧坐标系下坐标为 $\boldsymbol x$ 的向量在新坐标系下坐标为 $\boldsymbol y$，且 $\boldsymbol x = \boldsymbol{Cy}$），就可将二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 化为标准形。</p>
+<p><strong>定理 7</strong> 对于任意一个 $n$ 元实二次型 $f = \boldsymbol x^\mathrm T \boldsymbol{Ax}$，一定存在正交变换 $\boldsymbol x = \boldsymbol{Oy}$，使得</p>
+<script type="math/tex; mode=display">
+$f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax} = \boldsymbol y^\mathrm T \boldsymbol{ \Lambda y} = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2</script><p>其中 $\lambda_1, \lambda_2, \cdots, \lambda_n$ 是矩阵 $\boldsymbol A$ 的 $n$ 个特征值。</p>
+<blockquote>
+<p>除了通过正交变换外，还可用一般的可逆变换将二次型化为标准形。下面介绍的配方法就是其中的一种。</p>
+<p>给定二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$，其中 $\boldsymbol x = (x_1, x_2, \cdots, x_n)^\mathrm T, \boldsymbol A = (a_{ij})$ 为实对称矩阵。可按如下步骤将 $f$ 经过配方后化为只含平方项的形式。<br>(1) 若 $f$ 中不出现平方项，即 $a_{11} = a_{22} = \cdots = a_{nn} = 0$。</p>
+<p>此时必有某个 $a_{ij} \ne 0 \ (i &lt; j)$，即 $f$ 中会出现交叉乘积项，令 $x_i = y_i + y_j, x_j = y_i - y_j$，其余 $x_k = y_k \ (k \ne i, k \ne j)$，则在变量 $y_1, y_2, \cdots$ 下，$f$ 中会出现平方项。</p>
+<p>(2) 若 $f$ 中含有平方项。</p>
+<p>依次看 $f$ 中是否出现 $x_1^2, x_2^2, \cdots, x_n^2$。假设第一个出现的平方项为 $x_k^2$，即</p>
+<script type="math/tex; mode=display">
+a_{11} = a_{22} = \cdots = a_{k - 1, k - 1} = 0, \quad a_{kk} = 0</script><p>将 $f$ 中所有含 $x_k$ 的项归并到一起进行配方后可得</p>
+<script type="math/tex; mode=display">
+f = a_{kk} \left( x_k + \sum_{j \ne k}{ \frac{a_{kj} x_j}{a_{kk}}} \right)^2 + g</script><p>其中 $g$ 是不含 $x_k$ 的 $n - 1$ 元二次型，对 $g$ 继续实施步骤 (1)、(2)。</p>
+<p>如此操作有限次之后，$f$ 化为只含平方项的形式。</p>
+</blockquote>
+<p><strong>定义 12</strong> 只含平方项，且平方项系数为 $1, -1$ 或 $0$ 的二次型称为二次型的<strong>规范形</strong>。</p>
+<p>如果二次型 $f = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 的规范形为 $f = z_1^2 + \cdots + z_k^2 - z_{k + 1}^2 - \cdots - z_r^2$，则 $f$ 在变量 $z_1, z_2, \cdots, z_n$ 下的矩阵为 $\widetilde{\boldsymbol \Lambda} = \operatorname{diag}(1, \cdots, 1, -1, \cdots, -1, 0, \cdots, 0)$，其中 $1$ 的个数为 $k$，$-1$ 的个数为 $r - k$，$0$ 的个数为 $n - r$，显然 $\mathrm r(\widetilde{ \boldsymbol \Lambda}) = r$，因为 $\boldsymbol A$ 与 $\widetilde{ \boldsymbol \Lambda}$ 合同，所以 $\mathrm r( \boldsymbol A) = \mathrm r( \widetilde{ \boldsymbol \Lambda}) = r$。这说明规范形中非零系数（即 $1$ 或 $-1$ 的个数就是 $\mathrm r( \boldsymbol A)$，是由 $\boldsymbol A$ 唯一确定的。</p>
+<p>下面的惯性定理将表明规范形中系数 $1$ 的个数也是由 $\boldsymbol A$ 唯一确定的。</p>
+<p><strong>定理 8（惯性定理）</strong> 设 $n$ 元实二次型 $f = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 的秩为 $r$（即 $\mathrm r( \boldsymbol A) = r$），若有两个可逆线性变换 $\boldsymbol x = \boldsymbol{Cy}$ 与 $\boldsymbol x = \boldsymbol{Pz}$ 分别将 $f$ 化为规范形</p>
+<script type="math/tex; mode=display">
+f = y_1^2 + \cdots + y_p^2 - y_{p + 1}^2 - \cdots - y_r^2 \text{ \quad and \quad} f = z_1^2 + \cdots + z_q^2 - z_{q + 1}^2 - \cdots - z_r^2</script><p>则 $p = q$。</p>
+<p><strong>定义 13</strong> 设 $n$ 元实二次型 $f = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 的秩为 $r$（即 $\mathrm r( \boldsymbol A) = r$），$f = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 的规范形为</p>
+<script type="math/tex; mode=display">
+f = z_1^2 + \cdots + z_p^2 - z_{p + 1}^2 - \cdots - z_r^2</script><p>称 $p$ 为二次型 $f$（或矩阵 $\boldsymbol A$）的<strong>正惯性指数</strong>，称 $r - p$ 为 $f$（或矩阵 $\boldsymbol A$）的<strong>负惯性指数</strong>，$p - (r - p) = 2p - r$ 称为 $f$（或矩阵 $\boldsymbol A$）的<strong>符号差</strong>。</p>
+<p>给定二次型 $f = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 以后，$f$ 的秩 $r$ 与正惯性指数 $p$ 都是唯一确定的，因此 $f$ 的规范形也就唯一确定了（不计系数 $1, -1, 0$ 的排列次序）。换成矩阵的语言来说，对于任意一个 $n$ 阶实对称矩阵 $\boldsymbol A$，设 $\boldsymbol A$ 的秩为 $r$，正惯性指数为 $p$，则存在 $n$ 阶可逆矩阵 $\boldsymbol P$ 使得</p>
+<script type="math/tex; mode=display">
+\boldsymbol P^\mathrm T \boldsymbol{AP} = \widetilde{ \boldsymbol \Lambda} = \operatorname{diag}(1, \cdots, 1, -1, \cdots, -1, 0, \cdots, 0)</script><p>其中 $1, -1, 0$ 的个数分别为 $p, r - p, n - r$，在不计 $1, -1, 0$ 排列次序的意义下，$\widetilde{ \boldsymbol \Lambda}$ 是由 $\boldsymbol A$ 唯一确定的，称 $\widetilde{ \boldsymbol \Lambda}$ 为 $\boldsymbol A$ 的合同规范形。于是由下面的定理 9。</p>
+<p><strong>定理 9</strong> 对称矩阵 $\boldsymbol A$ 和 $\boldsymbol B$ 合同当且仅当它们有相同的秩和相同的正惯性指数。</p>
+<blockquote>
+<p>如果按合同规范形对实对称矩阵进行分类，即将合同规范形相同的实对称矩阵看成是同一类的，而合同规范形不同的实对称矩阵看成是不同类的，则有多少种合同规范形，就有多少类实对称矩阵。因为合同规范形完全由其秩与正惯性指数确定，秩为 $r$ 的合同规范形，它的正惯性指数可以为 $0, 1, 2, \cdots, r$，所以秩为 $r$ 的合同规范形 $r + 1$ 个 $(0 \le r \le n)$，于是合同规范形共有 $\dfrac{(n + 1)(n + 2)}2$ 个，也就是说，实对称矩阵共有 $\dfrac{(n + 1)(n + 2)}2$ 类。</p>
+</blockquote>
+<p><strong>定义 14</strong> 设实二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$。如果对任意 $\boldsymbol x \ne \boldsymbol 0$，都有 $\boldsymbol x^\mathrm T \boldsymbol{Ax} &gt; 0$，则称 $f$ 为<strong>正定二次型</strong>。称 $\boldsymbol A$ 为<strong>正定矩阵</strong>。</p>
+<blockquote>
+<p>若 $n$ 阶矩阵 $\boldsymbol A = (a_{ij})$ 为正定矩阵，则 $a_{ii} &gt; 0 \ (i = 1, 2, \cdots, n)$。</p>
+</blockquote>
+<p><strong>定理 10</strong> 实二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 是正定二次型的充分必要条件为 $f$ 的标准形中 $n$ 个系数全为正数（即 $f$ 的正惯性指数为 $n$）。</p>
+<p><strong>推论 1</strong> $n$ 阶实对称矩阵 $\boldsymbol A$ 正定的充分必要条件是 $\boldsymbol A$ 的 $n$ 个特征值全为正数。</p>
+<p><strong>推论 2</strong> $n$ 阶实对称矩阵 $\boldsymbol A$ 正定的充分必要条件是 $\boldsymbol A$ 的合同规范形为 $n$ 阶单位矩阵 $\boldsymbol E$。</p>
+<p><strong>定义 15</strong> 设 $\boldsymbol A = (a_{ij})$ 是 $n$ 阶方阵。任取 $1 \le i_1 &lt; i_2 &lt; \cdots &lt; i_k \le n$。由 $\boldsymbol A$ 的第 $i_1, i_2, \cdots, i_k$ 行与第 $i_1, i_2, \cdots, i_k$ 列交叉处的元素所构成的 $k$ 阶行列式</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+a_{i_1 i_1} & a_{i_1 i_2} & \cdots & a_{i_1 i_k} \\
+a_{i_2 i_1} & a_{i_2 i_2} & \cdots & a_{i_2 i_k} \\
+\vdots & \vdots & & \vdots \\
+a_{i_k i_1} & a_{i_k i_2} & \cdots & a_{i_k i_k} \\
+\end{vmatrix}</script><p>称为 $\boldsymbol A$ 的一个 $k$ 阶主子式。特别地，当 $i_1 = 1, i_2 = 2, \cdots, i_k = k$ 时，这个 $k$ 阶主子式称为 $\boldsymbol A$ 的 $k$ 阶顺序主子式。</p>
+<p><strong>定理 11（赫尔维茨定理）</strong> $n$ 阶实对称矩阵 $\boldsymbol A = (a_{ij})$ 是正定矩阵 $\Leftrightarrow \boldsymbol A$ 的 $n$ 个顺序主子式都为正数，即 $a_{11} &gt; 0, \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \\ \end{vmatrix} &gt; 0, \cdots, | \boldsymbol A | &gt; 0$。</p>
+<p><strong>定义 16</strong> 设 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 是实二次型。</p>
+<p>(1) 如果对任意 $x \ne 0$，都有 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax} \ge 0$，则称 $f$ 为<strong>半正定二次型</strong>，称 $\boldsymbol A$ 为<strong>半正定矩阵</strong>。</p>
+<p>(2) 如果对任意 $x \ne 0$，都有 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax} &lt; 0$，则称 $f$ 为<strong>负定二次型</strong>，称 $\boldsymbol A$ 为<strong>负定矩阵</strong>。</p>
+<p>(3) 如果对任意 $x \ne 0$，都有 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax} \le 0$，则称 $f$ 为<strong>半负定二次型</strong>，称 $\boldsymbol A$ 为<strong>半负定矩阵</strong>。</p>
+<p>既非正定、半正定，又非负定、非负定的二次型（矩阵）称为不定二次型（矩阵）。</p>
+<p><strong>定理 12</strong> 实二次型 $f(x_1, x_2, \cdots, x_n) = \boldsymbol x^\mathrm T \boldsymbol{Ax}$ 是半正定二次型的充分必要条件是它的标准形中 $n$ 个系数全为非负数。</p>
+<blockquote>
+<p>关于矩阵半正定的判别，没有类似于定理 11 的关于顺序主子式的性质。</p>
+</blockquote>
+<p><strong>定理 13</strong> 实对称矩阵 $\boldsymbol A$ 半正定的充分必要条件是 $\boldsymbol A$ 的所有主子式均非负。</p>
+<div style="page-break-after:always"></div>
+
+<h3 id="空间曲面与曲线-1"><a href="#空间曲面与曲线-1" class="headerlink" title="空间曲面与曲线"></a>空间曲面与曲线</h3><h4 id="清单-7"><a href="#清单-7" class="headerlink" title="清单"></a>清单</h4><ul>
+<li>空间曲面<ul>
+<li>曲面的方程</li>
+<li>旋转面</li>
+<li>柱面</li>
+<li>二次曲面<ul>
+<li>椭球面</li>
+<li>单叶双曲面</li>
+<li>双叶双曲面</li>
+<li>椭圆锥面</li>
+<li>椭圆抛物面</li>
+<li>双曲抛物面</li>
+<li>椭圆柱面、双曲柱面、抛物柱面</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间曲线<ul>
+<li>方程<ul>
+<li>一般方程</li>
+<li>参数方程</li>
+</ul>
+</li>
+<li>在坐标面上的投影</li>
+</ul>
+</li>
+</ul>
+<h4 id="课本原文-7"><a href="#课本原文-7" class="headerlink" title="课本原文"></a>课本原文</h4><p><strong>曲面方程</strong></p>
+<p>在平面解析几何中用一个二元方程 $f(x, y)$ 来表示平面上的一条曲线，这个方程体现了曲线上任意点 $(x, y)$ 的横、纵坐标之间的对应关系。在空间建立了直角坐标系以后，空间的每一个点都有了坐标，对空间的一张曲面 $S$，$S$ 上任意点 $(x, y, z)$ 的坐标之间也有对应关系，当 $x$ 与 $y$ 给定后，$z$ 随之也确定了。这种对应关系可以用一个三元方程 $F(x, y, z) = 0$ 来表示。因此用一个三元方程 $F(x, y, z) = 0$ 来表示空间的一张曲面。</p>
+<p>设曲面 $S$ 与三元方程 $F(x, y, z) = 0$ 有下述关系：</p>
+<p>(1) 曲面 $S$ 上每一点的坐标 $(x, y, z)$ 都满足方程 $F(x, y, z) = 0$；</p>
+<p>(2) 满足方程 $F(x, y, z) = 0$ 的点 $(x, y, z)$ 都在曲面 $S$ 上，</p>
+<p>则称方程 $F(x, y, z) = 0$ 为曲面 $S$ 的方程，曲面 $S$ 称为方程 $F(x, y, z) = 0$ 的图形，即点 $(x, y, z)$ 在曲面 $S$ 上 $\Leftrightarrow (x, y, z)$ 满足方程 $F(x, y, z) = 0$。</p>
+<p><strong>旋转面</strong></p>
+<p>平面曲线 $C$ 绕该平面内的直线 $L$ 旋转一周所形成的曲面称为旋转面。$C$ 与 $L$ 分别称为旋转面的母线和旋转轴。</p>
+<p>设在 $yOz$ 坐标面上有一已知曲线 $C$，它的方程为 $f(y, z) = 0, \ y \ge 0$。将这条曲线绕 $z$ 轴旋转一周，得到旋转曲面 $S$，下面建立 $S$ 的方程。</p>
+<p>任取 $S$ 上的点 $P(x, y, z$，设 $P$ 是由曲线 $C$ 上的点 $P_0(0, y_0, z_0)$ 绕 $z$ 轴旋转得到的，则 $z = z_0$。且 $P$ 与 $P_0$ 到 $z$ 轴的距离相等，即 $y_0^2 = x^2 + y^2$。因为点 $P_0（0, y_0, z_0$ 在 $C$ 上，所以 $f(y_0, z_0) = 0$，且 $y_0 \ge 0$，代入 $y_0 = \sqrt{x^2 + y^2}, z_0 = z$，得 $f( \sqrt{x^2 + y^2}, z) = 0$，即点 $P(x, y, z)$ 满足方程 $f( \sqrt{x^2 + y^2}, z) = 0$。</p>
+<p>反之，若空间的点 $P(x, y, z)$ 满足方程 $f( \sqrt{x^2 + y^2}, z) = 0$，设点 $P$ 绕 $z$ 轴旋转到 $yOz$ 坐标面的右半平面（即 $y \ge 0$）上时，对应的点为 $P_0(0, y_0, z_0) \ (y_0 \ge 0)$，则 $y_0 = \sqrt{x^2 + y^2}$ 且 $z_0 = z$，这说明 $P_0(0, y_0, z_0)$ 满足 $f(y_0, z_0) = 0$，即 $P_0$ 在曲线 $C$ 上，因此点 $P$ 在旋转曲面 $S$ 上。</p>
+<p>总之，旋转曲面 $s$ 的方程为 $f( \sqrt{x^2 + y^2}, z) = 0$。不难发现，若曲线 $C$ 的方程为 $f(y, z) = 0, \ y \le 0$，则旋转曲面的方程为 $f(- \sqrt{x^2 + y^2}, z) = 0$。</p>
+<p><strong>柱面</strong></p>
+<p>设 $C$ 为空间的一条曲线，动直线 $L$ 沿着 $C$ 平行移动形成的曲面称为柱面。曲线 $C$ 称为柱面的准线，动直线 $L$ 称为柱面的母线。</p>
+<p>设柱面 $S$ 的母线平行于 $z$ 轴，准线是 $xOy$ 平面上的曲线 $C:F(x, y) = 0$。下面建立 $S$ 的方程。</p>
+<p>任取柱面 $S$ 上的点 $P(x, y, z)$，因为柱面的母线平行于 $z$ 轴，所以 $P(x, y, z)$ 在 $xOy$ 平面上的投影点 $P’(x, y, 0)$ 在准线 $C$ 上，即 $F(x, y) = 0$</p>
+<p>反之，若空间中的点 $P(x, y, z)$ 满足方程 $F(x, y) = 0$，则 $P(x, y, z)$ 在 $xOy$ 平面上的投影点 $P’(x, y, 0)$ 在准线 $C$ 上，于是点 $P(x, y, z)$ 在柱面上。因此，柱面 $S$ 的方程为 $F(x, y) = 0$，这是一个不含变量 $z$ 的方程。</p>
+<p>对于任意一个不含变量 $z$ 的方程 $F(x, y) = 0$，方程对曲面上的点的竖坐标没有任何限制。任取 $xOy$ 平面上的曲线 $C:F(x, y) = 0$ 上的点 $P’(x, y, 0)$，点 $P’$ 平行于 $z$ 轴上下移动得到的点都在曲面上，因此曲面是由动直线 $L$ 沿着 $xOy$ 平面上的曲线 $C$，平行于 $z$ 轴移动形成的，也就是说，曲面是以 $xOy$ 平面上的 $C:F(x, y) = 0$ 为准线，母线平行于 $z$ 轴的柱面。</p>
+<p>完全类型，一个不含变量 $x$（或 $y$）的方程，其图形是母线平行于 $x$ 轴（或 $y$ 轴）的柱面。</p>
+<p><strong>二次曲面</strong></p>
+<p>三元二次方程 $F(x, y, z) = 0$ 代表的曲面称为二次曲面。其中 $F(x, y, z) = a_{11} x^2 + a_{22} y^2 + a_{33} z^2 + 2 a_{12} xy + 2 a_{13} xz + 2 a_{23} yz + 2ax + 2by + 2cz + d$（二次项系数不全为零）。</p>
+<p>除无图形的或图形为一个点的三元二次方程外，其余的任意一个三元二次方程，总可以经过若干次的直角坐标变换，化简为下面的九种标准方程之一。这就是说，任何一个二次曲面，总可以在适当的直角坐标系下，化为其中的某一种标准方程所代表的曲面。以下分别讨论这九种标准方程所代表的二次方程的情况。</p>
+<p>(1) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1 \ (a &gt; 0, b &gt; 0, c &gt; 0)$</p>
+<p>方程 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1 \ (a &gt; 0, b &gt; 0, c &gt; 0)$ 的图形称为椭球面，$a, b, c$ 称为椭球面的三个半轴，显然当 $a = b = c$ 时，方程 (1) 的图形为球心在原点，半径为 $a$ 的球面。</p>
+<p>从方程 (1) 可以发现，椭球面关于原点，关于 $x$ 轴、$y$ 轴和 $z$ 轴，关于三个坐标面都是对称的。</p>
+<p>下面用“截痕法”来了解椭球面的形状。所谓“截痕法”，就是用一组平行于坐标面的平面去截割曲面，得到曲面与平面的交线（称为截痕），通过这些截痕去推知曲面的形状。</p>
+<p>用平面 $z = k$ 去截椭球面，截痕在平面 $z = k$ 上，方程为 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 - \dfrac{k^2}{c^2}$。</p>
+<p>当 $|k| &gt; c$ 时，平面 $z = k$ 与椭球面不相交；当 $k = c$ 时，平面 $z = k$ 与椭球面相交于点 $(0, 0, k)$；当 $|k| &lt; c$ 时，截痕为平面 $z = k$ 上的椭圆</p>
+<script type="math/tex; mode=display">
+\frac{x^2}{a^2 \left( 1 - \dfrac{k^2}{c^2} \right)} + \frac{y^2}{b^2 \left( 1 - \dfrac{k^2}{c^2} \right)} = 1</script><p>当 $k = 0$ 时，椭圆的半轴最大，随着 $|k|$ 逐渐增大（$|k| &lt; c$），椭圆的半轴逐渐减小。雷斯克的其他两组与坐标面平行的截痕也是椭圆。综合起来得到椭球面的形状。</p>
+<p>(2) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1 \ (a &gt; 0, b &gt; 0, c &gt; 0)$</p>
+<p>方程 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1 \ (a &gt; 0, b &gt; 0, c &gt; 0)$ 的图形称为单叶双曲面。从方程 (2) 可以发现，单叶双曲面关于原点，关于 $x$ 轴、$y$ 轴和 $z$ 轴，关于三个坐标面都是对称的。</p>
+<p>用平面 $z = k$ 去截单叶双曲面，截痕在平面 $z = k$ 上，方程为 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 + \dfrac{k^2}{c^2}$。</p>
+<p>当 $k = 0$ 时，椭圆的半轴最短，是 $xOy$ 平面上的椭圆 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$，称为单叶双曲面的<strong>腰圆</strong>，随着 $|k|$ 的增大，椭圆的半轴变大。</p>
+<p>单叶双曲面的平行于 $yOz$ 平面的截痕为平面 $x = k$ 上的双曲线 $\dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1 - \dfrac{k^2}{a^2} \ (|k| \ne a)$；平行于 $xOz$ 平面的截痕为平面 $y = k$ 上的双曲线 $\dfrac{x^2}{a^2} - \dfrac{z^2}{c^2} = 1 - \dfrac{k^2}{b^2} \ (|k| \ne b)$。</p>
+<p>综合起来得到单叶双曲面的形状。</p>
+<p>(3) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = -1 \ (a &gt; 0, b &gt; 0, c &gt; 0)$</p>
+<p>方程 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = -1 \ (a &gt; 0, b &gt; 0, c &gt; 0)$ 的图形称为双叶双曲面。从方程 (3) 可以发现，双叶双曲面关于原点，关于 $x$ 轴、$y$ 轴和 $z$ 轴，关于三个坐标面都是对称的。</p>
+<p>用平面 $z = k$ 去截双叶双曲面，截痕在平面 $z = k$ 上，方程为 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{k^2}{c^2} - 1$。</p>
+<p>当 $|k| &lt; c$ 时，平面 $z = k$ 与双叶双曲面不相交；当 $|k| = c$ 时，平面 $z = k$ 与双叶双曲面交于点 $(0, 0, k)$；当 $|k| &gt; c$ 时，截痕为椭圆 $\dfrac{x^2}{a^2 \left( \dfrac{k^2}{c^2} - 1 \right)} + \dfrac{y^2}{b^2 \left( \dfrac{k^2}{c^2} - 1 \right)} = 1$，随着 $|k|$ 的增大，椭圆的半轴变大。</p>
+<p>双叶双曲面的平行于 $yOz$ 平面的截痕为平面 $x = k$ 上的双曲线 $\dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} = 1 + \dfrac{k^2}{b^2}$。综合起来得到双叶双曲面的形状。</p>
+<p>(4) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = z^2$</p>
+<p>方程 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = z^2$ 的图形称为椭圆锥面。</p>
+<p>从方程 (4) 可以发现，椭圆锥面关于原点，关于 $x$ 轴、$y$ 轴和 $z$ 轴，关于三个坐标面都是对称的。</p>
+<p>用平面 $z = k$ 去截椭圆锥面，截痕在平面 $z = k$ 上，方程为 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = k^2$。</p>
+<p>当 $k = 0$ 时，椭圆锥面与 $xOy$ 平面交于原点。</p>
+<p>当 $k \ne 0$ 时，截痕为椭圆 $\dfrac{x^2}{a^2 k^2} + \dfrac{y^2}{b^2 k^2} = 1$，随着 $|k|$ 的增大，椭圆的半轴变大。</p>
+<p>椭圆锥面的平行于 $yOz$ 平面的截痕为平面 $x = k$ 上的双曲线 $z^2 - \dfrac{y^2}{b^2} = \dfrac{k^2}{a^2} \ (k \ne 0)$，当 $k = 0$ 时，椭圆锥面与 $yOz$ 平面交于两条直线 $z = \pm \dfrac yb$。</p>
+<p>椭圆锥面的平行于 $xOz$ 平面的截痕为平面 $y = k$ 上的双曲线 $z^2 - \dfrac{x^2}{a^2} = \dfrac{k^2}{b^2} \ (k \ne 0)$，当 $k = 0$ 时，椭圆锥面与 $yOz$ 平面交于两条直线 $z = \pm \dfrac xa$。</p>
+<p>综合起来得到椭圆锥面的形状。</p>
+<p>(5) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = z$</p>
+<p>方程 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = z$ 的图形称为椭圆抛物面。</p>
+<p>从方程 (5) 可以发现，椭圆抛物面关于 $z$ 轴，关于 $yOz$ 平面，关于 $xOz$ 平面都是对称的。</p>
+<p>用平面 $z = k$ 去截椭圆抛物面，截痕在平面 $z = k$ 上，方程为 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = k$。</p>
+<p>当 $k = 0$ 时，椭圆抛物面与 $xOy$ 平面交于原点；当 $k &gt; 0$ 时，截痕为椭圆 $\dfrac{x^2}{a^2 k} + \dfrac{y^2}{b^2 k} = 1$，随着 $k$ 的增大，椭圆的半轴变大；当 $k &lt; 0$ 时，椭圆抛物面与 $z = k$ 不相交。</p>
+<p>椭圆抛物面的平行于 $yOz$ 平面的截痕为平面 $x = k$ 上的抛物线 $z = \dfrac{y^2}{b^2} + \dfrac{k^2}{a^2}$；平行于 $xOz$ 平面的截痕也为平面 $y = k$ 上的双曲线 $z = \dfrac{x^2}{a^2} + \dfrac{k^2}{b^2}$。</p>
+<p>综合起来得到椭圆抛物面的形状。</p>
+<p>(6) $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = z$</p>
+<p>方程 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = z$ 的图形称为双曲抛物面，也称为马鞍面。从方程 (6) 可以发现，双曲抛物面关于 $z$ 轴，关于 $yOz$ 平面，关于 $xOz$ 平面都是对称的。</p>
+<p>用平面 $z = k$ 去截双曲抛物面，截痕为平面 $z = k$ 上的双曲线 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = k \ (k \ne 0)$。当 $k &gt; 0$ 时，双曲线的实轴平行于 $x$ 轴；当 $k &lt; 0$ 时，双曲线的实轴平行于 $y$ 轴。</p>
+<p>双曲抛物面与 $xOy$ 平面交于两条直线 $\dfrac xa \pm \dfrac yb = 0$。</p>
+<p>用平面 $x = k$ 与 $y = k$ 去截割双曲抛物面，截痕都是抛物线。双曲抛物面与 $yOz$ 平面的交线为抛物线 $z = - \dfrac{y^2}{b^2}$，与 $xOz$ 平面的交线为抛物线 $z = \dfrac{x^2}{a^2}$。</p>
+<p>综合起来得到双曲抛物面的形状。</p>
+<p>(7) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$</p>
+<p>(8) $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$</p>
+<p>(9) $x^2 = ay$</p>
+<p>方程 (7)、(8)、(9) 的图形依次称为椭圆柱面，双曲柱面，抛物柱面。</p>
+<p><strong>空间曲线的方程</strong></p>
+<p>设曲面 $S_1:F_1(x, y, z) = 0$ 与曲面 $S_2:F_2(x, y, z) = 0$ 的交线为 $C$，则 $C$ 上的点 $P(x, y, z)$ 满足方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+F_1(x, y, z) = 0 \\
+F_2(x, y, z) = 0 \\
+\end{cases}</script><p>反之，若点 $P(x, y, z)$ 满足以上方程组，则点 $P$ 既在 $S_1$ 上，也在 $S_2$ 上，因此在曲线 $C$ 上。因此以上方程组就是曲线 $C$ 的方程，称为曲线 $C$ 的一般方程。</p>
+<p>除了一般方程外，还可以用参数方程来表示空间曲线。设空间曲线 $C$ 上的动点坐标 $x, y, z$ 可以表示为参数 $t$ 的函数</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = x(t) \\
+y = y(t) \\
+z = z(t) \\
+\end{cases}
+, \quad t \in I</script><p>如果任给 $t_0 \in I$，点 $(x(t_0), y(t_0), z(t_0))$ 在曲线 $C$ 上，反之，任给曲线 $C$ 上的点 $P_0(x_0, y_0, z_0)$，都有某个 $t_0 \in I$，使 $(x_0, y_0, z_0) = (x(t_0), y(t_0), z(t_0))$，则称该方程组为空间直线 $C$ 的参数方程。</p>
+<p><strong>空间曲线在坐标面上的投影</strong></p>
+<p>设 $C$ 为空间曲线，以 $C$ 为准线，母线平行于 $z$ 轴（即垂直于 $xOy$ 平面）的柱面称为曲线 $C$ 关于 $xOy$ 平面的投影柱面。投影柱面与 $xOy$ 平面的交线称为曲线 $C$ 在 $xOy$ 面上的投影曲线（简称为投影）。</p>
+<!-- flag of hidden posts --></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">fa_555</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.fa555.tech/2021/Linalg-Review/">https://blog.fa555.tech/2021/Linalg-Review/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.fa555.tech">fa_555's Blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a></div><nav id="pagination"></nav><div class="post-adv"></div></div></div><footer class="footer-bg" style="background-image: url(/files/topimg/johannes-plenio-E-Zuyev2XWo-unsplash.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2024 By fa_555</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
